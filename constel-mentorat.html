@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-dark">
+<head>
+<script>
+  (function () {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add(`theme-${savedTheme}`);
+  })();
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Constel Mentorat — Project</title>
+
+    <style>
+
+  @font-face {
+  font-family: "Poppins-fallback";
+  src: local("Arial");
+  size-adjust: 108%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Roboto-fallback";
+  src: local("Arial");
+  size-adjust: 100%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/poppins-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-bold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+</style>
+
+  <link rel="preload" href="fonts/poppins-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+/* TEST FORCE — index.html uniquement */
+
+/* Projets / À propos / CV */
+.nav ul li a {
+  font-weight: 600 !important;
+}
+
+/* Dropdown thème : Light / Dark */
+.theme-dropdown .dropdown-menu button {
+  font-weight: 600 !important;
+}
+</style>
+
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Style dédié à la page projet -->
+  <link rel="stylesheet" href="constel-mentorat.css" />
+</head>
+
+<body class="project-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ====================== -->
+  <!--      NAVIGATION        -->
+  <!-- ====================== -->
+  <header>
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Navigation principale" aria-expanded="false">
+
+     <a href="index.html" class="nav-left brand-link">
+  <img
+    class="avatar"
+    src="images/photo-profil.webp"
+    alt="Portrait de Gaël Tartare"
+    width="72"
+    height="72"
+  />
+  <span class="brand">
+    Gaël<br>Tartare
+  </span>
+</a>
+        <!-- DROITE -->
+        <div class="nav-right">
+
+          <!-- DROPDOWN MOBILE -->
+          <div class="theme-dropdown mobile-theme">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </div>
+
+          <!-- BURGER -->
+          <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+        </div>
+
+        <!-- MENU -->
+        <ul>
+          <li><a href="projetsbis.html">Projets</a></li>
+          <li><a href="test.html">À propos</a></li>
+          <li>
+          <a 
+            href="https://drive.google.com/file/d/12P7wmIBrvMZcJ2jdYPcSZYPVTRzzmXLn/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
+          </li>
+
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://www.linkedin.com/in/gael-tartare" 
+               class="nav-linkedin" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.55v-5.54c0-1.32-.02-3.01-1.84-3.01-1.84 0-2.13 1.43-2.13 2.91v5.64h-3.55V9h3.41v1.56h.05c.48-.91 1.66-1.87 3.43-1.87 3.67 0 4.35 2.42 4.35 5.56v6.2z"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- THEME DROPDOWN (DESKTOP) -->
+          <li class="theme-dropdown">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </li>
+
+          <!-- CTA -->
+          <li><a class="btn btn-primary" href="index.html#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====================== -->
+  <!--     CONTENU PROJET     -->
+  <!-- ====================== -->
+
+  <main id="contenu">
+
+    <section class="project-header">
+        
+      <h1 class="project-title">Constel Mentorat</h1>
+    
+      <div class="project-intro">
+        <p>
+        ⌛️ Année : <span class="semibold">2024</span><br>
+        🕘 Durée du projet : <span class="semibold">5 jours</span><br>
+        🎯 Livrables attendus :
+        <span class="semibold">Création d'une experience de matching mentors et mentorés</span><br>
+        👨‍💻 Rôle : <span class="semibold">Alternant Product Designer</span><br>
+        ⚒️ Outils utilisés : <span class="semibold">Figma, Métabase, Miro, PostHog</span>
+        </p>
+      </div>
+
+      <div class="project-hero">
+        <img src="img-constel/projet-1-1.png" alt="Aperçu du projet Food Day Lovers">
+      </div>
+      
+      <section class="project-section contexte-objectifs">
+  
+        <h2 class="section-title">Contexte & Objectifs</h2>
+      
+        <div class="section-text">
+             <p>
+      Suite à un <span class="semibold">besoin exprimé par un client de Constel Mentorat</span>,
+      une nouvelle fonctionnalité a été conçue pour enrichir l’expérience sur la plateforme.
+      <span class="semibold">Un module de mise en relation entre mentors et mentorés</span>.
+    </p>
+
+    <p>
+      Jusqu’à présent, les appariements étaient réalisés
+      <span class="semibold">manuellement</span> via des
+      <span class="semibold">groupes préétablis</span> et des
+      <span class="semibold">imports Excel</span>.
+    </p>
+
+    <p>
+      L’objectif était désormais de
+      <span class="semibold">créer un parcours autonome et scalable</span>
+      permettant aux utilisateurs de
+      <span class="semibold">matcher directement depuis l’application</span>,
+      de manière
+      <span class="semibold">fluide</span> et
+      <span class="semibold">personnalisée</span>.
+    </p>
+        </div>
+      
+      </section>
+      
+      <section class="project-separator project-separator-bottom">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+<section class="project-section approche-conception-section">
+
+  <!-- TITRE -->
+  <h2 class="section-title">
+    Approche<br class="desktop-only"> De Conception
+  </h2>
+
+  <!-- TEXTE -->
+  <div class="section-text">
+
+    <p>
+      Pour garantir une <span class="semibold">expérience fluide et engageante</span> dès les
+      premiers instants, la conception de cette nouvelle fonctionnalité a suivi une
+      <span class="semibold">démarche UX structurée</span>, mêlant
+      <span class="semibold">itérations rapides</span>,
+      <span class="semibold">travail rapproché avec l’équipe produit</span> et
+      <span class="semibold">vision centrée utilisateur</span>, afin de générer un
+      <span class="semibold">impact concret dès l’onboarding</span>.
+    </p>
+
+    <p>
+      Elle s’est articulée autour de <span class="semibold">plusieurs axes clés</span> :
+    </p>
+
+    <ul>
+      <li>
+        <span class="semibold">Compréhension du besoin client :</span><br>
+        Des échanges réguliers avec le Product Manager ont permis d’identifier les besoins
+        et les attentes spécifiques liées au matching, en particulier sur la
+        <span class="semibold">fluidité du parcours</span> et la
+        <span class="semibold">réassurance pour les utilisateurs</span>.
+      </li>
+
+      <li>
+        <span class="semibold">Cartographie des cas d’usage :</span><br>
+        Une analyse des scénarios possibles a mis en lumière des situations à anticiper
+        (absence de mentor disponible, sélection multiple, abandon du parcours ou
+        incompréhension des étapes).
+      </li>
+
+      <li>
+        <span class="semibold">Double parcours différencié :</span><br>
+        Deux expériences distinctes ont été conçues :
+        <ul>
+          <li>
+            l’une pour les <span class="semibold">mentors</span>, avec une logique de
+            complétion rapide.
+          </li>
+          <li>
+            l’autre pour les <span class="semibold">mentorés</span>, plus guidée, avec un
+            accompagnement progressif, répondant aux besoins spécifiques de chaque rôle.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <span class="semibold">Collaboration continue avec l’équipe produit :</span><br>
+        Un dialogue constant a permis de maximiser la
+        <span class="semibold">réactivité des itérations</span>, d’ajuster les priorités
+        selon les retours, et d’aligner les enjeux
+        <span class="semibold">UX</span> et
+        <span class="semibold">techniques</span>.
+      </li>
+
+      <li>
+        <span class="semibold">Mise en place de garde-fous UX :</span><br>
+        Des pop-ups intelligentes ont été pensées pour prévenir des éventuels blocages.
+        Si aucun mentor n’est trouvé, plusieurs relances sont proposées, puis une solution
+        de contact est automatiquement enclenchée.<br>
+        <span class="semibold">L'objectif</span> était limiter la frustration et sécuriser la suite
+        du parcours.
+      </li>
+
+      <li>
+        <span class="semibold">Anticipation des enjeux de scalabilité :</span>
+        <ul>
+          <li>
+            La <span class="semibold">gestion des données via Metabase</span> a été pensée
+            pour faciliter le suivi de cette feature.
+          </li>
+          <li>
+            Un <span class="semibold">import automatique des critères de matching</span>
+            pour faciliter le parcours mentors dans le futur.
+          </li>
+          <li>
+            La raison du pourquoi le groupes s’est formé dans l’interface admin afin de
+            <span class="semibold">réconforter les clients</span> sur cette fonctionnalité.
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>
+      Cette approche a permis de <span class="semibold">transformer une étape critique</span>
+      du parcours en une expérience
+      <span class="semibold">accessible</span>,
+      <span class="semibold">rassurante</span> et
+      <span class="semibold">évolutive</span>.
+      L’enjeu était majeur car si le
+      <span class="semibold">matching échoue</span>,
+      <span class="semibold">toute la suite du parcours est compromise</span>.
+    </p>
+
+  </div>
+
+</section>
+
+
+      <section class="project-separator project-separator-3">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+      <section class="project-section definition-section">
+
+  <h2 class="section-title">Flow-chart</h2>
+
+  <div class="section-col">
+
+    <!-- IMAGE -->
+
+    <div class="flow-block mentore">
+
+  <h3 class="subtitle">Mentoré</h3>
+
+    <div class="section-image">
+      <img src="img-constel/1.png" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+  <p>
+      Le parcours mentoré, plus guidé, intègre plusieurs scénarios.
+    </p>
+
+    <p>
+      Après avoir défini ses critères, l’utilisateur se voit proposer jusqu’à
+      <span class="semibold">trois mentors</span> correspondant à ses attentes.
+    </p>
+
+    <p>
+      Si aucun profil ne convient,
+      <span class="semibold">des pop-ups successives</span> l’invitent à reformuler
+      ses critères ou l’informent d’une prise en charge.
+    </p>
+
+    <p>
+      Ce parcours intègre aussi plusieurs
+      <span class="semibold">garde-fous UX</span>, réduisant les risques de blocage
+      tout en assurant un
+      <span class="semibold">accompagnement progressif et rassurant</span>.
+    </p>
+</div>
+
+   <div class="mentor">
+
+  <h3 class="subtitle">Mentor</h3>
+
+  <div class="section-image">
+    <img src="img-constel/2.png" alt="Parcours mentor">
+  </div>
+
+  <div class="section-text">
+
+    <p>
+      Le parcours <span class="semibold">mentor</span> repose sur une séquence
+      <span class="semibold">claire et efficace</span>.
+    </p>
+
+    <p>
+      Rappel des <span class="semibold">objectifs du programme</span>, complétion des
+      <span class="semibold">critères de matching</span>, puis mis à disposition pour
+      être sélectionné par un mentoré.
+    </p>
+
+    <p>
+      Le mentor a également la possibilité de
+      <span class="semibold">contacter le support</span>, ou
+      <span class="semibold">commencer à compléter son profil</span>.
+    </p>
+
+    <p>
+      Une fois sélectionné, il est automatiquement
+      <span class="semibold">notifié par e-mail</span>.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="project-separator project-separator-definition">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section personna-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">Maquettes High Fidelity</h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+
+    <div class="flow-block mentore">
+
+  <h3 class="subtitle subtitle--intro">Début de parcours commun : Mentor &  mentoré</h3>
+
+  <h4 class="section-subtitle">
+    Rappel des objectifs du programme :
+  </h4>
+
+    <div class="section-image">
+      <img src="img-constel/3.webp" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+  <p>
+    Présentée sous forme de pop-up, ce rappel
+    <span class="semibold">introduit le parcours de matching</span> en
+    <span class="semibold">contextualisant le programme</span> que ce soit pour le
+    mentor et mentoré.
+  </p>
+
+  <p>
+    L’objectif est d’<span class="semibold">aligner tous les utilisateurs</span> sur
+    la <span class="semibold">direction du programme</span>, en installant un
+    <span class="semibold">cadre clair</span> dès les premiers instants de navigation.
+  </p>
+</div>
+
+   <div class="critères">
+
+  <h4 class="section-subtitle">
+    Complétion des critères de matching :
+  </h4>
+
+  <div class="section-image">
+    <img src="img-constel/4.webp" alt="Parcours mentor">
+  </div>
+
+  <div class="section-text">
+
+    <p>
+  Cette interface marque le <span class="semibold">point de départ de la mise en relation</span>.
+  Elle permet aux mentorés de <span class="semibold">spécifier leurs besoins</span> en
+  renseignant <span class="semibold">quelques critères clés</span>.
+</p>
+
+<p>
+  Une version similaire a été conçue pour les mentors, avec un
+  <span class="semibold">wording adapté</span> afin qu’ils puissent, eux aussi,
+  <span class="semibold">compléter leurs critères</span>.
+</p>
+
+<p>
+  Cette étape est <span class="semibold">essentielle</span> pour permettre à l’algorithme
+  de matching d’<span class="semibold">opérer efficacement</span> et d’assurer une mise
+  en relation <span class="semibold">cohérente</span>.
+</p>
+
+  </div>
+
+  <div class="suite">
+
+    <h3 class="subtitle subtitle--section">Suite des parcours utilisateurs :</h3>
+
+  <h4 class="section-subtitle">
+    Sélection des mentors proposés (Mentoré) :
+  </h4>
+
+  <div class="section-image">
+    <img src="img-constel/5.webp" alt="Parcours mentor">
+  </div>
+
+  <div class="section-text">
+
+<p>
+  À cette étape, le mentoré découvre une
+  <span class="semibold">sélection personnalisée de trois profils</span>
+  correspondant à ses critères.
+</p>
+
+<p>
+  L’interface mise sur la
+  <span class="semibold">clarté</span> et la
+  <span class="semibold">simplicité</span> pour encourager
+  <span class="semibold">l’action</span> et une
+  <span class="semibold">navigation fluide</span> entre les profils,
+  avec accès aux <span class="semibold">critères de mise en relation</span>,
+  et possibilité de <span class="semibold">relancer une recherche</span>
+  si <span class="semibold">aucun mentor ne convient</span>.
+</p>
+
+  </div>
+
+<div class="confirmation">
+
+  <h4 class="section-subtitle">
+    Confirmation du matching en attente (mentor) :
+  </h4>
+
+  <div class="section-image">
+    <img src="img-constel/6.webp" alt="Parcours mentor">
+  </div>
+
+  <div class="section-text">
+
+ <p>
+  Une fois ses critères <span class="semibold">complétés</span>, le mentor accède à une
+  interface de confirmation <span class="semibold">claire et rassurante</span>.
+</p>
+
+<p>
+  Ce message l’informe que le processus de mise en relation est en cours et qu’il sera
+  <span class="semibold">notifié par email</span> dès qu’un mentoré l’aura
+  <span class="semibold">sélectionné</span>.
+</p>
+
+<p>
+  À cette étape, le mentor est <span class="semibold">invité</span> à enrichir son profil
+  (photo, description, etc.).<br>
+  Il peut également <span class="semibold">contacter le support</span> pour toute question
+  ou <span class="semibold">besoin d’accompagnement</span>.
+</p>
+
+<p>
+  Enfin, la pop-up peut être <span class="semibold">fermée</span> à tout moment, lui
+  permettant d’explorer <span class="semibold">librement l’application</span>.
+</p>
+
+  </div>
+
+
+<div class="accompagnement">
+
+  <h4 class="section-subtitle">
+    Accompagnement du mentoré en cas d'absence de résultat du matching :
+  </h4>
+
+  <div class="section-image">
+    <img src="img-constel/7.webp" alt="Parcours mentor">
+  </div>
+
+   <div class="section-image">
+    <img src="img-constel/8.webp" alt="Parcours mentor">
+  </div>
+
+  <div class="section-text">
+
+ <p>
+  Ces deux écrans s’inscrivent dans une logique de
+  <span class="semibold">prévention de la frustration utilisateur</span>.
+</p>
+
+<p>
+  Le système prévoit plusieurs niveaux de réponse si aucun mentor ne correspond
+  aux critères du mentoré :
+</p>
+
+<ul>
+  <li>
+    <span class="semibold">Première pop-up :</span>
+    Elle intervient après une première tentative infructueuse.
+    Le message est modéré et invite l’utilisateur à
+    <span class="semibold">relancer une recherche</span> en affinant ses critères,
+    tout en maintenant une
+    <span class="semibold">dynamique active et rassurante</span>.
+  </li>
+
+  <li>
+    <span class="semibold">Seconde pop-up :</span>
+    Elle s’affiche après deux tentatives non concluantes.
+    L’objectif ici est de
+    <span class="semibold">rassurer clairement l’utilisateur</span> sur la prise en
+    charge de sa demande, tout en l’informant qu’un membre de l’équipe le contactera.
+    Cela permet de
+    <span class="semibold">clôturer le parcours sans rupture</span>.
+  </li>
+</ul>
+
+<p>
+  Ce système progressif de pop-ups agit comme un
+  <span class="semibold">garde-fou UX essentiel</span> :
+  il <span class="semibold">évite l’abandon</span>,
+  <span class="semibold">renforce la confiance</span>, et montre que l’utilisateur
+  n’est <span class="semibold">jamais laissé sans réponse</span>.
+</p>
+
+  </div>
+
+</div>
+
+</section>
+
+<section class="project-separator project-separator-personnas">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section questionnaire-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">
+  Suivi Analytique
+  </h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-constel/9.webp" alt="Questionnaires utilisateurs Food Day Lovers">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+  Pour accompagner le lancement de cette nouvelle fonctionnalité de matching,
+  une réflexion s’est portée avec l’équipe produit sur la création
+  d’<span class="semibold">une nouvelle table dans Metabase</span>.
+</p>
+
+<p>
+  Elle permet de suivre l’état des mises en relation en temps réel et
+  d’identifier les éventuels points de friction dans le parcours utilisateur.
+</p>
+
+<p>
+  Ce dispositif joue un rôle crucial et donne une
+  <span class="semibold">vision fine de l’activité</span>, notamment sur :
+</p>
+
+<ul>
+  <li>
+    Le <span class="semibold">statut de chaque tentative de matching</span>
+    (mentors sélectionnés, mentors refusés, aucun résultat ne correspondant à la
+    recherche, mentor correspondant au résultat mais déjà choisi et en attente
+    de traitement)
+  </li>
+  <li>
+    Le <span class="semibold">nombre de tentatives</span> par utilisateur pour trouver un mentor
+  </li>
+  <li>
+    Les <span class="semibold">mentors proposés</span> aux mentorés
+  </li>
+  <li>
+    Le <span class="semibold">mentor choisi</span> par le mentoré
+  </li>
+  <li>
+    Les <span class="semibold">critères de mise en relation</span> entrés par le mentoré
+  </li>
+  <li>
+    La <span class="semibold">valeur correspondant à l’action utilisateur</span> ainsi que sa
+    modification, qui permet de visualiser précisément la
+    <span class="semibold">dernière action de l’utilisateur</span> dans le processus
+  </li>
+  <li>
+    Le <span class="semibold">taux de complétion</span> des parcours mentors et mentorés
+  </li>
+</ul>
+
+<p>
+  Ce suivi permet à l’équipe produit d’
+  <span class="semibold">identifier en temps réel les ruptures d’usage</span>,
+  de détecter les <span class="semibold">patterns d’échec récurrents</span> et
+  d’<span class="semibold">ajuster rapidement l’expérience</span> ou les paramètres
+  de l’algorithme.
+</p>
+
+<p>
+  En analysant les données issues de cette table, un
+  <span class="semibold">point de friction critique</span> a également été mis en lumière.
+</p>
+
+<p>
+  Un nombre <span class="semibold">insuffisant de tokens</span> générés par l’IA lors du matching
+  limitait le panel de mentors <span class="semibold">proposé aux mentorés</span>.
+</p>
+
+<p>
+  Cette restriction technique réduisait artificiellement la diversité des
+  profils visibles, causant à la fois des
+  <span class="semibold">frustrations</span> chez les utilisateurs et une
+  <span class="semibold">baisse du taux de mise en relation</span>.
+</p>
+
+<p>
+  Grâce à ce suivi fin, <span class="semibold">cette limitation a pu être identifiée,
+  analysée puis corrigée</span> en ajustant les paramètres de génération de tokens.
+</p>
+
+<p>
+  En résultat, les mentorés bénéficient désormais d’un
+  <span class="semibold">éventail plus large de mentors adaptés</span>, augmentant
+  significativement les chances de trouver un match pertinent dès la
+  première tentative.
+</p>
+
+<p>
+  La donnée devient ainsi un <span class="semibold">outil décisionnel quotidien</span>
+  pour maintenir la performance de la fonctionnalité et
+  <span class="semibold">éviter la déperdition d’utilisateurs</span> dès l’entrée dans
+  l’application.
+</p>
+
+<p>
+  Pour des raisons de <span class="semibold">confidentialité</span> et de
+  <span class="semibold">protection des données personnelles</span>, certaines
+  colonnes sensibles ont été volontairement masquées.
+</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-questionnaire">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+      <section class="project-section conclusion-section">
+
+        <h2 class="section-title">Conclusion</h2>
+      
+        <div class="section-text">
+
+<p>
+  La mise en place de cette nouvelle fonctionnalité de matching marque une
+  <span class="semibold">étape clé</span> dans l’évolution de la plateforme.
+</p>
+
+<p>
+  En partant d’un <span class="semibold">besoin client clair</span>, celui de créer une
+  mise en relation entre mentors et mentorés sur une base de critères de mise en relation.
+</p>
+
+<p>
+  Une solution UX complète et structurée a donc été déployée, mêlant réflexion stratégique,
+  itération rapide et ancrage dans les réalités opérationnelles.
+</p>
+
+<p>
+  Grâce à une <span class="semibold">approche centrée utilisateur</span>, chaque parcours
+  (mentor et mentoré) a été pensé pour être
+  <span class="semibold">fluide, rassurant et guidé</span>, avec des
+  <span class="semibold">garde-fous</span> pour limiter les frustrations.
+</p>
+
+<p>
+  Le travail de collaboration avec les équipes produit, la construction de deux parcours
+  différenciés, et la mise en place d’un suivi en temps réel via Metabase ont permis
+  d’<span class="semibold">ancrer cette fonctionnalité</span> dans une logique de
+  <span class="semibold">scalabilité</span> et de
+  <span class="semibold">pilotage par la donnée</span>.
+</p>
+
+<p>
+  Au-delà de l’amélioration immédiate de l’
+  <span class="semibold">expérience utilisateur</span>, ce projet a renforcé la robustesse
+  du dispositif de mise en relation, contribuant à
+  <span class="semibold">augmenter la rétention dès les premières interactions</span>,
+  à améliorer les taux de matching, et à outiller les équipes internes pour agir rapidement
+  sur les frictions identifiées.
+</p>
+
+<p>
+  Une preuve que l’UX, lorsqu’elle s’inscrit dans une vision produit cohérente, permet
+  d’avoir un <span class="semibold">impact tangible</span> sur la qualité de l’expérience
+  et sur les <span class="semibold">performances globales</span> de la plateforme et de
+  l’entreprise.
+</p>
+   
+        </div>
+      
+      </section>
+
+<section class="project-navigation project-navigation-desktop">
+
+  <!-- Projet précédent -->
+  <a href="food-day-lovers.html" class="project-nav prev">
+    <span class="chevron">‹</span>
+    <span class="project-name">Food Day Lovers</span>
+  </a>
+
+  <!-- Projet suivant -->
+  <a href="les-bambinets.html" class="project-nav next">
+    <span class="project-name">Les Bambinets</span>
+    <span class="chevron">›</span>
+  </a>
+
+</section>
+
+<!-- MOBILE : boutons -->
+<section class="project-navigation project-navigation-mobile">
+  <a href="projetsbis.html" class="btn">Projets</a>
+      <a class="btn btn-primary" href="mailto:g.tartare@yahoo.fr">
+        Me contacter
+      </a>
+</section>
+
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
