@@ -1,0 +1,866 @@
+body {
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+
+.nav,
+.btn,
+.cta {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  font-synthesis: none;
+}
+
+/* ===============================
+   VERROU TYPO — CONSTEL (FINAL)
+   =============================== */
+
+/* Texte courant */
+.project-page p,
+.project-page li {
+  font-weight: 500 !important;
+}
+
+/* Emphase dans le texte */
+.project-page .semibold {
+  font-weight: 800 !important;
+}
+
+/* Titres de section */
+.project-page h2 {
+  font-weight: 800 !important;
+}
+
+.project-page h3 {
+  font-weight: 600 !important;
+}
+
+/* Sous-titres */
+.project-page h4 {
+  font-weight: 600 !important;
+}
+
+/* ======================================== */
+/*   CSS PROPRE POUR LE PROJET FOOD DAY     */
+/*   (RESET COMPLET DU CONTENU SEULEMENT)   */
+/* ======================================== */
+
+/* Ne touche PAS au background, aux couleurs, ni aux polices :
+   Ce sont gérés par style.css, comme demandé. */
+
+/* ---- CONTENEUR GLOBAL ---- */
+.project-page {
+    /* On laisse le background défini par style.css */
+  }
+  
+  /* ---- HEADER DU PROJET ---- */
+  .project-header {
+    /* Aucun spacing par défaut */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Titre du projet */
+  .project-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin: 0;      /* reset */
+    padding: 0;     /* reset */
+  }
+  
+  /* Sous-titre / intro */
+  .project-intro {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;      /* reset */
+    padding: 0;     /* reset */
+  }
+  
+  /* ---- CORPS DU PROJET ---- */
+  .project-body {
+    /* Reset total */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  
+    /* Aucun layout, aucune règle visuelle */
+  }
+
+  @media (min-width: 1000px) {
+
+  /* H2 — titres de section */
+  .project-section .section-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  /* H3 — sous-titres */
+  .project-section .subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  /* Texte courant */
+  .project-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .section-text li {
+  font-size: 18px;
+}
+
+      /* H4 — sous-sous-titres */
+  .project-section .section-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+}
+
+ .project-section .section-text p + p {
+    margin-top: 14px;
+  }
+
+@media (max-width: 1000px) {
+  .project-section .section-title {
+    font-size: 26px;
+  }
+
+  .project-section .subtitle {
+    font-size: 22px;
+  }
+
+  .section-text li {
+  font-size: 18px;
+}
+
+  .project-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+    .project-section .section-subtitle {
+    font-size: 17px;
+}
+}
+
+ .project-section .section-text p + p {
+    margin-top: 18px;
+  }
+
+@media (max-width: 767px) {
+  .project-section .section-title {
+    font-size: 22px;
+  }
+
+  .project-section .subtitle {
+    font-size: 18px;
+  }
+
+  /* Premier H3 : Partie Maquettes High Fidelity */
+    .personna-section .subtitle--intro {
+    font-size: 18px;
+  }
+
+   /* H3 suivants : Partie Maquettes High Fidelity */
+  .personna-section .subtitle--section {
+    font-size: 18px;
+  }
+
+  .project-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+    .section-text li {
+  font-size: 16px;
+}
+
+  .project-section .section-subtitle {
+    font-size: 17px;
+}
+}
+
+  /* ---- RESET DES IMAGES DU PROJET ---- */
+  /* On neutralise toute règle d'image venant d'autres fichiers */
+  .project-body img,
+  .project-header img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    display: inline;      /* pas de block automatique */
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  /* ---- RESET DES SECTIONS INTERNES ---- */
+  .project-body section {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .project-intro {
+    display: block;
+    margin-top: px; /* petit espace propre et minimal */
+  }
+
+  /* Semi-gras global pour toute la page projet */
+.project-page .semibold {
+  font-weight: 600;
+}
+
+  
+/* ========================== */
+/*   VISUALISATION DU ZONE    */
+/* ========================== */
+
+/* Conteneur du projet (header + body) */
+.project-header,
+.project-body {
+  border: 2px dashed #ff4d4d;   /* 👉 cadre rouge bien visible */
+  padding-top: 64px;                /* 👉 qu’on ajuste ensuite */
+  margin-left: auto;       /* centre horizontalement */
+  margin-right: auto;
+  padding-left: 64px;      /* espace extérieur */
+  padding-right: 64px;
+  max-width: 1200px;            /* 👉 largeur de travail */
+  box-sizing: border-box;       /* indispensable */
+}
+
+/* TABLETTE */
+@media (max-width: 1000px) {
+  .project-header,
+  .project-body {
+    margin-left: ;
+    margin-right: ;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .project-header,
+  .project-body {
+    padding-top: 32px;
+    padding-left: 32px;   /* 👈 AJOUT */
+    padding-right: 32px;  /* 👈 AJOUT */
+  }
+}
+
+
+
+/* TITRE PRINCIPAL */
+.project-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 16px; /* Desktop */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .project-title {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .project-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+}
+
+/* ================================= */
+/*        PAGE PROJETS (BIS)         */
+/* ================================= */
+
+/* ---------- SECTION PRINCIPALE ---------- */
+
+.projects-section {
+  padding-top: 64px;
+}
+
+.section-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 64px;
+  padding-right: 64px;
+  box-sizing: border-box;
+}
+
+/* ---------- TITRE ---------- */
+
+.projects-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* ---------- GRID ---------- */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+/* ---------- ITEM PROJET ---------- */
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- IMAGES (COMPORTEMENT BAMBINETS) ---------- */
+
+.project-item img {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;   /* 🔥 clé du problème */
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 8px
+}
+
+/* ---------- TEXTES ---------- */
+
+.project-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: -4px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.project-item p {
+  font-size: 16px;
+  opacity: 0.85;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* ================================= */
+/*            TABLETTE               */
+/* ================================= */
+
+@media (max-width: 1100px) {
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section-inner {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .projects-title {
+    font-size: 36px;
+    margin-bottom: 64px;
+  }
+
+  .project-item img {
+    border-radius: 18px;
+    margin-bottom: 8px
+  }
+
+  .project-item h3 {
+  margin-bottom: -4px; /* espace titre → description */
+}
+}
+
+/* ================================= */
+/*              MOBILE                */
+/* ================================= */
+
+@media (max-width: 767px) {
+
+  .section-inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .projects-title {
+    font-size: 28px;
+    margin-bottom: 48px;
+  }
+
+  .project-item img {
+    border-radius: 16px;
+    margin-bottom: 8px
+  }
+
+  .project-item h3 {
+  margin-bottom: -4px; /* espace titre → description */
+}
+}
+
+/* ================================= */
+/*     INTERACTIONS CARTES PROJET    */
+/* ================================= */
+
+/* Base — état normal */
+.project-item {
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Image — transition douce */
+.project-item img {
+  transition: transform 0.35s ease;
+}
+
+/* ===================== */
+/* HOVER (desktop only)  */
+/* ===================== */
+@media (hover: hover) and (pointer: fine) {
+
+  .project-item:hover {
+    transform: translateY(-6px);
+  }
+
+  .project-item:hover img {
+    transform: scale(1.03);
+  }
+}
+
+/* ===================== */
+/* CLICK / TAP (tous)    */
+/* ===================== */
+.project-item:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+.project-item {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-item:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 6px;
+}
+
+/* ================================
+   NAV — LIEN ACTIF (SIMPLE & FIABLE)
+   ================================ */
+
+.nav ul li a[aria-current="page"] {
+  position: relative;
+  color: var(--text);
+}
+
+.nav ul li a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--btn-primary-bg);
+  border-radius: 2px;
+}
+
+/* ===========================
+   ESPACEMENT BAS DE PAGE
+   =========================== */
+
+/* DESKTOP */
+@media (min-width: 1101px) {
+  body {
+    padding-bottom: 48px;
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 600px) and (max-width: 1100px) {
+  body {
+    padding-bottom: 32px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  body {
+    padding-top: 72px;
+    padding-bottom: 32px;
+  }
+}
+
+/* ===============================
+   TYPOGRAPHIE GLOBALE
+   =============================== */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+p, li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* ===============================
+   Taille texte
+   =============================== */
+
+@media (min-width: 768px) {
+
+  .project-item h3 {
+    font-size: 22px !important;
+  }
+
+  .project-item p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .project-item h3 {
+    margin-bottom: -4px;
+  }
+
+  .project-item p {
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .project-item h3 {
+    margin-bottom: -6px;
+  }
+
+  .project-item p {
+    margin: 0;
+  }
+
+}
+
+/* =========================================
+   COVER PROJET 2 — THEME LIGHT UNIQUEMENT
+   ========================================= */
+
+html.theme-light img[src="images/projet-2-1.png"] {
+  content: url("images/les-bambinets-rouge-cover.png");
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  html.theme-light a[href="les-bambinets.html"]:hover img {
+    transform: scale(1.03);
+  }
+
+}
+
+/* =========================================
+   IMAGES PROJETS — STROKE + OMBRE (LIGHT)
+   ========================================= */
+
+html.theme-light .project-item img {
+  border-radius: 20px;
+
+  border: px solid var(--btn-primary-bg);
+
+  box-shadow:
+    0 0 18px color-mix(
+      in srgb,
+      var(--btn-primary-bg) 40%,
+      transparent
+    );
+}
+
+
+/* =========================================
+   PROJET 1 — CONSTEL MENTORAT (DARK)
+   ========================================= */
+
+html.theme-dark a[href="constel-mentorat.html"] img {
+  filter: drop-shadow(0 0 18px rgba(245, 246, 247, 0.18));
+}
+
+
+/* =========================================
+   PROJET 2 — LES BAMBINETS (DARK)
+   Ombre plus douce
+   ========================================= */
+
+html.theme-dark a[href="les-bambinets.html"] img {
+  filter: drop-shadow(0 0 8px rgba(245, 246, 247, 0.10));
+}
+
+
+/* =========================================
+   PROJET 3 — SECONDE PEAU (DARK)
+   ========================================= */
+
+html.theme-dark a[href="seconde-peau.html"] img {
+  filter: drop-shadow(0 0 14px rgba(245, 246, 247, 0.14));
+}
+
+
+/* =========================================
+   PROJET 4 — FOOD DAY LOVERS (DARK)
+   ========================================= */
+
+html.theme-dark a[href="food-day-lovers.html"] img {
+  filter: drop-shadow(0 0 16px rgba(245, 246, 247, 0.17));
+}
+
+
+/* =========================================
+   BADGES — DESCRIPTIONS PROJETS (THEME LIGHT)
+   ========================================= */
+
+html.theme-light .project-item p {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px 12px;
+
+  border-radius: 999px;
+  background-color: color-mix(
+    in srgb,
+    var(--btn-primary-bg) 12%,
+    transparent
+  );
+  color: var(--btn-primary-bg);
+
+  margin-top: 6px;
+  opacity: 1;
+
+  /* 🔧 FIX ESPACE À DROITE */
+  width: fit-content;
+  max-width: max-content;
+  white-space: nowrap;
+
+    /* 🔑 ALIGNEMENT À GAUCHE */
+  align-self: flex-start;
+}
+
+/* ===============================
+   BADGES — ALIGNEMENT HORIZONTAL
+   =============================== */
+
+.project-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: flex-start; /* 🔥 CLÉ */
+}
+
+/* ===============================
+   FIX ALIGNEMENT MOBILE / TABLETTE
+   =============================== */
+
+@media (max-width: 1100px) {
+  .project-item {
+    align-items: flex-start;
+  }
+}
+
+/* ===============================
+   LARGEUR CONTENU MOBILE / TABLETTE
+   =============================== */
+
+@media (max-width: 1100px) {
+  .project-item img,
+  .project-item h3,
+  .project-badges {
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 767px) and (max-width: 1100px) {
+  .section-inner {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+/* ===============================
+   BADGES — ESPACEMENT MOBILE
+   =============================== */
+
+@media (max-width: 767px) {
+  .project-badges {
+    column-gap: 8px; /* espace horizontal conservé */
+    row-gap: 4px;    /* ⬅️ espace vertical réduit */
+  }
+}
+
+
+/* =========================================
+   BADGES — DESCRIPTIONS PROJETS (THEME DARK)
+   (même fond hover que dropdown + bouton Projets)
+   ========================================= */
+
+html.theme-dark .project-item p {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  /* ✅ fond hover dark (dropdown + bouton Projets) */
+  background: rgba(255, 255, 255, 0.10);
+
+  /* Texte lisible en dark */
+  color: var(--text);
+
+  font-weight: 600;
+
+  margin-top: 6px;
+  opacity: 1;
+
+  width: fit-content;
+  max-width: max-content;
+  white-space: nowrap;
+
+  align-self: flex-start;
+}
+
+/* =========================================
+   BADGES — THEME LIGHT
+   Fond = background + ombre type "En vedette"
+   ========================================= */
+
+html.theme-light .project-item p {
+  background-color: rgba(246, 241, 233, 0.98) !important;
+  color: var(--btn-primary-bg);
+
+  border-radius: 999px;
+  padding: 6px 12px;
+
+  box-shadow:
+    /* halo clair */
+    0 0 24px rgba(246, 241, 233, 0.9),
+
+    /* halo rouge type "En vedette" */
+    0 0 14px color-mix(
+      in srgb,
+      var(--btn-primary-bg) 35%,
+      transparent
+    );
+
+  opacity: 1;
+}
+
+html.theme-light .project-item img {
+  border: 2.4px solid color-mix(
+    in srgb,
+    var(--btn-primary-bg) 21%,
+    transparent
+  ) !important;
+}
+
+/* =========================================
+   BADGES — THEME DARK
+   Fond = bg dark
+   Ombre = couleur bouton "Me contacter"
+   ========================================= */
+
+html.theme-dark .project-item p {
+  /* Fond identique au background dark */
+  color: var(--muted);
+
+  /* Texte inchangé (lisible & éditorial) */
+  color: var(--btn-primary-bg);
+
+  /* Ombre = couleur du bouton primary */
+  box-shadow:
+    0 0 18px color-mix(
+      in srgb,
+      var(--btn-primary-bg) 13%,
+      transparent
+    );
+  
+  padding: 6px 14px;
+}
+
+/* ===============================
+   MOBILE — TITRE "PROJETS"
+   =============================== */
+
+@media (max-width: 767px) {
+  .projects-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+}
+
+/* ===============================
+   MOBILE — ESPACEMENT TITRE PROJETS
+   identique à la page À propos
+   =============================== */
+
+@media (max-width: 767px) {
+  .projects-section {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-title {
+    font-size: 32px;      /* comme décidé */
+    line-height: 1.2;
+    margin-bottom: 40px; /* 👈 réduction nette */
+  }
+}
+
+

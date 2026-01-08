@@ -1,0 +1,2499 @@
+body {
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+
+.nav,
+.btn,
+.cta {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  font-synthesis: none;
+}
+
+
+body {
+  overflow-anchor: none;
+}
+
+:root {
+  --bg: #101112;
+  --text: #f5f6f7;
+  --muted: #c2c6cc;
+  --stroke: #f1f2f3;
+  --ring: #86e7f4;
+  --radius: 18px;
+  --maxw: 1200px;
+}
+
+:root.theme-light {
+  --bg: #ffffff;
+  --text: #0c0d0f;
+  --stroke: #0c0d0f;
+}
+
+:root.theme-dark {
+  --bg: #101112;
+  --text: #f5f6f7;
+  --stroke: #f1f2f3;
+}
+
+/* Transition douce entre light et dark */
+html {
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+
+/* --- GLOBAL --- */
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* --- NAVIGATION --- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+main {
+  padding-top: 82px;
+}
+
+
+.nav-wrap {
+  background: rgba(16,17,18,.75);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid #23252a;
+}
+
+.nav {
+  margin: 0;
+  padding: .9rem 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* MOBILE : padding 16px */
+@media (max-width: 600px) {
+  .nav {
+    padding: 0.9rem 16px !important;
+  }
+}
+
+/* TABLETTE : padding 24px */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .nav {
+    padding: 0.9rem 24px !important;
+  }
+}
+
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: .01em;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+    font-size: 1.05rem;
+    margin-top: 2px;
+  }
+  
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li:nth-child(4) { margin-left: 16px; }
+.nav ul li:nth-child(5) { margin-left: 16px; }
+.nav ul li:nth-child(6) { margin-left: 16px; }
+
+.nav a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* --- BOUTON BURGER --- */
+.nav-toggle {
+  display: none;
+  border: 1px solid #2a2c31;
+  background: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  width: 42px;
+  height: 42px;
+  font-size: 1.4rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* --- RESPONSIVE NAV --- */
+@media (max-width: 1100px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav ul {
+    display: none;
+  }
+}
+
+
+ /* ✅ MEDIA QUERY FERMÉE — PROBLÈME RÉSOLU */
+
+/* --- HERO --- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.hero-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 142px 48px 6rem;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.9rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.lead {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 12px 0 0;
+}
+
+.cta {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* --- BOUCLE SVG pleine largeur --- */
+/* BOUCLE DU HERO (la toute première) */
+.loop-wrap {
+  position: relative;
+  width: 100%;
+  left: 0%;
+  margin-left: 0;
+  margin-bottom: -50px;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.loop-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: rotate(-13deg);     /* 👉 rotation d’origine */
+  transform-origin: center;      /* 👉 pivot correct */
+}
+
+
+/* --- SECTION EN VEDETTE --- */
+.featured {
+  position: relative;
+  background: var(--bg);
+  padding: 3rem 0 50px;
+  margin-top: -1rem;
+  overflow: hidden;
+}
+
+.featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,.15), transparent 55%),
+    radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,.18), transparent 55%),
+    radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,.12), transparent 55%);
+  opacity: .9;
+  mix-blend-mode: lighten;
+  filter: contrast(150%) brightness(105%);
+  pointer-events: none;
+}
+
+/* Alignement hero = featured */
+.section-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.featured h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  text-align: left;
+}
+
+/* Image parfaitement alignée */
+.featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  /* OMBRE — NE BOUGERA JAMAIS */
+  box-shadow: 0 0 14px rgba(245, 246, 247, 0.18);
+  border: 2px solid var(--ui-stroke);
+  transform: translateZ(0);
+}
+
+/* --- SKIP LINK --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  background: #000;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  z-index: 1000;
+  width: auto;
+  height: auto;
+}
+
+/* --- BOUTONS HERO --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 155px;
+  height: 48px;
+  padding: 0 20px;
+  border: 1.8px solid rgba(241, 242, 243, 0.9); /* 40% d’opacité */
+  background: transparent;
+  color: var(--text);
+  border-radius: var(--radius);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all .25s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,.1);
+}
+
+.btn-primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text, #fff);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #c8ccd1;
+}
+
+.divider {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   SECTION — CE QUE JE FAIS (version clean & corrigée)
+   ========================================================= */
+   /* SECTION Ce que je fais */
+/* Titre de la section "Ce que je fais" */
+.services-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 34px 0;  /* uniquement un espace en bas */
+  /* PAS de padding, PAS de width, PAS de max-width */
+}
+
+/* Style de base des cartes (sans layout) */
+.service-card {
+  width: 100%;
+  max-width: 340px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+/* Image dans les cartes */
+.service-card img {
+  width: 100%;
+  display: block;
+  transform: translateZ(0);
+}
+
+/* Layout vertical de la section */
+.services-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* espace entre la ligne du haut et la ligne du bas */
+  width: 100%;
+  margin-bottom: 170px;
+}
+
+/* Ligne du haut : 3 images alignées */
+.services-row-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  /* prend toute la largeur */
+  gap: 40px;
+  width: 100%;
+}
+
+/* Ligne du bas : 2 images centrées */
+.services-row-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centre le groupe */
+  gap: 40px;
+  width: 100%;
+}
+
+.service-card {
+  border: 1.8px solid rgba(255, 255, 255, 0.70);   /* un peu plus présent */
+  box-shadow: 0 0 14px rgba(245, 246, 247, 0.18);
+  border-radius: 24px;
+}
+
+/* Aligne l’espacement entre la courbe et la section "Ce que je fais" */
+.services-section {
+  margin-top: 160px !important;  /* même espacement que celui utilisé au-dessus */
+  margin-bottom: 160px;
+}
+
+.divider-wrap {
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+  margin-top: 40px;
+}
+
+.divider {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Espacement identique au premier divider */
+  margin-top: 120px;
+}
+
+/* SECTION Témoignage */
+.testimonial-section {
+  width: 100%;
+  margin-top: 160px;  /* 👉 même espacement que la section "Ce que je fais" */
+}
+
+.testimonial-image-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1.8px solid rgba(255, 255, 255, 0.60);
+  box-shadow: 0 0 14px rgba(245, 246, 247, 0.18);
+}
+
+.testimonial-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+}
+
+/* ESPACEMENT IDENTIQUE AUX SECTIONS */
+.loop-section {
+  margin-top: 160px; /* même espacement que tes autres sections ! */
+}
+
+/* EXACTEMENT la même structure que tes précédents dividers */
+.loop-wrap {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.loop-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SECTION Collaboration */
+.collaboration-section {
+  margin-top: 120px; /* même espacement que tes autres sections */
+  text-align: center;
+}
+
+.collaboration-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;      /* 👉 même taille que “Ce que je fais” */
+  line-height: 1.2;
+  margin: 0 0 34px 0;   /* 👉 espacement demandé sous le titre */
+}
+
+.collab-cta {
+  display: flex;
+  justify-content: center;
+}
+
+/* SECTION Collaboration */
+.collaboration-section {
+  margin-top: -120px; /* même espacement que les autres sections */
+  text-align: left;  /* alignement à gauche */
+}
+
+.collaboration-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 40px;       /* même taille que “Ce que je fais” */
+  line-height: 1.2;
+  margin: 0 0 16px 0;    /* espacement sous le titre */
+}
+
+/* Bouton aligné à gauche */
+.collab-cta {
+  display: flex;
+  justify-content: flex-start; /* bouton à gauche */
+}
+
+body {
+  padding-bottom: 48px;
+}
+
+/* Centrage parfait du logo LinkedIn */
+.nav-linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.dropdown-menu {
+  display: none; /* fermé par défaut */
+}
+.theme-dropdown.open .dropdown-menu {
+  display: flex;
+}
+
+/* === Dropdown calqué sur le style des boutons === */
+/* --- Dropdown Button Compact (version finale) --- */
+.dropdown-button {
+  height: 48px;
+  padding: 0 24px; /* plus compact */
+  border: 1.8px solid rgba(241, 242, 243, 0.9); /* 90% d’opacité */
+  background: transparent;
+  color: var(--text);
+  border-radius: var(--radius);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+
+  /* Compact & centré */
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* ❗compacte l’espace */
+  gap: 12px;                  /* ❗espace idéal entre texte + flèche */
+
+  /* remove forced width */
+  min-width: auto !important;
+  width: auto !important;
+  max-width: none !important;
+
+  cursor: pointer;
+}
+
+.dropdown-button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Menu déroulant */
+.dropdown-menu {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  background: var(--bg);
+  border: 1.8px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 0 !important; /* 🔥 supprime tout espace haut et bas */
+  width: 100%;
+}
+.dropdown-menu button {
+  background: transparent;
+  color: var(--text);
+  border: none;
+  text-align: left;
+  padding: 10px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+   /* centrage propre */
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   text-align: left;
+ 
+   padding: 0 24px;     /* plus de padding haut/bas */
+   height: 32px;        /* ou 34/36 si tu veux un peu plus haut */
+   line-height: 1;
+}
+.dropdown-menu button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.theme-dropdown {
+  position: relative;
+  z-index: 500;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 100%;
+  background: var(--bg);
+  border: 1.8px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 6px 0;
+  z-index: 600;
+}
+
+.theme-dropdown.open .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.theme-dropdown {
+  position: relative;
+  z-index: 1100;
+}
+
+.dropdown-menu {
+  z-index: 1200;
+}
+
+.nav ul {
+  position: relative;
+  z-index: 1000;
+}
+
+.theme-dropdown {
+  position: relative;
+  z-index: 2000;
+}
+
+.dropdown-menu {
+  z-index: 3000;
+}
+
+
+/* Correction optique du premier item */
+.dropdown-menu button:first-child {
+  padding-top: 12px;      /* +2px pour compenser l’arrondi du haut */
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(241,242,243,0.15);
+}
+
+/* Correction optique du dernier item */
+.dropdown-menu button:last-child {
+  padding-top: 10px;
+  padding-bottom: 12px;   /* +2px pour compenser l’arrondi du bas */
+}
+
+/* =========================================================
+   MENU HAMBURGER – PANNEAU FLOTTANT (version qui marchait)
+   ========================================================= */
+/* ✔ Fixe TOUS les items du menu hamburger à la même largeur */
+.nav[aria-expanded="true"] ul li {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* aligne tout à gauche */
+  margin: 0;
+  padding: 0;
+}
+
+/* ✔ Les liens et boutons à l'intérieur prennent toute la largeur */
+.nav[aria-expanded="true"] ul li > * {
+  width: 100%;
+  text-align: left;
+}
+
+/* ✔ Supprime les effets du menu desktop */
+@media (max-width: 1100px) {
+  .nav ul {
+      gap: 0 !important;
+  }
+}
+
+/* === MENU HAMBURGER – panneau flottant (version stable) === */
+
+@media (max-width: 1100px) {
+
+  /* Affiche le panneau quand aria-expanded = true */
+  .nav[aria-expanded="true"] ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      position: absolute;
+      top: 60px;
+      right: 16px;
+      width: 260px;
+
+      background: rgba(16,17,18,.92);
+      backdrop-filter: saturate(160%) blur(14px);
+      border: 1px solid #262a2f;
+      border-radius: 18px;
+      padding: 1.25rem;
+
+      z-index: 5000;
+
+      align-items: flex-start; /* aligne tout à gauche */
+      text-align: left;
+  }
+
+  /* Tous les items du menu = alignés à gauche */
+  .nav[aria-expanded="true"] ul li {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+      padding: 0;
+  }
+
+  /* Tous les liens / boutons prennent toute la largeur */
+  .nav[aria-expanded="true"] ul li > * {
+      width: 100%;
+      text-align: left;
+      justify-content: flex-start;
+      display: flex;
+  }
+}
+
+/* Empêche le menu hamburger de forcer l'ouverture du dropdown */
+@media (max-width: 1100px) {
+  .theme-dropdown .dropdown-menu {
+    display: none !important;
+  }
+
+  .theme-dropdown.open .dropdown-menu {
+    display: flex !important;
+  }
+}
+
+/* Empêche le bouton Me contacter de s'étirer dans le menu hamburger */
+@media (max-width: 1100px) {
+  .nav[aria-expanded="true"] ul li .btn-primary {
+    width: auto !important;
+    min-width: 155px !important; /* même largeur qu’en desktop */
+    justify-content: center !important;
+  }
+}
+
+/* MENU HAMBURGER — Version compacte */
+@media (max-width: 1100px) {
+  .nav[aria-expanded="true"] ul {
+    width: 210px !important;  /* largeur plus élégante */
+    padding: 1rem !important; /* léger resserrement interne */
+    right: 20px !important;   /* ajustement pour un alignement parfait */
+  }
+
+  /* Ajuste l’espacement entre les éléments pour un rendu plus compact */
+  .nav[aria-expanded="true"] ul li {
+    margin: 6px 0 !important;
+  }
+
+  /* Alignement plus naturel du dropdown de thème dans le panneau */
+  .theme-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* ----------------------------- */
+/* DROPDOWN MOBILE À GAUCHE DU BURGER */
+/* ----------------------------- */
+
+/* Par défaut (desktop) → on cache le dropdown mobile */
+.mobile-theme {
+  display: none;
+}
+
+/* Mobile : on affiche le dropdown juste à côté du hamburger */
+@media (max-width: 1100px) {
+
+  .mobile-theme {
+    display: flex;
+    align-items: center;
+    margin-right: 12px; /* espace avant burger */
+  }
+
+  /* On garde le dropdown ABSENT du menu hamburger */
+  .nav[aria-expanded="true"] ul .theme-dropdown {
+    display: none !important;
+  }
+}
+
+/* Conteneur à droite du header */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto; /* pousse le groupe complètement à droite */
+}
+
+/* Desktop : on cache le dropdown mobile */
+@media (min-width: 1101px) {
+  .mobile-theme {
+    display: none !important;
+  }
+}
+
+/* Empêche le hamburger d'être étiré / écrasé */
+.nav-toggle {
+  width: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+/* === Stroke plus visible mais même épaisseur === */
+:root {
+  --ui-stroke: rgba(241, 242, 243, 0.55); /* intensification légère du stroke */
+}
+
+/* Hamburger (fermé ou ouvert) */
+.nav-toggle {
+  border-color: var(--ui-stroke) !important;
+}
+
+/* Bouton "Projets" (bouton secondaire) */
+.btn {
+  border-color: var(--ui-stroke) !important;
+}
+
+/* Dropdown principal (Dark ▼) */
+.dropdown-button {
+  border-color: var(--ui-stroke) !important;
+}
+
+/* Contour du menu déroulant du dropdown */
+.dropdown-menu {
+  border-color: var(--ui-stroke) !important;
+}
+
+/* Harmoniser la bordure du panneau du menu hamburger */
+@media (max-width: 1100px) {
+  .nav[aria-expanded="true"] ul {
+    border: 1px solid var(--ui-stroke) !important;
+  }
+}
+
+/* === Hamburger de la même taille visuelle que le dropdown === */
+.nav-toggle {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--ui-stroke) !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 !important;
+  font-size: 20px !important; /* taille du symbole ▢ */
+  flex-shrink: 0 !important;
+}
+
+/* ==== AUGMENTATION DE 0.2PX DES STROKES ==== */
+
+/* Bouton Projets : 1.8px → 2px */
+.btn {
+  border-width: 2px !important;
+}
+
+/* Hamburger : 1px → 1.2px */
+.nav-toggle {
+  border-width: 1.8px !important;
+}
+
+/* Panneau du menu hamburger : 1px → 1.2px */
+@media (max-width: 1100px) {
+  .nav[aria-expanded="true"] ul {
+    border-width: 1.8px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav[aria-expanded="true"] ul {
+    padding-right: 0px !important; /* au lieu de 20 */
+    padding-left: 25px !important;
+  }
+}
+
+
+/* Centrage optique de l’icône du hamburger */
+.nav-toggle {
+  width: 48px !important;
+  height: 48px !important;
+  font-size: 24px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  line-height: 1 !important;
+  padding: 0 !important;
+
+  /* petit décalage vers le bas pour corriger l’optique */
+  padding-top: 0px !important;
+  padding-bottom: 4px !important;
+}
+
+/* Espacement interne du panneau du menu hamburger */
+@media (max-width: 1100px) {
+  .nav[aria-expanded="true"] ul li {
+    margin-bottom: 12px; /* espace entre Projets / À propos / CV */
+  }
+
+  /* Espace supplémentaire au-dessus du logo LinkedIn */
+  .nav[aria-expanded="true"] ul li a[href*="linkedin"] {
+    margin-top: 8px;
+  }
+
+  /* Espace supplémentaire au-dessus du bouton Me contacter */
+  .nav[aria-expanded="true"] ul li:last-child {
+    margin-top: 12px;
+  }
+}
+
+/* Plus d'espace entre le logo LinkedIn et le bouton "Me contacter" */
+@media (max-width: 1100px) {
+
+  /* Espace plus large avant le bouton dans le panneau hamburger */
+  .nav[aria-expanded="true"] ul li:last-child {
+    margin-top: 16px !important; /* augmenté depuis 12px */
+  }
+
+}
+
+/* Cacher le hamburger en desktop */
+@media (min-width: 1101px) {
+  .nav-toggle {
+    display: none !important;
+  }
+}
+
+/* =============================== */
+/*   FEATURED IMAGE – HOVER PROJET */
+/* =============================== */
+
+.featured-image {
+  display: block;
+  border-radius: 24px;
+  cursor: pointer;
+
+  /* Prépare l’animation */
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover uniquement sur devices compatibles */
+@media (hover: hover) and (pointer: fine) {
+  .featured-image:hover img {
+    transform: scale(1.03);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .featured-image:hover .featured-inner {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  /* IMPORTANT : autorise le scroll */
+  touch-action: manipulation;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* =============================== */
+/* CE QUE JE FAIS — DESKTOP EN LIGNE */
+/* =============================== */
+
+@media (min-width: 1101px) {
+
+  .services-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  /* On neutralise les anciennes lignes */
+  .services-row-bottom-wrapper,
+  .services-row-bottom {
+    display: contents;
+  }
+
+  /* Toutes les cartes sur une ligne */
+  .service-card {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+
+/* =============================== */
+/* CE QUE JE FAIS — TABLETTE FINAL */
+/* =============================== */
+@media (min-width: 600px) and (max-width: 1100px) {
+
+  /* Neutralise les wrappers */
+  .services-row-bottom-wrapper,
+  .services-row-bottom {
+    display: contents !important;
+  }
+
+.services-layout {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+
+  column-gap: 40px !important; /* espace horizontal */
+  row-gap: 40px !important;    /* 🔼 espace vertical augmenté */
+
+  width: 100% !important;
+}
+
+
+  /* Taille des cartes (plus grandes) */
+  .service-card {
+    grid-column: span 2 !important;    /* 3 cartes par ligne */
+    width: 100% !important;
+    max-width: 300px !important;       /* 🔼 cartes plus larges */
+  }
+
+  /* Alignement parfait en haut (touchent les bords) */
+  .service-1 { justify-self: start; }
+  .service-2 { justify-self: center; }
+  .service-3 { justify-self: end; }
+
+  /* Centrage mathématique des 2 cartes du bas */
+  .service-4 { grid-column: 2 / span 2 !important; }
+  .service-5 { grid-column: 4 / span 2 !important; }
+
+  /* Carte 6 cachée en tablette */
+  .service-6 {
+    display: none !important;
+  }
+}
+
+/* ================================= */
+/* CE QUE JE FAIS — MOBILE FINAL */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+  /* 1️⃣ On cache les cartes inutiles */
+  .service-2,
+  .service-3 {
+    display: none !important;
+  }
+
+  /* 2️⃣ On force l'affichage de la carte 6 */
+  .service-6 {
+    display: block !important;
+  }
+
+  /* 3️⃣ On neutralise les anciennes lignes desktop */
+  .services-row-bottom-wrapper,
+  .services-row-bottom {
+    display: contents;
+  }
+
+  /* 4️⃣ On crée une vraie grille mobile */
+  .services-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  /* 5️⃣ Sécurité taille */
+  .service-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .service-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Par défaut : carte 6 cachée */
+.service-6 {
+  display: none;
+}
+
+/* Mobile UNIQUEMENT : carte 6 visible */
+@media (max-width: 600px) {
+  .service-6 {
+    display: block;
+  }
+}
+
+/* Mobile boutons */
+@media (max-width: 599px) {
+  .cta {
+    flex-direction: column;
+    align-items: flex-start; /* garde la largeur naturelle */
+  }
+}
+
+/* Boucle 1 Mobile */
+@media (max-width: 599px) {
+  .loop-svg {
+    transform:
+      translateX(-1%)
+      translateY(-32px)   /* 🔼 fait remonter la boucle */
+      rotate(-22deg)
+      scale(1.05);
+
+    transform-origin: center center;
+  }
+}
+
+/* Espacement En Vedette (au dessus) Tablette */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .featured {
+    margin-top: -32px; /* ajuste ici */
+  }
+}
+
+/* Espacement En Vedette (au dessus) Mobile */
+@media (max-width: 599px) {
+  .featured {
+    margin-top: -78px; /* un peu plus d’air en mobile */
+  }
+}
+
+/* Séparateur 1 */
+@media (min-width: 600px) and (max-width: 1100px) {
+
+  .divider-wrap {
+    margin-top: 80px;   /* espace AU-DESSUS du séparateur */
+  }
+
+  .divider {
+    margin-top: 80px;   /* espace EN-DESSOUS du séparateur */
+  }
+}
+
+@media (max-width: 599px) {
+
+  .divider-wrap {
+    margin-top: -40px;   /* espace AU-DESSUS */
+  }
+
+  .divider {
+    margin-top: 64px;   /* espace EN-DESSOUS */
+  }
+}
+
+/* Espacement Ce que je fais (dessus et dessous) Tablett et Mobile */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .services-section {
+    margin-top: 120px !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .services-section {
+    margin-top: 72px !important;
+  }
+}
+
+/* Séparateur 2 */
+@media (min-width: 600px) and (max-width: 1100px) {
+
+  .divider-spacer + .divider-wrap {
+    margin-top: -40px;
+  }
+
+  .divider-spacer + .divider-wrap .divider {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 599px) {
+
+  .divider-spacer + .divider-wrap {
+    margin-top: -72px;
+  }
+
+  .divider-spacer + .divider-wrap .divider {
+    margin-top: 96px;
+  }
+}
+
+/* Espacement Un avis qui compte (dessus et dessous) Tablett et Mobile */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .testimonial-section {
+    margin-top: 136px;
+  }
+}
+
+@media (max-width: 599px) {
+  .testimonial-section {
+    margin-top: 96px;
+  }
+}
+
+/* Boucle final */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .loop-section {
+    margin-top: 136px;
+  }
+}
+
+@media (max-width: 599px) {
+  .loop-section {
+    margin-top: 96px;
+  }
+}
+
+/* Espacement Une collaboration (dessus et dessous) Desktop, Tablett et Mobile (taille font mobile titre)*/
+@media (min-width: 1101px) {
+  .collaboration-section {
+    margin-top: -80px;  /* effet de chevauchement maîtrisé */
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .collaboration-section {
+    margin-top: -80px;   /* moins agressif que desktop */
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .collaboration-section {
+    margin-top: -48px;   /* moins agressif que desktop */
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 599px) {
+  .collaboration-section {
+    margin-top: -32px;
+    margin-bottom: 32px;
+  }
+
+  .collaboration-section h2 {
+  font-size: 28px;
+  }
+}
+
+/* Taille identique aux autres titres — TABLETTE */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .collaboration-section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+}
+
+
+/* Espacement contenu principal (dessus) Mobile */
+@media (max-width: 599px) {
+  main {
+    margin-top: -72px;
+  }
+}
+
+/* Taille fonte Ce que je fais Mobile */
+@media (max-width: 599px) {
+  .services-section h2 {
+    font-size: 28px;
+      font-weight: 700;
+  }
+}
+
+/* Taille fonte Ce que je fais — TABLETTE */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .services-section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+}
+
+
+/* ==================================================
+   THEME LIGHT — PAPIER TECHNIQUE / EDITORIAL
+   ================================================== */
+
+:root.theme-light {
+  /* Fonds */
+--bg: #f6f1e9;       /* crème un peu plus lumineux */
+--bg-soft: #fcf9f5; /* surface plus aérienne */
+
+
+  /* Textes */
+  --text: #0e1116;
+  --muted: #2f343a;
+
+  /* Strokes */
+  --stroke: rgba(14,17,22,0.12);
+  --ui-stroke: rgba(14,17,22,0.16);
+
+  /* Accent (bleu grisé data) */
+  --accent: #6b8fbf;
+  --accent-soft: rgba(107,143,191,0.14);
+
+  /* Ombres */
+  --shadow: 0 8px 24px rgba(14,17,22,0.08);
+}
+
+:root.theme-light .nav-wrap {
+  background-color: rgba(246, 241, 233, 0.96);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid rgba(14,17,22,0.08);
+}
+/* Liens */
+:root.theme-light .nav a:hover {
+  color: var(--btn-primary-bg);
+  text-decoration: none;
+}
+
+/* Focus clavier */
+:root.theme-light :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Bouton secondaire */
+:root.theme-light .btn:not(.btn-primary):hover {
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+:root.theme-light .service-card,
+:root.theme-light .testimonial-image-wrap,
+:root.theme-light .featured-image img {
+  background: var(--bg-soft);
+}
+
+:root.theme-light body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+
+  mix-blend-mode: multiply;
+}
+
+/* ===============================
+   FIX — PAS DE SOULIGNEMENT SUR BOUTONS
+   =============================== */
+
+:root.theme-light .btn:focus-visible {
+  text-decoration: none !important;
+}
+
+/* ===============================
+   BOUTONS — THEME LIGHT (COULEUR)
+   =============================== */
+
+:root.theme-dark {
+  --btn-primary-bg: var(--text);
+  --btn-primary-text: #f6f4ef;
+}
+
+:root.theme-light {
+  --btn-primary-bg: #B34755;
+  --btn-primary-text: #f6f4ef;
+}
+
+:root.theme-light {
+  --ui-stroke: #B34755;
+}
+
+/* Par défaut : light */
+.loop-dark {
+  display: none;
+}
+
+.loop-light {
+  display: block;
+}
+
+/* Mode sombre */
+.theme-dark .loop-dark {
+  display: block;
+}
+
+.theme-dark .loop-light {
+  display: none;
+}
+
+.loop-wrap {
+  overflow: visible;
+}
+
+/* ===============================
+   ÉPAISSEUR DES STROKES – THEME LIGHT
+   =============================== */
+
+:root.theme-light {
+  --stroke-width: 2.44px;   /* ← ajuste ici */
+}
+
+:root.theme-light .btn {
+  border-width: 2.44px !important;
+}
+
+
+:root.theme-light * {
+  border-width: var(--stroke-width);
+}
+
+/* ===============================
+   COULEUR TITRE THEME LIGHT
+   =============================== */
+/* Couleur accentuée uniquement en thème light */
+:root.theme-light .highlight {
+  color: var(--btn-primary-bg);
+  font-weight: 700;
+  text-shadow: 0 0 0.01px currentColor;
+}
+
+/* ===============================
+   HOVER DARK ET LIGHT NAV BAR
+   =============================== */
+:root.theme-light .nav a:hover {
+  color: var(--btn-primary-bg);
+  text-decoration: none;
+}
+
+:root.theme-dark .nav a:hover {
+  color: #c8ccd1;
+  text-decoration: none;
+}
+
+/* ===============================
+   THEME LIGHT — DROPDOWN HOVER/OPEN
+   =============================== */
+
+/* 1) Dès que la souris entre sur le dropdown (bouton OU menu), le bouton devient "hover" */
+:root.theme-light .theme-dropdown:hover .dropdown-button,
+:root.theme-light .theme-dropdown.open .dropdown-button {
+  color: var(--btn-primary-bg);
+}
+
+/* Dropdown : PAS de changement de couleur du texte */
+:root.theme-light .dropdown-menu button:hover {
+  color: inherit; /* garde la couleur normale */
+  background: color-mix(
+    in srgb,
+    var(--btn-primary-bg) 12%,
+    transparent
+  );
+}
+
+/* (optionnel) Transition douce */
+:root.theme-light .dropdown-button,
+:root.theme-light .dropdown-menu button {
+  transition: color .15s ease, background .15s ease;
+}
+
+/* Hover bouton "Projets" — thème light */
+:root.theme-light .btn:not(.btn-primary):hover {
+  color: inherit;
+  background: color-mix(
+    in srgb,
+    var(--btn-primary-bg) 12%,
+    transparent
+  );
+}
+
+/* Bouton "Me contacter" — hover & active (theme light) */
+:root.theme-light .btn-primary:hover,
+:root.theme-light .btn-primary:active {
+  color: inherit; /* garde la couleur du texte */
+  background: color-mix(
+    in srgb,
+    var(--btn-primary-bg) 12%,
+    transparent
+  );
+}
+
+/* ======================================
+   BOUTON "ME CONTACTER" — THEME LIGHT
+   ====================================== */
+
+:root.theme-light .btn-primary {
+  color: var(--bg);
+}
+
+:root.theme-light .btn-primary:hover,
+:root.theme-light .btn-primary:active {
+  background: color-mix(
+    in srgb,
+    var(--btn-primary-bg) 85%,
+    transparent
+  );
+}
+
+/* FIX — Texte du bouton "Me contacter" identique au background (theme light) */
+:root.theme-light .btn-primary,
+:root.theme-light .btn-primary:hover,
+:root.theme-light .btn-primary:focus,
+:root.theme-light .btn-primary:active {
+  color: var(--bg) !important;
+}
+
+/* FIX — Bouton "Me contacter" en thème DARK */
+:root.theme-dark .btn-primary,
+:root.theme-dark .btn-primary:hover,
+:root.theme-dark .btn-primary:focus,
+:root.theme-dark .btn-primary:active {
+  color: var(--bg) !important;
+}
+
+/* ==========================================
+   THEME DARK — STROKES = TEXTE DU BOUTON
+   ========================================== */
+
+:root.theme-dark {
+  --ui-stroke: var(--btn-primary-text);
+}
+
+/* Bouton "Projets" */
+:root.theme-dark .btn {
+  border-color: var(--btn-primary-text) !important;
+}
+
+/* Dropdown (bouton + menu) */
+:root.theme-dark .dropdown-button,
+:root.theme-dark .dropdown-menu {
+  border-color: var(--btn-primary-text) !important;
+}
+
+/* Menu hamburger */
+:root.theme-dark .nav-toggle,
+:root.theme-dark .nav[aria-expanded="true"] ul {
+  border-color: var(--btn-primary-text) !important;
+}
+
+/* ======================================
+   THEME LIGHT — ICÔNE LINKEDIN
+   ====================================== */
+
+:root.theme-light .nav-linkedin svg {
+  color: var(--btn-primary-bg);
+  transition: color 0.2s ease;
+}
+
+/* Hover → plus clair (vers le fond clair) */
+:root.theme-light .nav-linkedin:hover svg {
+  color: color-mix(
+    in srgb,
+    var(--btn-primary-bg) 85%,
+    white
+  );
+}
+
+/* ======================================
+   THEME LIGHT — MENU HAMBURGER (FLU FLOUTÉ)
+   ====================================== */
+@media (max-width: 1100px) {
+  :root.theme-light .nav[aria-expanded="true"] ul {
+    background: rgba(246, 241, 233, 0.98); /* ← clé du flou */
+
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+
+    border: 1px solid var(--ui-stroke);
+  }
+}
+
+/* ======================================
+   ÉPAISSIR LES STROKES DU MENU HAMBURGER
+   ====================================== */
+
+/* Bouton hamburger (fermé & ouvert) */
+.nav-toggle {
+  border-width: 2.4px !important;
+}
+
+/* Panneau du menu hamburger */
+@media (max-width: 1100px) {
+  .nav[aria-expanded="true"] ul {
+    border-width: 2.4px !important;
+  }
+}
+
+/* ======================================
+   BOUTON "PROJETS" — FOND IDENTIQUE AU BACKGROUND
+   ====================================== */
+
+:root.theme-light .btn:not(.btn-primary) {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ======================================
+   TEXTE — NOIR TEINTÉ DU ROUGE PRINCIPAL
+   ====================================== */
+
+:root.theme-light {
+  --text-main: color-mix(
+    in srgb,
+    #000 92%,
+    var(--btn-primary-bg)
+  );
+}
+
+:root.theme-light {
+  color: var(--text-main);
+}
+
+:root.theme-light body {
+  color: var(--text-main);
+}
+
+/* Par défaut : LIGHT */
+.divider-dark {
+  display: none;
+}
+
+.divider-light {
+  display: block;
+}
+
+/* Mode DARK */
+.theme-dark .divider-dark {
+  display: block;
+}
+
+.theme-dark .divider-light {
+  display: none;
+}
+
+/* ======================================
+   SÉPARATEUR 2
+   ====================================== */
+
+/* Par défaut : light */
+.divider-dark {
+  display: none;
+}
+
+.divider-light {
+  display: block;
+}
+
+/* Mode dark */
+.theme-dark .divider-dark {
+  display: block;
+}
+
+.theme-dark .divider-light {
+  display: none;
+}
+
+/* ======================================
+   SÉPARATEUR 3
+   ====================================== */
+
+   /* Par défaut : light */
+.divider-dark {
+  display: none;
+}
+
+.divider-light {
+  display: block;
+}
+
+/* Mode dark */
+.theme-dark .divider-dark {
+  display: block;
+}
+
+.theme-dark .divider-light {
+  display: none;
+}
+
+/* ======================================
+   SÉPARATEUR 4
+   ====================================== */
+
+   /* =====================================
+   FIX CIBLÉ — BOUCLE FINALE UNIQUEMENT
+   ===================================== */
+
+.loop-section {
+  position: relative;
+  isolation: isolate; /* empêche toute interaction avec les sections voisines */
+}
+
+.loop-wrap--final {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;       /* ne touche plus aux autres espacements */
+  pointer-events: none; /* purement décoratif */
+}
+
+/* =====================================
+   BOUCLE DE CLÔTURE — SWITCH THEME (ciblé)
+   N'affecte AUCUNE autre section
+   ===================================== */
+
+.loop-section .divider-dark { display: none !important; }
+.loop-section .divider-light { display: block !important; }
+
+/* Quand le <html> est en theme-dark */
+html.theme-dark .loop-section .divider-dark { display: block !important; }
+html.theme-dark .loop-section .divider-light { display: none !important; }
+
+/* AGRANDIR UNIQUEMENT LA BOUCLE FINALE EN MODE LIGHT */
+html.theme-light .loop-wrap--final .divider-light {
+  width: 115%;          /* ajuste si besoin */
+  max-width: none;
+  margin-left: -7.5%;   /* recentrage visuel */
+}
+
+/* ================================
+   FIX SAFARI — FLASH AU CHARGEMENT
+   ================================ */
+
+.values-item img,
+.featured-image img,
+.testimonial-image {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  will-change: opacity;
+}
+
+html.loaded .values-item img,
+html.loaded .featured-image img,
+html.loaded .testimonial-image {
+  opacity: 1;
+}
+
+/* Texte selon le thème */
+html.theme-dark .theme-dropdown .label::before {
+  content: "Dark";
+}
+
+html.theme-light .theme-dropdown .label::before {
+  content: "Light";
+}
+
+/* =========================================
+   IMAGE "EN VEDETTE" — THEME LIGHT
+   ========================================= */
+
+html.theme-light .featured-image-main {
+  content: url("images/en-vedette-rouge-desktop.png");
+}
+
+/* TABLETTE */
+@media (min-width: 1000px) and (max-width: 1100px)  {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-tablette.png");
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 900px) and (max-width: 1000px)  {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-tablette-1000.png");
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 800px) and (max-width: 900px)  {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-tablette-900.png");
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 700px) and (max-width: 800px)  {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-tablette-800.png");
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 601px) and (max-width: 700px)  {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-tablette-700.png");
+  }
+}
+
+/* MOBILE */
+@media (min-width: 550px) and (max-width: 600px) {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-mobile.png");
+  }
+}
+
+/* MOBILE */
+@media (min-width: 500px) and (max-width: 549px) {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-mobile-549.png");
+  }
+}
+
+/* MOBILE */
+@media (min-width: 450px) and (max-width: 499px) {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-mobile-499.png");
+  }
+}
+
+/* MOBILE */
+@media (min-width: 400px) and (max-width: 449px) {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-mobile-449.png");
+  }
+}
+
+/* MOBILE */
+@media (min-width: 350px) and (max-width: 399px) {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-mobile-400.png");
+  }
+}
+
+/* MOBILE */
+@media (min-width: 300px) and (max-width: 349px) {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-mobile-350.png");
+  }
+}
+
+/* MOBILE */
+@media (max-width: 299px) {
+  html.theme-light .featured-image-main {
+    content: url("images/en-vedette-rouge-mobile-300.png");
+  }
+}
+
+/* =========================================
+   EN VEDETTE — OMBRE ROUGE (THEME LIGHT)
+   ========================================= */
+
+html.theme-light .featured-image img {
+  border: 2.4px solid color-mix(
+    in srgb,
+    var(--btn-primary-bg) 21%,
+    transparent
+  );
+
+  box-shadow:
+    /* halo clair (fond) */
+    0 0 32px rgba(246, 241, 233, 0.85),
+
+    /* halo rouge existant */
+    0 0 18px color-mix(
+      in srgb,
+      var(--btn-primary-bg) 40%,
+      transparent
+    );
+}
+
+:root.theme-light {
+  --text: #0e1116 !important;
+}
+
+/* =================================================
+   HERO — DESCRIPTION "JE VALORISE LE BUSINESS"
+   TAILLE FIXE PAR INTERFACE (OVERRIDE TOTAL)
+   ================================================= */
+
+/* DESKTOP */
+@media (min-width: 1101px) {
+  .hero .lead {
+    font-size: 1.1rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .hero .lead {
+    font-size: 1.05rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  .hero .lead {
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* ===============================
+   HERO — TEXTE PLUS MARQUÉ
+   =============================== */
+
+.hero .lead {
+  font-weight: 500 !important;
+}
+
+/* ======================================
+   HERO — COULEUR TEXTE À 90 %
+   ====================================== */
+
+.hero .lead {
+  color: rgba(14, 17, 22, 0.9) !important;
+}
+
+/* =========================================
+   HERO — RÉDUCTION ESPACEMENT TEXTE MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+  .hero .lead {
+    line-height: 1.3 !important;
+  }
+}
+
+/* =========================================
+   HOVER SECTON "EN VEDETTE"
+   ========================================= */
+
+.featured-image img {
+  will-change: transform;
+}
+
+/* Animation */
+@keyframes gentleZoom {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.004);
+  }
+  100% {
+    transform: scale(1.012);
+  }
+}
+
+/* Hover */
+@media (hover: hover) and (pointer: fine) {
+  .featured-image:hover img {
+    animation: gentleZoom 1.6s cubic-bezier(0.35, 0.05, 0.15, 1) forwards;
+  }
+
+  .featured-image:not(:hover) img {
+    animation: none;
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   CE QUE JE FAIS — IMAGES ROUGES (THEME LIGHT)
+   ========================================= */
+
+html.theme-light .service-1 img {
+  content: url("images/ce-que-je-fais-1-rouge.png");
+}
+
+html.theme-light .service-2 img {
+  content: url("images/ce-que-je-fais-2-rouge.png");
+}
+
+html.theme-light .service-3 img {
+  content: url("images/ce-que-je-fais-3-rouge.png");
+}
+
+html.theme-light .service-4 img {
+  content: url("images/ce-que-je-fais-4-rouge.png");
+}
+
+html.theme-light .service-5 img {
+  content: url("images/ce-que-je-fais-5-rouge.png");
+}
+
+html.theme-light .service-6 img {
+  content: url("images/ce-que-je-fais-6-rouge.png");
+}
+
+/* =========================================
+   CE QUE JE FAIS — OMBRE & STROKE (THEME LIGHT)
+   ========================================= */
+
+html.theme-light .service-card {
+  border-color: color-mix(
+    in srgb,
+    var(--btn-primary-bg) 25%,
+    transparent
+  ) !important;
+
+  box-shadow:
+    /* halo clair (fond) */
+    0 0 32px rgba(246, 241, 233, 0.85),
+
+    /* halo rouge existant */
+    0 0 18px color-mix(
+      in srgb,
+      var(--btn-primary-bg) 40%,
+      transparent
+    );
+}
+
+/* =========================================
+   UN AVIS QUI COMPTE — IMAGE DESKTOP (THEME LIGHT)
+   ========================================= */
+
+html.theme-light .testimonial-image {
+  content: url("images/un-avis-qui-compte-rouge-desktop.png");
+}
+
+/* TABLETTE */
+@media (min-width: 840px) and (max-width: 1100px) {
+  html.theme-light .testimonial-image {
+    content: url("images/un-avis-qui-compte-rouge-tablette.png");
+  }
+}
+@media (min-width: 751px) and (max-width: 839px) {
+  html.theme-light .testimonial-image {
+    content: url("images/un-avis-qui-compte-rouge-tablette-max839.png");
+  }
+}
+
+@media (min-width: 600px) and (max-width: 750px) {
+  html.theme-light .testimonial-image {
+    content: url("images/un-avis-qui-compte-rouge-tablette-max750.png");
+  }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  html.theme-light .testimonial-image {
+    content: url("images/un-avis-qui-compte-rouge-mobile.png");
+  }
+}
+
+/* =========================================
+   UN AVIS QUI COMPTE — STROKE + OMBRE (THEME LIGHT)
+   ========================================= */
+
+html.theme-light .testimonial-image-wrap {
+  border: 2.4px solid color-mix(
+    in srgb,
+    var(--btn-primary-bg) 21%,
+    transparent
+  );
+
+  box-shadow:
+    /* halo clair */
+    0 0 32px rgba(246, 241, 233, 0.85),
+
+    /* halo rouge */
+    0 0 18px color-mix(
+      in srgb,
+      var(--btn-primary-bg) 40%,
+      transparent
+    );
+}
+
+/* =========================================
+   FIX — SOULIGNEMENT NAV EN MODE MOBILE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+  /* Empêche le lien de prendre toute la largeur */
+  .nav[aria-expanded="true"] ul li a {
+    width: fit-content !important;
+  }
+
+  /* Sécurise l’alignement du soulignement */
+  .nav[aria-expanded="true"] ul li a::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1101px) {
+  .collaboration-section {
+    margin-bottom: 0px;
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .collaboration-section {
+    margin-bottom: 0px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  .collaboration-section {
+    margin-bottom: 0px;
+  }
+}
+
+/* ===========================
+   ESPACEMENT BAS DE PAGE
+   =========================== */
+   
+/* DESKTOP */
+@media (min-width: 1101px) {
+  body {
+    padding-bottom: 48px;
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 600px) and (max-width: 1100px) {
+  body {
+    padding-bottom: 48px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  body {
+    padding-bottom: 48px;
+  }
+}
+
+/* ===============================
+   TYPOGRAPHIE GLOBALE
+   =============================== */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+p, li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* =====================================
+   HERO — gestion du retour à la ligne
+   ===================================== */
+
+/* Mobile uniquement */
+@media (max-width: 767px) {
+  .hero-break {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1101px) {
+
+  .services-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px; /* rythme horizontal */
+  }
+
+  .service-card {
+    max-width: 260px; /* équilibre idéal à 5 */
+  }
+}
+
+/* =========================================
+   CE QUE JE FAIS — STROKE IDENTIQUE À EN VEDETTE
+   (THEME LIGHT — OVERRIDE FINAL)
+   ========================================= */
+
+html.theme-light .service-card {
+  border: 2.4px solid color-mix(
+    in srgb,
+    var(--btn-primary-bg) 21%,
+    transparent
+  ) !important;
+
+  box-shadow:
+    /* halo clair (fond) */
+    0 0 32px rgba(246, 241, 233, 0.85),
+
+    /* halo rouge */
+    0 0 18px color-mix(
+      in srgb,
+      var(--btn-primary-bg) 40%,
+      transparent
+    ) !important;
+}
+
+/* =========================================
+   BTN "PROJETS" — HOVER TEXTE UNIQUEMENT
+   THEME LIGHT
+   ========================================= */
+
+html.theme-light .btn:not(.btn-primary):hover {
+  background-color: transparent !important;
+  color: var(--btn-primary-bg) !important;
+}
+
+/* DARK */
+html.theme-dark .hero .lead {
+  color: rgba(245, 246, 247, 0.85) !important;
+}
+
+/* LIGHT */
+html.theme-light .hero .lead {
+  color: rgba(14, 17, 22, 0.9) !important;
+}
+
+html.theme-dark .featured-image img {
+  border-width: 2px;
+}
+html.theme-dark .featured-image img {
+  border: 2px solid color-mix(
+    in srgb,
+    var(--btn-primary-bg) 88%,
+    transparent
+  ) !important;
+}
+
+
+/* ===============================
+   STROKE 1.9px — SECTIONS IMAGES (DARK)
+   =============================== */
+
+html.theme-dark .service-card {
+  border: 2px solid color-mix(
+    in srgb,
+    var(--btn-primary-bg) 88%,
+    transparent
+  ) !important;
+}
+
+html.theme-dark .testimonial-image-wrap {
+  border: 2px solid color-mix(
+    in srgb,
+    var(--btn-primary-bg) 88%,
+    transparent
+  ) !important;
+}
+
+/* =========================================
+   IMAGE "EN VEDETTE" — THEME NOIR
+   ========================================= */
+
+/* DESKTOP (par défaut) */
+html.theme-dark .featured-image-main {
+  content: url("images/en-vedette-desktop.png");
+}
+
+/* ======================
+   TABLETTE
+   ====================== */
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-tablette.png");
+  }
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-tablette-900.png");
+  }
+}
+
+@media (min-width: 800px) and (max-width: 899px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-tablette-800.png");
+  }
+}
+
+@media (min-width: 700px) and (max-width: 799px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-tablette-700.png");
+  }
+}
+
+@media (min-width: 601px) and (max-width: 699px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-tablette-600.png");
+  }
+}
+
+/* ======================
+   MOBILE
+   ====================== */
+
+@media (min-width: 550px) and (max-width: 600px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-mobile.png");
+  }
+}
+
+@media (min-width: 500px) and (max-width: 549px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-mobile-549.png");
+  }
+}
+
+@media (min-width: 450px) and (max-width: 499px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-mobile-499.png");
+  }
+}
+
+@media (min-width: 400px) and (max-width: 449px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-mobile-449.png");
+  }
+}
+
+@media (min-width: 350px) and (max-width: 399px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-mobile-400.png");
+  }
+}
+
+@media (min-width: 300px) and (max-width: 349px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-mobile-350.png");
+  }
+}
+
+@media (max-width: 299px) {
+  html.theme-dark .featured-image-main {
+    content: url("images/en-vedette-noir-mobile-300.png");
+  }
+}
+
+@media (max-width: 599px) {
+  .collaboration-section h2 {
+    font-size: 24px !important;
+  }
+}
+
+/* =========================================
+   UN AVIS QUI COMPTE — THEME DARK
+   ========================================= */
+
+/* TABLETTE INTERMÉDIAIRE */
+@media (min-width: 751px) and (max-width: 839px) {
+  html.theme-dark .testimonial-image {
+    content: url("images/un-avis-qui-compte-tablette-839.png");
+  }
+}
+
+/* PETITE TABLETTE / GRAND MOBILE */
+@media (min-width: 600px) and (max-width: 750px) {
+  html.theme-dark .testimonial-image {
+    content: url("images/un-avis-qui-compte-tablette-750.png");
+  }
+}
+
+/* PETITE TABLETTE / GRAND MOBILE */
+@media (max-width: 450px) {
+  html.theme-dark .testimonial-image {
+    content: url("images/un-avis-qui-compte-mobile-475.png");
+  }
+}
+
+/* PETITE TABLETTE / GRAND MOBILE */
+@media (max-width: 450px) {
+  html.theme-light .testimonial-image {
+    content: url("images/un-avis-qui-compte-rouge-mobile-475.png");
+  }
+}
+
+/* ESPACEMENT TITRE "CE QUE JE FAIS" — MOBILE */
+@media (max-width: 599px) {
+  .services-section h2 {
+    margin-bottom: 24px; /* ajuste ici : 16 / 20 / 24 selon ton ressenti */
+  }
+}
+
+@media (max-width: 600px) {
+  .services-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* ESPACEMENT EN VEDETTE — MOBILE LARGE (≤ 450px) */
+@media (max-width: 450px) {
+  .featured {
+    margin-top: -78px; /* au lieu de -78px */
+  }
+}
+
+/* ESPACEMENT ENTRE "EN VEDETTE" ET DIVIDER — MOBILE */
+@media (max-width: 450px) {
+  .featured {
+    padding-bottom: 40px; /* ajuste : 16 / 24 / 32 */
+  }
+}
+
+/* ESPACEMENT DIVIDER → "CE QUE JE FAIS" — MOBILE */
+@media (max-width: 450px) {
+  .services-section {
+    padding-top: 0px !important; /* ajuste : 24 / 32 / 40 */
+  }
+}
+
+/* ESPACEMENT AVANT "CE QUE JE FAIS" — MOBILE */
+@media (max-width: 450px) {
+  .services-section {
+    margin-top: 56px !important; /* ajuste : -16 / -24 / -32 */
+    margin-bottom: -104px !important; /* ajuste : -12 / -20 / -28 */
+  }
+}
+
+/* ESPACEMENT AVANT "UN AVIS QUI COMPTE" — MOBILE */
+@media (max-width: 450px) {
+  .testimonial-section {
+    margin-top: 72px !important; /* ajuste : -16 / -24 / -32 */
+    margin-bottom: -28px !important;
+  }
+}
+
+/* ESPACEMENT AVANT "UNE COLLABORATION ?" — MOBILE */
+@media (max-width: 450px) {
+  .collaboration-section {
+    margin-top: -26px !important; /* ajuste : -16 / -24 / -32 */
+  }
+}
+
+/* ESPACEMENT TITRE → BOUTON — "UNE COLLABORATION ?" — MOBILE */
+@media (max-width: 600px) {
+  .collaboration-section h2 {
+    margin-bottom: 10px; /* ajuste : 16 / 20 / 24 */
+  }
+}
+
+/* ESPACEMENT AVANT "UNE COLLABORATION ?" — MOBILE */
+@media (max-width: 420px) {
+  .collaboration-section {
+    margin-top: 16px !important; /* ajuste : -16 / -24 / -32 */
+  }
+}

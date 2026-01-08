@@ -1,0 +1,1989 @@
+body {
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+
+.nav,
+.btn,
+.cta {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===============================
+   VERROU TYPO — CONSTEL (FINAL)
+   =============================== */
+
+/* Texte courant */
+.project-page p,
+.project-page li {
+  font-weight: 500 !important;
+}
+
+/* Emphase dans le texte */
+.project-page .semibold {
+  font-weight: 800 !important;
+}
+
+/* Titres de section */
+.project-page h2 {
+  font-weight: 800 !important;
+}
+
+.project-page h3 {
+  font-weight: 600 !important;
+}
+
+/* Sous-titres */
+.project-page h4 {
+  font-weight: 600 !important;
+}
+
+/* ======================================== */
+/*   CSS PROPRE POUR LE PROJET FOOD DAY     */
+/*   (RESET COMPLET DU CONTENU SEULEMENT)   */
+/* ======================================== */
+
+/* Ne touche PAS au background, aux couleurs, ni aux polices :
+   Ce sont gérés par style.css, comme demandé. */
+
+/* ---- CONTENEUR GLOBAL ---- */
+.project-page {
+    /* On laisse le background défini par style.css */
+  }
+  
+  /* ---- HEADER DU PROJET ---- */
+  .project-header {
+    /* Aucun spacing par défaut */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Titre du projet */
+  .project-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin: 0;      /* reset */
+    padding: 0;     /* reset */
+  }
+  
+  /* Sous-titre / intro */
+  .project-intro {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;      /* reset */
+    padding: 0;     /* reset */
+  }
+  
+  /* ---- CORPS DU PROJET ---- */
+  .project-body {
+    /* Reset total */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  
+    /* Aucun layout, aucune règle visuelle */
+  }
+
+  @media (min-width: 1000px) {
+
+  /* H2 — titres de section */
+  .project-section .section-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  /* H3 — sous-titres */
+  .project-section .subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  /* Texte courant */
+  .project-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+}
+ .project-section .section-text p + p {
+    margin-top: 14px;
+  }
+
+  .section-text li {
+  font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  .project-section .section-title {
+    font-size: 26px;
+  }
+
+  .project-section .subtitle {
+    font-size: 22px;
+  }
+
+  .project-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+}
+
+.section-text li {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .project-section .section-title {
+    font-size: 22px;
+  }
+
+  .project-section .subtitle {
+    font-size: 18px;
+  }
+
+  .project-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.section-text li {
+  font-size: 16px;
+}
+
+/* ============================== */
+/*  BR desktop uniquement (H2)    */
+/* ============================== */
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .desktop-only {
+    display: inline;
+  }
+}
+
+  
+  /* ---- RESET DES IMAGES DU PROJET ---- */
+  /* On neutralise toute règle d'image venant d'autres fichiers */
+  .project-body img,
+  .project-header img {
+    width: auto;
+    height: auto;
+    max-width: none;
+    display: inline;      /* pas de block automatique */
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  /* ---- RESET DES SECTIONS INTERNES ---- */
+  .project-body section {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .project-intro {
+    display: block;
+    margin-top: px; /* petit espace propre et minimal */
+  }
+
+  /* Semi-gras global pour toute la page projet */
+.project-page .semibold {
+  font-weight: 600;
+}
+
+  
+/* ========================== */
+/*   VISUALISATION DU ZONE    */
+/* ========================== */
+
+/* Conteneur du projet (header + body) */
+.project-header,
+.project-body {
+  padding-top: 64px;                /* 👉 qu’on ajuste ensuite */
+  margin-left: auto;       /* centre horizontalement */
+  margin-right: auto;
+  padding-left: 64px;      /* espace extérieur */
+  padding-right: 64px;
+  max-width: 1200px;            /* 👉 largeur de travail */
+  box-sizing: border-box;       /* indispensable */
+}
+
+/* TABLETTE */
+@media (max-width: 1000px) {
+  .project-header,
+  .project-body {
+    margin-left: ;
+    margin-right: ;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .project-header,
+  .project-body {
+    padding-top: 32px;
+    padding-left: 32px;   /* 👈 AJOUT */
+    padding-right: 32px;  /* 👈 AJOUT */
+  }
+}
+
+
+
+/* TITRE PRINCIPAL */
+.project-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 16px; /* Desktop */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .project-title {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .project-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+}
+
+/* DESCRIPTION SOUS LE TITRE */
+.project-intro {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 32px; /* Desktop */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .project-intro {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .project-intro {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+}
+
+/* PHOTO HERO */
+.project-hero {
+  margin-bottom: 16px; /* Desktop */
+}
+
+@media (max-width: 1000px) {
+  .project-hero {
+    margin-bottom: 16px; /* Tablet */
+  }
+}
+
+@media (max-width: 767px) {
+  .project-hero {
+    margin-bottom: 8px; /* Mobile */
+  }
+}
+
+.project-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px; /* Même arrondi que la nav */
+}
+
+.contexte-objectifs {
+  margin-bottom: 32px; /* Desktop */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .contexte-objectifs {
+    margin-bottom: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .contexte-objectifs {
+    margin-bottom: 32px;
+  }
+}
+
+/* ---------- */
+/* DESKTOP    */
+/* Titre gauche / Texte droite */
+/* ---------- */
+@media (min-width: 1000px) {
+  .contexte-objectifs {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr; /* Titre = colonne gauche / Texte = colonne droite */
+    gap: 32px; /* espace horizontal */
+    align-items: start;
+  }
+
+  /* Le titre doit être bien aligné à gauche */
+  .contexte-objectifs .section-title {
+    margin-bottom: 0;
+  }
+
+  /* ⭐️ NOUVEAU : padding top uniquement pour la version desktop */
+  .contexte-objectifs .section-text {
+    padding-top: 16px; /* Ajustable */
+  }
+
+  /* Le texte garde ses paragraphes espacés */
+  .contexte-objectifs .section-text p {
+    margin-bottom: -4px;
+  }
+}
+
+/* H2 uniquement */
+.contexte-objectifs h2.section-title {
+  font-size: 32px;
+}
+
+/* Mobile uniquement */
+@media (max-width: 767px) {
+  .contexte-objectifs h2.section-title {
+    font-size: 22px;
+    margin-bottom: 900px;
+  }
+}
+
+/* Tablette uniquement */
+@media (max-width: 1000px) {
+  .contexte-objectifs h2.section-title {
+    margin-bottom: -12px;
+  }
+}
+
+/* Tablette */
+@media (max-width: 1000px) {
+  .contexte-objectifs .section-text p  {
+    margin-top: 16px;
+    margin-bottom: -8px; /* ajuste la valeur */
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .contexte-objectifs .section-text p  {
+    margin-bottom: -8px; /* valeur mobile */
+  }
+}
+
+/* ================================ */
+/*   Taille harmonisée des textes   */
+/* ================================ */
+
+/* 🖥️ Desktop (≥ 1000px) */
+.contexte-objectifs .section-text p {
+  font-size: 18px;   /* tu peux mettre 19px si tu veux encore plus lisible */
+  line-height: 1.6;
+}
+
+/* 📱 Tablette (≤ 1000px) */
+@media (max-width: 1000px) {
+  .contexte-objectifs .section-text p {
+      font-size: 18px; /* légèrement plus petit pour l’équilibre visuel */
+      line-height: 1.55;
+  }
+}
+
+/* 📱 Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .contexte-objectifs .section-text p {
+      font-size: 16px; /* lisible sans être trop massif */
+      line-height: 1.5;
+  }
+}
+
+/* =========================================== */
+/*   Image Hero parfaitement adaptée au bloc   */
+/* =========================================== */
+
+.project-separator .separator-img {
+  width: 70%;        /* Choisis la largeur que tu veux */
+  margin: 0 auto;    /* centre la ligne */
+  height: auto;
+  display: block;
+}
+
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+.project-separator {
+  margin: 48px 0; /* Espace haut/bas sur desktop */
+}
+
+@media (max-width: 1000px) {
+  .project-separator {
+    margin-top: 48px;      /* espace avant */
+    margin-bottom: 64px;   /* espace après */
+  }
+}
+
+@media (max-width: 767px) {
+  .project-separator {
+    margin-top: 32px;      /* espace avant */
+    margin-bottom: 48px;   /* espace après */
+  }
+}
+
+/* =============================== */
+/*          EMPATHY MAP            */
+/* =============================== */
+
+.empathy-section {
+  margin-bottom: 32px;
+  margin-top: -32px;
+}
+
+/* H2 desktop */
+.empathy-section .section-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* ----------- DESKTOP (≥1000px) ----------- */
+@media (min-width: 1000px) {
+  .empathy-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr; /* identique à .contexte-objectifs */
+    gap: 32px;
+    align-items: start;
+  }
+
+  .empathy-section .section-col {
+    padding-top: 44px; /* Identique à Contexte & Objectifs */
+}
+
+
+  .empathy-section .section-title {
+    margin-bottom: 0; 
+  }
+
+  /* Colonne droite = image + texte */
+  .empathy-section .section-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* ESPACEMENT image ↔ texte */
+  }
+
+  .empathy-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    display: block;
+  }
+
+  .empathy-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .empathy-section .semibold {
+    font-weight: 600;
+  }
+}
+
+/* ----------- TABLETTE (≤1000px) ----------- */
+@media (max-width: 1000px) {
+  .empathy-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .empathy-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 0px;
+  }
+
+  .empathy-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+}
+
+/* ----------- MOBILE (≤767px) ----------- */
+@media (max-width: 767px) {
+  .empathy-section .section-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .empathy-section .section-image img {
+    border-radius: 0px;
+    margin-bottom: -8px;
+  }
+
+  .empathy-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* MOBILE — Harmoniser les SAUTS DE LIGNE dans Empathy Map */
+@media (max-width: 767px) {
+
+  /* Même compaction que Contexte & Objectifs */
+  .empathy-section .section-text p {
+    margin-top: 16;
+    margin-bottom: -8px; /* IDENTIQUE à Contexte & Objectifs */
+  }
+
+  /* Empêcher le bloc d’ajouter un espace supplémentaire */
+  .empathy-section .section-text {
+    margin-top: 0;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+.project-separator .separator-img {
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .project-separator-bottom {
+    margin-top: 48px;      /* espace avant */
+    margin-bottom: 16px;   /* espace après */
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-separator-bottom {
+    margin-top: 48px;      /* espace avant */
+    margin-bottom: 32px;   /* espace après */
+  }
+}
+
+@media (max-width: 767px) {
+  .project-separator-bottom {
+    margin-top: -8px;      /* espace avant */
+    margin-bottom: 8px;   /* espace après */
+  }
+}
+
+/* ============================== */
+/*         BENCHMARK SECTION      */
+/* ============================== */
+
+.benchmark-section {
+  margin-bottom: 32px; /* Desktop */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .benchmark-section {
+    margin-bottom: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .benchmark-section {
+    margin-bottom: 32px;
+  }
+}
+
+/* ---------- */
+/* DESKTOP    */
+/* Titre gauche / Texte droite */
+/* ---------- */
+
+@media (min-width: 1000px) {
+  .benchmark-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr; /* Titre = colonne gauche / Texte = colonne droite */
+    gap: 32px; /* espace horizontal */
+    align-items: start;
+  }
+
+  /* Le titre doit être bien aligné à gauche */
+  .benchmark-section .section-title {
+    margin-bottom: 0;
+  }
+
+  /* ⭐️ NOUVEAU : padding top uniquement pour la version desktop */
+  .benchmark-section .section-text {
+    padding-top: 16px; /* Ajustable */
+  }
+
+  /* Le texte garde ses paragraphes espacés */
+  .benchmark-section .section-text p {
+    margin-bottom: -4px;
+  }
+}
+
+/* H2 uniquement */
+.benchmark-section h2.section-title {
+  font-size: 32px;
+}
+
+/* Mobile uniquement */
+@media (max-width: 767px) {
+  .benchmark-section h2.section-title {
+    font-size: 22px;
+    margin-bottom: 900px;
+  }
+}
+
+/* Tablette uniquement */
+@media (max-width: 1000px) {
+  .benchmark-section h2.section-title {
+    margin-bottom: -12px;
+  }
+}
+
+/* Tablette */
+@media (max-width: 1000px) {
+  .benchmark-section .section-text p  {
+    margin-top: 16px;
+    margin-bottom: -8px; /* ajuste la valeur */
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .benchmark-section .section-text p  {
+    margin-bottom: -8px; /* valeur mobile */
+  }
+}
+
+/* ================================ */
+/*   Taille harmonisée des textes   */
+/* ================================ */
+
+/* 🖥️ Desktop (≥ 1000px) */
+.benchmark-section.section-text p {
+  font-size: 18px;   /* tu peux mettre 19px si tu veux encore plus lisible */
+  line-height: 1.6;
+}
+
+/* 📱 Tablette (≤ 1000px) */
+@media (max-width: 1000px) {
+  .benchmark-section .section-text p {
+      font-size: 18px; /* légèrement plus petit pour l’équilibre visuel */
+      line-height: 1.55;
+  }
+}
+
+/* 📱 Mobile (≤ 767px) */
+@media (max-width: 767px) {
+  .benchmark-section .section-text p {
+      font-size: 16px; /* lisible sans être trop massif */
+      line-height: 1.5;
+  }
+}
+
+.benchmark-section .subtitle {
+  margin-top: 32px;      /* espace au-dessus */
+  margin-bottom: -8px;   /* espace en dessous */
+  font-size: 22px;       /* option : même taille que ton h2 mobile */
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+  .benchmark-section .subtitle {
+    margin-top: 28px;
+    margin-bottom: -16px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .benchmark-section .subtitle {
+    margin-top: 24px;    /* espace avant le H3 */
+    margin-bottom: -16px; /* espace sous le H3 */
+    font-size: 18px;     /* option : s’adapte à ton mobile */
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+.project-separator .separator-img {
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .project-separator-3 {
+    margin-top: 48px;      /* espace avant */
+    margin-bottom: 24px;   /* espace après */
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-separator-3 {
+    margin-top: 48px;      /* espace avant */
+    margin-bottom: 32px;   /* espace après */
+  }
+}
+
+@media (max-width: 767px) {
+  .project-separator-3 {
+    margin-top: -8px;      /* espace avant */
+    margin-bottom: 0px;   /* espace après */
+  }
+}
+
+/* =============================== */
+/*          DÉFINITION          */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .definition-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+    .project-section .subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-top: 24px;
+    margin-bottom: -12px;
+  }
+  
+  .definition-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .definition-section .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .definition-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  .definition-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .definition-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .definition-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .definition-section .subtitle {
+    margin-top: 24px;
+    margin-bottom: -16px;
+  }
+
+  .definition-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: -8px;
+  }
+
+  .definition-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .definition-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .definition-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+   .definition-section .subtitle {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: -14px;
+  }
+
+  .definition-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+@media (min-width: 1000px) {
+  .project-separator-definition {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-separator-definition {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-separator-definition {
+    margin-top: 24px;      /* espace avant */
+    margin-bottom: 0px;   /* espace après */
+  }
+}
+
+/* =============================== */
+/*          PERSONNAS          */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .personna-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .personna-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .personna-sectionn .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .personna-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  .personna-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .personna-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .personna-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .personna-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: 0px;
+  }
+
+  .personna-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .personna-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .personna-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+  .personna-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+@media (min-width: 1000px) {
+  .project-separator-personnas {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-separator-personnas {
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-separator-personnas {
+    margin-top: 24px;      /* espace avant */
+    margin-bottom: 0px;   /* espace après */
+  }
+}
+
+/* =============================== */
+/*          QUESTIONNAIRES UTILLISATEURS          */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .questionnaire-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .questionnaire-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .questionnaire-section .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .questionnaire-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  .questionnaire-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .questionnaire-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .questionnaire-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .questionnaire-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: -8px;
+  }
+
+  .questionnaire-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .questionnaire-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .questionnaire-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+  .questionnaire-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+@media (min-width: 1000px) {
+  .project-separator-questionnaire {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-separator-questionnaire {
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-separator-questionnaire {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+/* =============================== */
+/*          BRAINSTORMING          */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .brainstorming-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .brainstorming-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .brainstorming-section .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .brainstorming-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  .brainstorming-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .brainstorming-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .brainstorming-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .brainstorming-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: -4px;
+  }
+
+  .brainstorming-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .brainstorming-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .brainstorming-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+  .brainstorming-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+@media (min-width: 1000px) {
+  .project-separator-brainstorming {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 999px) {
+  .project-separator-brainstorming {
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .project-separator-brainstorming {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+/* =============================== */
+/*          USER STORIES          */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .user-stories-section .section-image + .section-image {
+    margin-top: 8px; /* espace entre image 1 et 2 */
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-stories-section .section-image + .section-image {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .user-stories-section .section-image + .section-image {
+    margin-top: 12px;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .user-stories-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .user-stories-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .user-stories-section .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .user-stories-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  .user-stories-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .user-stories-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .user-stories-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .user-stories-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: 0px;
+  }
+
+  .user-stories-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .user-stories-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .user-stories-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+  .user-stories-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+@media (min-width: 1000px) {
+  .project-separator-user-stories {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 999px) {
+  .project-separator-user-stories {
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .project-separator-user-stories {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+/* =============================== */
+/*          DIAGRAMME          */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .diagramme-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .diagramme-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .diagramme-section .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .diagramme-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  .diagramme-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .diagramme-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .diagramme-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .diagramme-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: 0px;
+  }
+
+  .diagramme-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .diagramme-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .diagramme-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+  .diagramme-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+@media (min-width: 1000px) {
+  .project-separator-diagramme {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 999px) {
+  .project-separator-diagramme {
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .project-separator-diagramme {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+/* =============================== */
+/*          WIREFRAME & PROTOTYPES         */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .wireframes-section .section-image + .section-image {
+    margin-top: 24px; /* espace entre image 1 et 2 */
+  }
+}
+
+@media (max-width: 1000px) {
+  .wireframes-section .section-image + .section-image {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .wireframes-section .section-image + .section-image {
+    margin-top: 16px;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .wireframes-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .wireframes-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .wireframes-section .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .wireframes-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    display: block;
+  }
+
+  .wireframes-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .wireframes-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .wireframes-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .wireframes-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: 0px;
+  }
+
+  .wireframes-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .wireframes-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .wireframes-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+  .wireframes-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* ============================== */
+/*         Séparator      */
+/* ============================== */
+
+@media (min-width: 1000px) {
+  .project-separator-wireframes {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 999px) {
+  .project-separator-wireframes {
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .project-separator-wireframes {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+/* =============================== */
+/*          INTERFACES UTILISATEURS          */
+/* =============================== */
+
+@media (min-width: 1000px) {
+  .interfaces-section {
+    display: grid;
+    grid-template-columns: 1.4fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+  
+  .interfaces-section .section-col {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .interfaces-section .section-title {
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .interfaces-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    display: block;
+  }
+
+  .interfaces-section .section-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: -4px;
+    font-weight: 400;
+  }
+
+  .interfaces-section .semibold {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .interfaces-section .section-title {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .interfaces-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    margin-bottom: -8px;
+  }
+
+  .interfaces-section .section-text p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: -8px;
+  }
+} 
+
+@media (max-width: 767px) {
+
+  .interfaces-section .section-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .interfaces-section .section-image img {
+    border-radius: 12px;
+    margin-bottom: -12px;
+  }
+
+  .interfaces-section .section-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+/* =============================== */
+/*       PROJECT NAVIGATION        */
+/* =============================== */
+@media (min-width: 651px) {
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.project-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.project-nav:hover {
+  opacity: 0.7;
+}
+
+/* Chevron */
+.project-nav .chevron {
+  font-size: 40px;              /* TU NE CHANGES PAS LA TAILLE */
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  top: -0.07em;                 /* 🔥 correction optique réelle */
+}
+
+
+/* Alignements spécifiques */
+.project-nav.prev {
+  justify-content: flex-start;
+}
+
+.project-nav.next {
+  justify-content: flex-end;
+}
+}
+
+/* =============================== */
+/*   CTA PROJETS / CONTACT – MOBILE */
+/* =============================== */
+
+/* Par défaut : caché (desktop + tablette) */
+.project-navigation .btn,
+.project-navigation .btn-primary {
+  display: none;
+}
+
+/* Mobile uniquement */
+@media (max-width: 650px) {
+
+  .project-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  /* On réactive les boutons hérités de style.css */
+  .project-navigation .btn,
+  .project-navigation .btn-primary {
+    display: inline-flex;
+  }
+}
+
+/* =============================== */
+/*   PROJECT NAVIGATION — SPACING  */
+/* =============================== */
+
+/* Par défaut : caché */
+.project-navigation-desktop,
+.project-navigation-mobile {
+  display: none;
+}
+
+/* ========= MOBILE (≤ 650px) ========= */
+@media (max-width: 650px) {
+
+  .project-navigation-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    margin-top: 32px; /* ⬅️ espace mobile */
+    margin-bottom: 32px;
+  }
+}
+
+/* ========= TABLET (651px → 999px) ========= */
+@media (min-width: 651px) and (max-width: 999px) {
+
+  .project-navigation-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 40px; /* ⬅️ espace intermédiaire */
+    margin-bottom: 32px;
+  }
+}
+
+/* ========= LARGE DESKTOP (≥ 1000px) ========= */
+@media (min-width: 1000px) {
+
+  .project-navigation-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 64px; /* ⬅️ espace large écran */
+    margin-bottom: 40px;
+  }
+}
+
+/* =============================== */
+/*   GESTION DES SAUTS DE TEXTE    */
+/*   (MOBILE UNIQUEMENT)           */
+/* =============================== */
+
+@media (max-width: 767px) {
+
+  /* Paragraphes normaux = compacts */
+  .project-section .section-text p {
+    margin-bottom: -8px;
+  }
+
+}
+
+/* ================================
+   NAV — LIEN ACTIF (SIMPLE & FIABLE)
+   ================================ */
+
+.nav ul li a[aria-current="page"] {
+  position: relative;
+  color: var(--text);
+}
+
+.nav ul li a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--btn-primary-bg);
+  border-radius: 2px;
+}
+
+/* Titre "FDL" — uniquement en thème clair */
+.theme-light .project-page .project-title {
+  color: #B34755; /* remplace par la couleur souhaitée */
+}
+
+/* ================================ */
+/* Séparateur rouge en thème light */
+/* ================================ */
+
+.theme-light .project-separator .separator-img {
+  content: url("img-fdl/separateur-rouge.png");
+}
+
+/* =========================================
+   PROJECT NAV — FOOD DAY LOVERS (LIGHT MODE)
+   ========================================= */
+
+/* État normal */
+:root.theme-light .project-nav {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+/* Hover (desktop uniquement) */
+@media (hover: hover) and (pointer: fine) {
+  :root.theme-light .project-nav:hover {
+    color: color-mix(
+      in srgb,
+      var(--btn-primary-bg) 85%,
+      transparent
+    );
+  }
+}
+
+/* Active (clic) */
+:root.theme-light .project-nav:active {
+  color: var(--btn-primary-bg);
+}
+
+/* =========================================
+   INDICATION "PROJETS" ACTIVE — PAGE PROJET
+   ========================================= */
+
+.project-page .nav a[href="projetsbis.html"] {
+  position: relative; /* OBLIGATOIRE pour ::after */
+}
+
+/* Ligne sous le lien */
+.project-page .nav a[href="projetsbis.html"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--btn-primary-bg);
+  border-radius: 2px;
+}
+
+/* =========================================
+   FIX — SOULIGNEMENT NAV EN MODE MOBILE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+  /* Empêche le lien de prendre toute la largeur */
+  .nav[aria-expanded="true"] ul li a {
+    width: fit-content !important;
+  }
+
+  /* Sécurise l’alignement du soulignement */
+  .nav[aria-expanded="true"] ul li a::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+/* ===========================
+   ESPACEMENT BAS DE PAGE
+   =========================== */
+   
+/* DESKTOP */
+@media (min-width: 1101px) {
+  body {
+    padding-bottom: 8px;
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 600px) and (max-width: 1100px) {
+  body {
+    padding-bottom: 8px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 599px) {
+  body {
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 650px) {
+  .project-navigation {
+    margin-top: 40px;
+  }
+}
+
+/* =============================== */
+/*  Images Wireframes — Theme Light */
+/* =============================== */
+
+.theme-light img[src="img-fdl/wireframes.png"] {
+  content: url("img-fdl/wireframes-rouge.png");
+}
+
+.theme-light img[src="img-fdl/wireframes-2.png"] {
+  content: url("img-fdl/wireframes-rouge-2.png");
+}
+
+/* ================================ */
+/*   Texte listes = texte paragraphes */
+/* ================================ */
+
+.project-section .section-text li {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .project-section .section-text li {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-section .section-text li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
