@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-dark">
+<head>
+<script>
+  (function () {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add(`theme-${savedTheme}`);
+  })();
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seconnde Peau — Project</title>
+    <style>
+
+  @font-face {
+  font-family: "Poppins-fallback";
+  src: local("Arial");
+  size-adjust: 108%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Roboto-fallback";
+  src: local("Arial");
+  size-adjust: 100%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-bold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+</style>
+
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Style dédié à la page projet -->
+  <link rel="stylesheet" href="seconde-peau.css" />
+</head>
+
+<body class="project-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ====================== -->
+  <!--      NAVIGATION        -->
+  <!-- ====================== -->
+  <header>
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Navigation principale" aria-expanded="false">
+
+     <a href="index.html" class="nav-left brand-link">
+  <img
+    class="avatar"
+    src="images/photo-profil.webp"
+    alt="Portrait de Gaël Tartare"
+    width="72"
+    height="72"
+  />
+  <span class="brand">
+    Gaël<br>Tartare
+  </span>
+</a>
+
+        <!-- DROITE -->
+        <div class="nav-right">
+
+          <!-- DROPDOWN MOBILE -->
+          <div class="theme-dropdown mobile-theme">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </div>
+
+          <!-- BURGER -->
+          <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+        </div>
+
+        <!-- MENU -->
+        <ul>
+          <li><a href="projetsbis.html">Projets</a></li>
+          <li><a href="test.html">À propos</a></li>
+          <li>
+          <a 
+            href="https://drive.google.com/file/d/12P7wmIBrvMZcJ2jdYPcSZYPVTRzzmXLn/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
+          </li>
+
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://www.linkedin.com/in/gael-tartare" 
+               class="nav-linkedin" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.55v-5.54c0-1.32-.02-3.01-1.84-3.01-1.84 0-2.13 1.43-2.13 2.91v5.64h-3.55V9h3.41v1.56h.05c.48-.91 1.66-1.87 3.43-1.87 3.67 0 4.35 2.42 4.35 5.56v6.2z"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- THEME DROPDOWN (DESKTOP) -->
+          <li class="theme-dropdown">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </li>
+
+          <!-- CTA -->
+          <li><a class="btn btn-primary" href="index.html#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====================== -->
+  <!--     CONTENU PROJET     -->
+  <!-- ====================== -->
+
+  <main id="contenu">
+
+    <section class="project-header">
+        
+      <h1 class="project-title">Seconde Peau</h1>
+    
+      <div class="project-intro">
+        <p>
+        ⌛️ Année : <span class="semibold">2025</span><br>
+        🕘 Durée du projet : <span class="semibold">7 jours</span><br>
+        🎯 Livrables attendus :
+        <span class="semibold">Analyses et refonte de l'expérience utilisateurs</span><br>
+        👨‍💻 Rôle : <span class="semibold">UX Designer</span><br>
+        ⚒️ Outils utilisés : <span class="semibold">Figma, Miro</span>
+        </p>
+      </div>
+
+      <div class="project-hero">
+        <img src="img-seconde-peau/projet-3-1.png" alt="Aperçu du projet Food Day Lovers">
+      </div>
+      
+      <section class="project-section contexte-objectifs">
+  
+        <h2 class="section-title">Contexte & Objectifs</h2>
+      
+        <div class="section-text">
+
+<p>
+  <span class="semibold">Seconde Peau</span> est une entreprise e-commerce
+  spécialisée dans la <span class="semibold">vente de vêtements de seconde main</span>.
+  Ma mission consistait à <span class="semibold">analyser</span> et
+  <span class="semibold">améliorer l’ensemble du parcours utilisateur</span>
+  sur le site.
+</p>
+
+<p>
+  L’entreprise avait récemment déployé une
+  <span class="semibold">nouvelle fonctionnalité de recommandations vestimentaires</span>,
+  censée <span class="semibold">personnaliser l’expérience</span> des utilisateurs,
+  mais dont l’impact réel restait à évaluer.
+</p>
+
+<p>
+  L’objectif était donc
+  <span class="semibold">d’identifier les points de friction</span> tout au long du
+  parcours utilisateur,
+  <span class="semibold">d’analyser les données analytiques et qualitatives</span>,
+  puis de formuler des
+  <span class="semibold">recommandations UX concrètes</span> afin de
+  <span class="semibold">restaurer la confiance</span> et
+  <span class="semibold">renforcer l’engagement</span>.
+</p>
+        </div>
+      
+      </section>
+      
+      <section class="project-separator project-separator-bottom">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+<section class="project-section impact-business-section">
+
+  <!-- TITRE -->
+  <h2 class="section-title">
+    Conséquences &<br class="desktop-only"> Impact Business
+  </h2>
+
+  <!-- CONTENU -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-seconde-peau/ui-actuel.webp" alt="UI et UX actuelles">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+ <p>
+    Les visuels présentés illustrent
+    <span class="semibold">l’UI</span> et
+    <span class="semibold">l’UX actuelles</span>, reflétant
+    <span class="semibold">l’expérience vécue par les utilisateurs</span>.
+  </p>
+
+  <p>
+    Grâce à l’<span class="semibold">analyse des données collectées</span>, en
+    croisant les <span class="semibold">données quantitatives</span> et les
+    <span class="semibold">retours qualitatifs</span>, j’ai pu identifier des
+    <span class="semibold">impacts significatifs</span> sur les
+    <span class="semibold">performances de l’entreprise</span> :
+  </p>
+
+  <ul>
+    <li>
+      <span class="semibold">Augmentation du taux de rebond</span> de 45 % à 60 %,
+      traduisant un <span class="semibold">désengagement rapide</span> des visiteurs.
+    </li>
+    <li>
+      <span class="semibold">Réduction du temps moyen de visite</span>, passant de
+      3 minutes à 2 minutes, signe d’une
+      <span class="semibold">perte d’intérêt</span> et d’une
+      <span class="semibold">attractivité en baisse</span>.
+    </li>
+    <li>
+      <span class="semibold">Diminution du temps passé</span> sur les
+      <span class="semibold">pages stratégiques</span> (accueil et pages produit),
+      au profit d’une <span class="semibold">augmentation</span> sur des pages
+      <span class="semibold">non prioritaires</span> (profil et formulaire de
+      recommandations), traduisant une
+      <span class="semibold">perte de fluidité</span> et d’
+      <span class="semibold">intensité</span> dans le parcours.
+    </li>
+    <li>
+      <span class="semibold">Chute du taux de conversion</span>, tombé de 2 % à 1 %,
+      entraînant une <span class="semibold">perte directe de revenus</span> et une
+      <span class="semibold">efficacité réduite</span> des parcours d’achat.
+    </li>
+    <li>
+      <span class="semibold">Baisse du nombre d’inscriptions</span> de 20 %,
+      révélant un <span class="semibold">point de friction</span> dès
+      <span class="semibold">l’onboarding utilisateur</span>.
+    </li>
+    <li>
+      <span class="semibold">Frustration accrue</span> et
+      <span class="semibold">dégradation de la satisfaction client</span>,
+      impactant la <span class="semibold">fidélisation</span> et ternissant
+      <span class="semibold">l’image de marque</span>.
+    </li>
+  </ul>
+
+</div>
+    </div>
+
+  </div>
+
+</section>
+
+      <section class="project-separator project-separator-3">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+<section class="project-section definition-section">
+
+  <h2 class="section-title">Empathy Map</h2>
+
+  <div class="section-col">
+
+
+    <div class="section-image">
+      <img src="img-seconde-peau/empathy-map-seconde-peau.png" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+  <p>
+    Cette <span class="semibold">carte d’empathie</span> permet de placer davantage
+    les <span class="semibold">utilisateurs au cœur de l’analyse</span>, afin de
+    mieux comprendre leur <span class="semibold">expérience vécue</span>.
+  </p>
+
+  <p>
+    Elle aide à identifier et à analyser plus finement les
+    <span class="semibold">ressentis</span>,
+    <span class="semibold">frustrations</span>,
+    <span class="semibold">besoins</span> et
+    <span class="semibold">attentes</span> des utilisateurs, en s’appuyant sur ce
+    qu’ils <span class="semibold">pensent</span>,
+    <span class="semibold">ressentent</span>,
+    <span class="semibold">disent</span> et
+    <span class="semibold">font</span> tout au long de leur parcours.
+  </p>
+
+  <p>
+    Cet outil a constitué une base essentielle pour orienter les
+    <span class="semibold">décisions UX</span> et alimenter les réflexions menant à
+    des <span class="semibold">améliorations concrètes</span> du parcours
+    utilisateur.
+  </p>
+</div>
+</section>
+
+<section class="project-separator project-separator-definition">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+
+<section class="project-section wireframe-section">
+
+    <h2 class="section-title">
+    Parcours Users<br class="desktop-only"> Actuel et Idéal
+  </h2>
+
+  <div class="section-col">
+
+
+    <div class="section-image">
+      <img src="img-seconde-peau/comparaison-du-parcours-utilisateurs-ideal-et-actuel.png" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+  <p class="semibold">
+    Principaux constats liés au parcours utilisateur actuel :
+  </p>
+
+  <ul>
+    <li>
+      Un <span class="semibold">parcours fragmenté</span>, marqué par des
+      interruptions fréquentes, générant une
+      <span class="semibold">surcharge cognitive</span>.
+    </li>
+    <li>
+      Une <span class="semibold">navigation peu intuitive</span>, rendant l’accès
+      aux <span class="semibold">catégories</span> et aux
+      <span class="semibold">produits</span> difficile.
+    </li>
+    <li>
+      Un <span class="semibold">système de recommandations</span> perçu comme
+      <span class="semibold">trop intrusif</span> et souvent
+      <span class="semibold">incohérent</span> avec les préférences réelles des
+      utilisateurs.
+    </li>
+    <li>
+      Un <span class="semibold">manque de feedback clair</span> et de
+      <span class="semibold">visibilité sur les actions</span> (validation des
+      choix, confirmation de l’enregistrement, etc.).
+    </li>
+    <li>
+      Des <span class="semibold">temps de chargement excessifs</span>, notamment
+      lors du <span class="semibold">paramétrage des préférences</span> et de la
+      navigation au sein des recommandations.
+    </li>
+  </ul>
+
+  <p>
+    Le parcours utilisateur a été entièrement repensé afin de
+    <span class="semibold">réduire drastiquement les irritants</span> et les
+    <span class="semibold">points de friction</span>, transformant une navigation
+    auparavant <span class="semibold">frustrante</span> et
+    <span class="semibold">décourageante</span> en une expérience
+    <span class="semibold">fluide</span>,
+    <span class="semibold">intuitive</span> et
+    <span class="semibold">rassurante</span>.
+  </p>
+
+  <p>
+    Cette refonte améliore non seulement
+    <span class="semibold">l’efficacité du parcours</span>, mais renforce également
+    la <span class="semibold">confiance</span> et
+    <span class="semibold">l’écoute des utilisateurs</span>, en les plaçant
+    véritablement <span class="semibold">au centre de l’expérience</span>.
+  </p>
+
+  <p>
+    Afin de visualiser plus clairement ces parcours, voici le lien :
+    <br>
+<a
+  href="https://miro.com/app/board/uXjVLluh-vo=/"
+  target="_blank"
+  class="external-link highlight-link"
+>
+  Parcours utilisateur actuel et idéal
+</a>
+  </p>
+</div>
+</section>
+
+<section class="project-separator project-separator-personnas">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+
+      <section class="project-section ameliorations-section">
+
+        <h2 class="section-title">Amélioration UX</h2>
+      
+        <div class="section-text">
+
+  <p>
+    À partir de cette analyse et du constat établi sur le
+    <span class="semibold">parcours utilisateur actuel</span>, j’ai pu élaborer
+    une série de <span class="semibold">recommandations UX concrètes et actionnables</span>,
+    avec différents niveaux de <span class="semibold">granularité</span>, offrant
+    ainsi au client une <span class="semibold">vision claire et pragmatique</span>
+    des axes d’amélioration à <span class="semibold">prioriser</span>.
+  </p>
+
+  <p>
+    Ces recommandations s’articulent autour de plusieurs axes :
+  </p>
+
+  <ul>
+    <li>
+      <span class="semibold">Simplification et dissociation</span> de la
+      <span class="semibold">connexion</span> et de
+      <span class="semibold">l’inscription</span> afin de
+      <span class="semibold">fluidifier l’entrée</span> sur le site et de
+      <span class="semibold">réduire les points de friction</span>.
+    </li>
+
+    <li>
+      <span class="semibold">Amélioration de l’ergonomie du formulaire</span> :
+      réduction du nombre de <span class="semibold">champs obligatoires</span>,
+      meilleure <span class="semibold">visibilité des étapes</span> et possibilité
+      de <span class="semibold">sauvegarde</span> pour une reprise ultérieure.
+    </li>
+
+    <li>
+      <span class="semibold">Optimisation de l’expérience globale</span> :
+      mise en place de <span class="semibold">feedbacks visuels immédiats</span>
+      après chaque interaction, réduction de
+      <span class="semibold">l’intrusivité</span> des recommandations sur les pages
+      sensibles et amélioration de
+      <span class="semibold">l’algorithme de matching</span> afin d’éviter les
+      incompréhensions et les <span class="semibold">frustrations</span>.
+    </li>
+
+    <li>
+      <span class="semibold">Optimisation des performances techniques</span> :
+      réduction des <span class="semibold">temps de chargement</span> et amélioration
+      globale de la <span class="semibold">fluidité</span> de navigation.
+    </li>
+
+    <li>
+      <span class="semibold">Dissociation claire</span> entre
+      <span class="semibold">préférences vestimentaires</span> et
+      <span class="semibold">informations personnelles annexes</span>, afin de
+      mieux <span class="semibold">hiérarchiser l’information</span> et de
+      <span class="semibold">simplifier l’usage</span> de l’application.
+    </li>
+  </ul>
+
+  <p>
+    En complément, plusieurs <span class="semibold">recommandations bonus</span>
+    ont été envisagées pour <span class="semibold">enrichir davantage</span>
+    l’expérience utilisateur :
+  </p>
+
+  <ul>
+    <li>
+      Permettre à l’utilisateur
+      <span class="semibold">d’aimer ou de ne pas aimer</span> une recommandation,
+      afin de <span class="semibold">personnaliser</span> et
+      <span class="semibold">affiner l’algorithme</span>.
+    </li>
+
+    <li>
+      Intégrer une <span class="semibold">fonctionnalité d’ajustement rapide</span>
+      des préférences, sans repasser par le
+      <span class="semibold">formulaire complet</span>.
+    </li>
+
+    <li>
+      Proposer une <span class="semibold">navigation alternative</span> sans
+      activer la fonctionnalité de recommandations, afin de
+      <span class="semibold">laisser le choix</span> à l’utilisateur.
+    </li>
+
+    <li>
+      Ajouter un indicateur
+      <span class="semibold">« Pourquoi cette recommandation ? »</span> pour
+      <span class="semibold">renforcer la confiance</span> entre l’utilisateur et
+      l’algorithme de matching.
+    </li>
+
+    <li>
+      Intégrer un <span class="semibold">tutoriel dédié</span> à l’application ou à
+      la fonctionnalité de recommandations, afin
+      <span class="semibold">d’accompagner efficacement</span> l’utilisateur dans
+      la prise en main.
+    </li>
+  </ul>
+
+  </section>
+
+<section class="project-separator project-separator-questionnaire">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+     <section class="project-section conclusion-section">
+
+        <h2 class="section-title">Conclusion</h2>
+      
+<div class="section-text">
+  <p>
+    En intégrant ces <span class="semibold">recommandations UX</span>, l’application
+    <span class="semibold">Seconde Peau</span> pourra offrir une expérience utilisateur
+    plus <span class="semibold">fluide</span>,
+    <span class="semibold">intuitive</span> et
+    <span class="semibold">engageante</span>, tout en renforçant la
+    <span class="semibold">confiance</span> et
+    <span class="semibold">l’engagement</span> des utilisateurs.
+  </p>
+
+  <p>
+    Ces améliorations permettront d’atteindre des
+    <span class="semibold">résultats business concrets</span> :
+  </p>
+
+  <ul>
+    <li>Une augmentation significative du nombre d’inscriptions.</li>
+    <li>Une amélioration du taux de conversion.</li>
+    <li>Une hausse du taux de rétention.</li>
+    <li>
+      Une réduction du taux de rebond et des abandons en cours de parcours.
+    </li>
+    <li>
+      Une augmentation du temps passé sur les pages stratégiques
+      (<span class="semibold">accueil</span> et
+      <span class="semibold">pages produit</span>).
+    </li>
+    <li>
+      Une diminution du temps passé sur les pages non prioritaires
+      (<span class="semibold">profil</span> et
+      <span class="semibold">formulaire de recommandations</span>).
+    </li>
+    <li>
+      Un renforcement de la satisfaction et de la confiance des utilisateurs.
+    </li>
+    <li>
+      Une meilleure compréhension et utilisation de la fonctionnalité de
+      recommandations.
+    </li>
+    <li>
+      Une contribution directe à l’atteinte des objectifs business de
+      <span class="semibold">Seconde Peau</span>.
+    </li>
+  </ul>
+</div>
+
+      
+      </section>
+
+<section class="project-navigation project-navigation-desktop">
+
+  <!-- Projet précédent -->
+  <a href="les-bambinets.html" class="project-nav prev">
+    <span class="chevron">‹</span>
+    <span class="project-name">Les Bambinets</span>
+  </a>
+
+  <!-- Projet suivant -->
+  <a href="food-day-lovers.html" class="project-nav next">
+    <span class="project-name">Food Day Lovers</span>
+    <span class="chevron">›</span>
+  </a>
+
+</section>
+
+<!-- MOBILE : boutons -->
+<section class="project-navigation project-navigation-mobile">
+  <a href="projetsbis.html" class="btn">Projets</a>
+  <a href="/#contact" class="btn btn-primary">Me contacter</a>
+</section>
+
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+ 

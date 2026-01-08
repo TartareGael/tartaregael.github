@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-dark">
+<head>
+<script>
+  (function () {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add(`theme-${savedTheme}`);
+  })();
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Day Lovers — Project</title>
+
+      <style>
+
+  @font-face {
+  font-family: "Poppins-fallback";
+  src: local("Arial");
+  size-adjust: 108%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Roboto-fallback";
+  src: local("Arial");
+  size-adjust: 100%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-bold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+</style>
+
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Style dédié à la page projet -->
+  <link rel="stylesheet" href="food-day-lovers.css" />
+</head>
+
+<body class="project-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ====================== -->
+  <!--      NAVIGATION        -->
+  <!-- ====================== -->
+  <header>
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Navigation principale" aria-expanded="false">
+     
+        <a href="index.html" class="nav-left brand-link">
+  <img
+    class="avatar"
+    src="images/photo-profil.webp"
+    alt="Portrait de Gaël Tartare"
+    width="72"
+    height="72"
+  />
+  <span class="brand">
+    Gaël<br>Tartare
+  </span>
+</a>
+
+        <!-- DROITE -->
+        <div class="nav-right">
+
+          <!-- DROPDOWN MOBILE -->
+          <div class="theme-dropdown mobile-theme">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </div>
+
+          <!-- BURGER -->
+          <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+        </div>
+
+        <!-- MENU -->
+        <ul>
+          <li><a href="projetsbis.html">Projets</a></li>
+          <li><a href="test.html">À propos</a></li>
+          <li>
+          <a 
+            href="https://drive.google.com/file/d/12P7wmIBrvMZcJ2jdYPcSZYPVTRzzmXLn/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
+          </li>
+
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://www.linkedin.com/in/gael-tartare" 
+               class="nav-linkedin" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.55v-5.54c0-1.32-.02-3.01-1.84-3.01-1.84 0-2.13 1.43-2.13 2.91v5.64h-3.55V9h3.41v1.56h.05c.48-.91 1.66-1.87 3.43-1.87 3.67 0 4.35 2.42 4.35 5.56v6.2z"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- THEME DROPDOWN (DESKTOP) -->
+          <li class="theme-dropdown">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </li>
+
+          <!-- CTA -->
+          <li><a class="btn btn-primary" href="index.html#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====================== -->
+  <!--     CONTENU PROJET     -->
+  <!-- ====================== -->
+
+  <main id="contenu">
+
+    <section class="project-header">
+        
+      <h1 class="project-title">Food Day Lovers</h1>
+    
+      <div class="project-intro">
+        <p>
+        ⌛️ Année : <span class="semibold">2023</span><br>
+        🕘 Durée du projet : <span class="semibold">21 jours</span><br>
+        🎯 Livrables attendus :
+        <span class="semibold">Conception d’une expérience centrée sur le Design Thinking</span><br>
+        👨‍💻 Rôle : <span class="semibold">Product Designer</span><br>
+        ⚒️ Outils utilisés : <span class="semibold">Figma</span>
+        </p>
+      </div>
+
+      <div class="project-hero">
+        <img src="img-fdl/projet-4-1.png" alt="Aperçu du projet Food Day Lovers">
+      </div>
+      
+      <section class="project-section contexte-objectifs">
+  
+        <h2 class="section-title">Contexte & Objectifs</h2>
+      
+        <div class="section-text">
+          <p>
+            <span class="semibold">Food Day Lover</span> est une application mobile pensée pour accompagner les utilisateurs 
+            dans leur quotidien <span class="semibold">culinaire</span> afin de mieux planifier leurs repas, limiter le gaspillage, 
+            gagner du temps sans renoncer au plaisir de bien manger.
+          </p>
+      
+          <p>
+            Ce projet s’inscrit dans une <span class="semibold">démarche de conception globale</span>, 
+            fondée sur les principes du <span class="semibold">Design Thinking</span>.
+          </p>
+      
+          <p>
+            L’objectif était d’<span class="semibold">imaginer une solution complète</span> à partir d’un 
+            besoin perçu, et de la traduire en une expérience 
+            <span class="semibold">cohérente</span>, 
+            <span class="semibold">fonctionnelle</span> 
+            et <span class="semibold">désirable</span>.
+          </p>
+        </div>
+      
+      </section>
+      
+      <section class="project-separator">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+    
+      <section class="project-section empathy-section">
+
+        <h2 class="section-title">Empathy Map</h2>
+      
+        <div class="section-col">
+      
+          <!-- IMAGE EMPATHY MAP -->
+          <div class="section-image">
+            <img src="img-fdl/empathy-map.webp" alt="Empathy map de Diane">
+          </div>
+      
+          <!-- TEXTE -->
+          <div class="section-text">
+      
+            <p>
+              La phase d’empathie a constitué <span class="semibold">le point de départ</span> essentiel du projet,
+              permettant de comprendre en profondeur <span class="semibold">les attentes</span>, 
+              <span class="semibold">les usages</span> et 
+              <span class="semibold">les éventuelles frustrations</span> des utilisateurs dans leur rapport quotidien à la cuisine.
+            </p>
+      
+            <p>
+              Une première série <span class="semibold">d’hypothèses</span> a été formulée pour 
+              <span class="semibold">cerner les besoins</span>, puis affinée à l’aide d’une 
+              <span class="semibold">carte d’empathie</span>.
+            </p>
+      
+            <p>
+              Cette approche m’a permis de construire une 
+              <span class="semibold">première vision centrée utilisateur</span>, 
+              <span class="semibold">indispensable</span> pour orienter les étapes suivantes du projet sur des bases 
+              <span class="semibold">réalistes</span> et <span class="semibold">cohérentes</span>.
+            </p>
+      
+          </div>
+      
+        </div>
+      
+      </section>
+      
+      <section class="project-separator project-separator-bottom">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+      <section class="project-section benchmark-section">
+
+        <h2 class="section-title">Benchmark</h2>
+      
+        <div class="section-text">
+      
+          <p>
+            Afin de mieux positionner <span class="semibold">Food Day Lovers</span>, une analyse comparative 
+            des solutions existantes a été menée.
+          </p>
+      
+          <p>
+            Ce benchmark a mis en évidence une multiplicité d’applications répondant 
+            à des besoins spécifiques liés à l’alimentation :
+          </p>
+      
+          <ul>
+            <li><span class="semibold">Découverte de recettes</span></li>
+            <li><span class="semibold">Planification de menus</span></li>
+            <li><span class="semibold">Création de listes de courses</span></li>
+            <li><span class="semibold">Commandes et livraisons alimentaires</span></li>
+            <li><span class="semibold">Valorisation des restes pour éviter le gaspillage</span></li>
+          </ul>
+      
+          <p>
+            Ce morcellement oblige aujourd’hui les utilisateurs à <span class="semibold">jongler</span> 
+            entre plusieurs outils, rendant l’expérience <span class="semibold">fragmentée</span> 
+            et moins fluide.
+          </p>
+      
+          <h3 class="subtitle">Constat :</h3>
+      
+          <p>
+            Il n’existait pas, à ce jour, de solution unifiée regroupant l’ensemble de ces fonctionnalités 
+            de manière <span class="semibold">cohérente</span> et <span class="semibold">intuitive</span>.
+          </p>
+      
+          <p>
+            C’est dans cette logique que <span class="semibold">Food Day Lovers</span> a été imaginée, 
+            comme une application <span class="semibold">tout-en-un</span>, simplifiant le quotidien des utilisateurs.
+          </p>
+      
+          <p>
+            Une proposition d’un outil unique, capable de couvrir les besoins clés des utilisateurs, du choix des menus 
+            à la gestion des courses, tout en y ajoutant une proposition différenciante, grâce à des 
+            <span class="semibold">suggestions de menus préétablis</span>, directement livrés à l’utilisateur, 
+            évitant ainsi la charge mentale liée à la planification.
+          </p>
+        </div>
+      
+      </section>
+
+      <section class="project-separator project-separator-3">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+      <section class="project-section definition-section">
+
+  <h2 class="section-title">Définition</h2>
+
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-fdl/definition.webp" alt="Schéma des 5 biais">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+  <h3 class="subtitle">Pourquoi créer cette application ?</h3>
+
+  <p>
+    Cette question a guidé l’ensemble de la réflexion stratégique.
+    <span class="semibold">Food Day Lovers</span> vise à répondre à plusieurs enjeux identifiés au
+    croisement de problématiques
+    <span class="semibold">écologiques</span>,
+    <span class="semibold">économiques</span>,
+    <span class="semibold">temporelles</span>
+    et <span class="semibold">alimentaires</span> en proposant une réponse accessible
+    et concrète à un besoin quotidien.
+  </p>
+
+  <p>
+    Pour affiner la pertinence de la solution, un
+    <span class="semibold">questionnaire d’entrée</span>
+    est intégré dès l’onboarding de l’utilisateur. Il permet de :
+  </p>
+
+  <ul>
+    <li>
+      <span class="semibold">Détecter</span> d’éventuelles allergies ou restrictions alimentaires
+    </li>
+    <li>
+      <span class="semibold">Identifier</span> ses préférences culturelles ou géographiques
+      (cuisines du monde, plats familiers ou exotiques)
+    </li>
+    <li>
+      <span class="semibold">Adapter</span> les recommandations selon son rythme de vie,
+      ses habitudes et son budget
+    </li>
+  </ul>
+
+  <p>
+    Une attention particulière est également portée à la
+    <span class="semibold">valeur nutritionnelle</span>
+    des recettes, via l’intégration des
+    <span class="semibold">Nutri-Scores</span>,
+    afin de favoriser une alimentation équilibrée et transparente.
+    <span class="semibold">Food Day Lovers</span> anticipe aussi les problématiques liées à la
+    charge mentale du quotidien :
+  </p>
+
+  <ul>
+    <li>« Qu’est-ce qu’on mange ce soir ? »</li>
+    <li>« J’ai déjà cuisiné ça la semaine dernière… »</li>
+    <li>« Je n’ai rien dans mon frigo. »</li>
+  </ul>
+
+  <p>
+    Ces situations récurrentes sont adressées grâce à un
+    <span class="semibold">système intelligent de suggestions</span>,
+    de la <span class="semibold">planification des repas</span>
+    à la <span class="semibold">commande des courses</span>,
+    en passant par l’optimisation des
+    <span class="semibold">restes alimentaires</span>.
+  </p>
+
+  <p>
+    Au-delà des fonctionnalités, cette application s’inscrit dans une logique
+    d’<span class="semibold">efficacité</span>,
+    de <span class="semibold">réduction du gaspillage</span>,
+    et de <span class="semibold">soutien à l’organisation personnelle</span>.
+    En centralisant les usages au sein d’une seule interface,
+    elle permet également de
+    <span class="semibold">désencombrer l’environnement numérique</span>
+    de l’utilisateur.
+  </p>
+
+</div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-definition">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section personna-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">Personas</h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-fdl/personna.webp" alt="Personas Food Day Lovers">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+        Afin de concevoir une solution centrée sur
+        <span class="semibold">l’humain</span>, cinq personas représentatifs ont été définis à partir des
+        <span class="semibold">besoins</span>,
+        <span class="semibold">contraintes</span>
+        et <span class="semibold">motivations</span> identifiés en amont.
+      </p>
+
+      <p>
+        Ils permettent de mieux comprendre les
+        <span class="semibold">profils types</span> qui pourraient bénéficier de
+        <span class="semibold">Food Day Lovers</span>, et d’adapter l’expérience à leurs usages réels.
+      </p>
+
+      <p>
+        Parmi eux,
+        <span class="semibold">Aline</span>, 45 ans, secrétaire comptable, mariée, avec une aisance modérée
+        vis-à-vis du digital. Elle effectue ses courses les mercredis et weekends, accorde de
+        l’importance aux promotions et recherche une solution simple, claire, sans surcharge
+        d’options.
+      </p>
+
+      <p>
+        Elle représente un profil courant d’utilisatrices souhaitant
+        <span class="semibold">gagner du temps</span>,
+        <span class="semibold">mieux s’organiser</span>
+        et <span class="semibold">trouver des idées de repas sans prise de tête</span>.
+      </p>
+
+      <p>
+        Chaque persona a permis d’établir des
+        <span class="semibold">scénarios d’usage spécifiques</span>, croisant objectifs, frustrations et
+        attentes, pour concevoir une interface
+        <span class="semibold">accessible</span>,
+        <span class="semibold">inclusive</span>
+        et <span class="semibold">utile au quotidien</span>.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-personnas">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section questionnaire-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">
+  Questionnaires <br class="desktop-only">Utilisateurs
+  </h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-fdl/questionnaire.webp" alt="Questionnaires utilisateurs Food Day Lovers">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+        Pour compléter l’approche empathique et confronter les premières hypothèses
+        aux <span class="semibold">usages réels</span>, un questionnaire utilisateur a été
+        partagé auprès d’un panel <span class="semibold">ciblé et diversifié</span>,
+        en cohérence avec les personas établis afin d’assurer la pertinence des retours
+        et <span class="semibold">d’alimenter</span> le processus de conception.
+      </p>
+
+      <p>
+        Structuré en <span class="semibold">quatre grandes catégories</span>, il visait à
+        explorer les habitudes, <span class="semibold">les besoins</span>,
+        <span class="semibold">les freins</span> et
+        <span class="semibold">les attentes</span> autour de l’organisation des repas
+        et de l’usage d’applications culinaires.
+      </p>
+
+      <p>
+        Les réponses ont permis de faire <span class="semibold">émerger des tendances claires</span>,
+        d’affiner les orientations fonctionnelles de l’application, et de mieux cerner
+        <span class="semibold">les leviers à activer</span> pour proposer une expérience
+        à la fois <span class="semibold">pertinente</span>,
+        <span class="semibold">intuitive</span> et
+        <span class="semibold">engageante</span>.
+      </p>
+
+      <p>
+        Au total, <span class="semibold">cinq questionnaires</span> ont été analysés,
+        offrant une base qualitative solide pour alimenter les étapes suivantes du projet.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-questionnaire">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section brainstorming-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">Brainstorming</h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-fdl/brainstorming.webp" alt="Brainstorming Food Day Lovers">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+        L’étape de brainstorming a permis d’explorer des pistes concrètes pour répondre
+        aux cinq grands axes identifiés en amont :
+        <span class="semibold">écologie</span>,
+        <span class="semibold">économie</span>,
+        <span class="semibold">santé</span>,
+        <span class="semibold">gain de temps</span>
+        et <span class="semibold">plaisir de cuisiner</span>.
+      </p>
+
+      <p>
+        Plutôt que de partir d’une page blanche, cette phase a été nourrie par les
+        insights tirés des questionnaires et des premières hypothèses, permettant ainsi
+        de cadrer la réflexion et d’éviter les biais trop personnels.
+      </p>
+
+      <p>
+        Certaines idées avaient déjà émergé dès
+        <span class="semibold">les premières étapes du projet</span>, et ont été affinées
+        durant le brainstorming pour les confronter aux
+        <span class="semibold">attentes réelles</span> des utilisateurs.
+      </p>
+
+      <p>
+        Cette approche a permis de structurer les fonctionnalités futures tout en
+        garantissant leur
+        <span class="semibold">utilité</span>,
+        <span class="semibold">faisabilité</span>
+        et <span class="semibold">désirabilité</span>.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-brainstorming">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section user-stories-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">Users Stories</h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGES -->
+    <div class="section-image">
+      <img src="img-fdl/user-stories-1.webp" alt="User stories – vue d’ensemble">
+    </div>
+
+    <div class="section-image">
+      <img src="img-fdl/user-stories-2.webp" alt="User stories – détail du diagramme">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+        Afin de structurer les fonctionnalités clés de l’application autour des
+        <span class="semibold">besoins réels des utilisateurs</span>, les user stories
+        ont été rédigées.
+      </p>
+
+      <p>
+        Formalisant les attentes sous une forme
+        <span class="semibold">opérationnelle</span>, orientée usage.
+      </p>
+
+      <p>
+        L’identification des logiques d’interaction, la
+        <span class="semibold">hiérarchisation des priorités fonctionnelles</span> et la
+        <span class="semibold">clarification du parcours utilisateur</span> ont renforcé
+        la cohérence globale de l’expérience proposée.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-user-stories">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section diagramme-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">Diagramme</h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-fdl/diagramme.png" alt="Diagramme de parcours utilisateur">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+        La modélisation du parcours via un
+        <span class="semibold">diagramme</span> a permis de
+        <span class="semibold">visualiser les connexions</span> entre les différentes
+        fonctionnalités et d’anticiper les
+        <span class="semibold">enchaînements logiques</span>.
+      </p>
+
+      <p>
+        Cette étape a joué un rôle clé pour structurer
+        <span class="semibold">l’architecture de l’application</span>,
+        fluidifier la navigation et éviter les ruptures
+        dans <span class="semibold">l’expérience utilisateur</span>.
+      </p>
+
+      <p>
+        Apportant une base solide pour la
+        <span class="semibold">création des wireframes</span>.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-diagramme">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section wireframes-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">
+    Wireframes &<br class="desktop-only"> Prototypes
+  </h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGES -->
+    <div class="section-image">
+      <img src="img-fdl/wireframes.png" alt="Wireframes de l’application">
+    </div>
+
+    <div class="section-image">
+      <img src="img-fdl/wireframe-2.png" alt="Prototypes interactifs de l’application">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+        Les wireframes ont posé les
+        <span class="semibold">bases visuelles</span> de l’interface, en traduisant
+        les fonctionnalités clés en écrans structurés.
+      </p>
+
+      <p>
+        <span class="semibold">Un peu plus de 30 wireframes</span> ont été transformés en
+        <span class="semibold">prototypes interactifs</span> afin de simuler les parcours
+        utilisateurs de manière réaliste.
+      </p>
+
+      <p>
+        Cette phase a servi de support pour tester les
+        <span class="semibold">enchaînements</span>, valider la
+        <span class="semibold">logique de navigation</span> et affiner les
+        <span class="semibold">micro-interactions</span>.
+      </p>
+
+      <p>
+        Les tests réalisés auprès de
+        <span class="semibold">5 utilisateurs</span> ont permis d’identifier quelques
+        ajustements mineurs. Cependant, dans sa globalité, les retours ont
+        <span class="semibold">confirmé la clarté et l’efficacité du prototype</span>.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-separator project-separator-wireframes">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section interfaces-section">
+
+  <!-- COLONNE GAUCHE (desktop) -->
+  <h2 class="section-title">
+    Interfaces<br class="desktop-only"> Utilisateurs
+  </h2>
+
+  <!-- COLONNE DROITE (desktop) -->
+  <div class="section-col">
+
+    <!-- IMAGE -->
+    <div class="section-image">
+      <img src="img-fdl/maquettes-fdl.webp" alt="Interfaces utilisateurs Food Day Lovers">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="section-text">
+
+      <p>
+        Pour finaliser le projet,
+        <span class="semibold">plusieurs pistes d’interfaces</span> ont été explorées afin
+        de <span class="semibold">tester différentes directions graphiques</span> et
+        renforcer la cohérence visuelle de l’application.
+      </p>
+
+      <p>
+        Une version <span class="semibold">claire</span>, pensée comme l’interface principale,
+        propose une esthétique accessible et lumineuse. Une déclinaison
+        <span class="semibold">sombre</span> a également été conçue pour répondre à des
+        <span class="semibold">préférences d’usage différentes</span>.
+      </p>
+
+      <p>
+        Deux autres variantes, l’une autour de
+        <span class="semibold">teintes bordeaux</span>, une autre au style plus
+        <span class="semibold">épuré et haut de gamme</span>, viennent enrichir les
+        possibilités en termes d’identité visuelle.
+      </p>
+
+      <p>
+        Ces propositions permettent de projeter l’application dans des
+        <span class="semibold">univers visuels distincts</span>, tout en maintenant une
+        <span class="semibold">cohérence fonctionnelle</span>, une
+        <span class="semibold">hiérarchie claire</span> et un
+        <span class="semibold">design centré utilisateur</span>.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="project-navigation project-navigation-desktop">
+
+  <!-- Projet précédent -->
+  <a href="seconde-peau.html" class="project-nav prev">
+    <span class="chevron">‹</span>
+    <span class="project-name">Seconde Peau</span>
+  </a>
+
+  <!-- Projet suivant -->
+  <a href="constel-mentorat.html" class="project-nav next">
+    <span class="project-name">Constel Mentorat</span>
+    <span class="chevron">›</span>
+  </a>
+
+</section>
+
+<!-- MOBILE : boutons -->
+<section class="project-navigation project-navigation-mobile">
+  <a href="projetsbis.html" class="btn">Projets</a>
+      <a class="btn btn-primary" href="mailto:g.tartare@yahoo.fr">
+        Me contacter
+      </a>
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr" class="theme-dark">
+<head>
+<script>
+  (function () {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add(`theme-${savedTheme}`);
+  })();
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Les Bambinets — Project</title>
+  
+  <style>
+
+  @font-face {
+  font-family: "Poppins-fallback";
+  src: local("Arial");
+  size-adjust: 108%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Roboto-fallback";
+  src: local("Arial");
+  size-adjust: 100%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-bold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+</style>
+
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Style dédié à la page projet -->
+  <link rel="stylesheet" href="les-bambinets.css" />
+
+  <!-- Google Fonts (identiques à toutes tes pages) -->
+</head>
+
+<body class="project-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ====================== -->
+  <!--      NAVIGATION        -->
+  <!-- ====================== -->
+  <header>
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Navigation principale" aria-expanded="false">
+
+     <a href="index.html" class="nav-left brand-link">
+  <img
+    class="avatar"
+    src="images/photo-profil.webp"
+    alt="Portrait de Gaël Tartare"
+    width="72"
+    height="72"
+  />
+  <span class="brand">
+    Gaël<br>Tartare
+  </span>
+</a>
+
+        <!-- DROITE -->
+        <div class="nav-right">
+
+          <!-- DROPDOWN MOBILE -->
+          <div class="theme-dropdown mobile-theme">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </div>
+
+          <!-- BURGER -->
+          <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+        </div>
+
+        <!-- MENU -->
+        <ul>
+          <li><a href="projetsbis.html">Projets</a></li>
+          <li><a href="test.html">À propos</a></li>
+          <li>
+          <a 
+            href="https://drive.google.com/file/d/12P7wmIBrvMZcJ2jdYPcSZYPVTRzzmXLn/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
+          </li>
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://www.linkedin.com/in/gael-tartare" 
+               class="nav-linkedin" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.55v-5.54c0-1.32-.02-3.01-1.84-3.01-1.84 0-2.13 1.43-2.13 2.91v5.64h-3.55V9h3.41v1.56h.05c.48-.91 1.66-1.87 3.43-1.87 3.67 0 4.35 2.42 4.35 5.56v6.2z"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- THEME DROPDOWN (DESKTOP) -->
+          <li class="theme-dropdown">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </li>
+
+          <!-- CTA -->
+          <li><a class="btn btn-primary" href="index.html#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====================== -->
+  <!--     CONTENU PROJET     -->
+  <!-- ====================== -->
+
+  <main id="contenu">
+
+    <section class="project-header">
+        
+      <h1 class="project-title">Les Bambinets</h1>
+    
+      <div class="project-intro">
+        <p>
+        ⌛️ Année : <span class="semibold">2025</span><br>
+        🕘 Durée du projet : <span class="semibold">20 jours</span><br>
+        🎯 Livrables attendus :
+        <span class="semibold">Maquettes hautes fidélités pour une application mobile</span><br>
+        👨‍💻 Rôle : <span class="semibold">Product Designer</span><br>
+        ⚒️ Outils utilisés : <span class="semibold">Figma</span>
+        </p>
+      </div>
+
+      <div class="project-hero">
+        <img src="img-les-bambinets/projet-2-1.png" alt="Aperçu du projet Food Day Lovers">
+      </div>
+      
+      <section class="project-section contexte-objectifs">
+  
+        <h2 class="section-title">Contexte & Objectifs</h2>
+      
+        <div class="section-text">
+
+<p>
+  En tant qu’UX/UI Designer, j’ai été sollicitée par la crèche
+  <span class="semibold">« Les Bambinets »</span> pour concevoir une
+  <span class="semibold">application mobile dédiée à l’apprentissage du vocabulaire de la langue des signes</span>
+  pour les tout-petits.
+</p>
+
+<p>
+  L’objectif principal était de
+  <span class="semibold">faciliter la communication</span> entre les
+  <span class="semibold">professionnels de la petite enfance</span>, les
+  <span class="semibold">parents</span> et les
+  <span class="semibold">enfants</span>, en exploitant le
+  <span class="semibold">langage non verbal</span>, particulièrement adapté aux
+  <span class="semibold">enfants de moins de 3 ans</span>.
+</p>
+        </div>
+      
+      </section>
+      
+      <section class="project-separator project-separator-bottom">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+<section class="project-section approche-conception-section">
+
+  <!-- TITRE -->
+  <h2 class="section-title">Besoin Client </h2>
+
+  <!-- TEXTE -->
+  <div class="section-text">
+
+<h3 class="subtitle subtitle--intro">Utilisateurs cibles :</h3>
+<ul>
+  <li><span class="semibold">Professionnels de la petite enfance</span>.</li>
+  <li><span class="semibold">Parents bénéficiaires</span>.</li>
+</ul>
+
+    <h3 class="subtitle subtitle--section">Fonctionnalités souhaitées :</h3>
+<ul>
+  <li>
+    Un <span class="semibold">glossaire d’environ 20 mots signés</span>,
+    organisés par <span class="semibold">ordre alphabétique</span> et par
+    <span class="semibold">catégories</span> (essentiel, émotions, loisirs, nature).
+  </li>
+  <li>
+    Des <span class="semibold">micro-quiz interactifs</span> pour valider les acquis.
+  </li>
+  <li>
+    Une <span class="semibold">FAQ dédiée</span> aux questions fréquentes sur
+    l’apprentissage des signes avec les enfants.
+  </li>
+  <li>
+    Une fonctionnalité <span class="semibold">Favoris</span> (icône « cœur » à côté
+    des signes) permettant de
+    <span class="semibold">retrouver rapidement les signes les plus utilisés</span>.
+  </li>
+  <li>
+    Une utilisation intensive de <span class="semibold">contenus vidéo</span> pour
+    illustrer les signes et
+    <span class="semibold">rendre l’apprentissage plus vivant</span>.
+  </li>
+</ul>
+
+    <h3 class="subtitle subtitle--section">Contraintes :</h3>
+<ul>
+  <li>
+    Une interface <span class="semibold">simple</span> et
+    <span class="semibold">intuitive</span>, accessible à tous, y compris aux
+    <span class="semibold">utilisateurs peu familiers des technologies</span>.
+  </li>
+  <li>
+    Une structure <span class="semibold">évolutive</span> permettant l’ajout de
+    <span class="semibold">nouveaux contenus</span> (nouveaux signes).
+  </li>
+  <li>
+    Le <span class="semibold">respect des contraintes légales</span> liées aux
+    <span class="semibold">données personnelles</span> et aux
+    <span class="semibold">droits d’auteur</span>.
+  </li>
+</ul>
+</section>
+
+      <section class="project-separator project-separator-3">
+        <img src="img-fdl/line.webp" alt="Séparateur graphique" class="separator-img">
+      </section>
+
+<section class="project-section definition-section">
+
+  <h2 class="section-title">flow-chart</h2>
+
+  <div class="section-col">
+
+
+    <div class="section-image">
+      <img src="img-les-bambinets/flow-chart.png" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+<p>
+  Ce flow-chart illustre <span class="semibold">l’expérience utilisateur complète</span>
+  au sein de <span class="semibold">l’application mobile</span>.
+</p>
+
+<p>
+  Il met en évidence des <span class="semibold">branches logiques</span>
+  (Oui / Non) permettant de couvrir
+  <span class="semibold">l’ensemble des scénarios possibles</span>.
+</p>
+</div>
+</section>
+
+<section class="project-separator project-separator-definition">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section wireframe-section">
+
+    <h2 class="section-title">
+    Wireframes<br class="desktop-only"> Moyenne Fidelity
+  </h2>
+
+  <div class="section-col">
+
+
+    <div class="section-image">
+      <img src="img-les-bambinets/planche-wireframes.png" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+<p>
+  Après avoir conçu le <span class="semibold">flow-chart</span>, je me suis
+  naturellement orientée vers la réalisation des
+  <span class="semibold">wireframes</span>.
+</p>
+
+<p>
+  Ayant déjà une <span class="semibold">vision claire</span> de la conception de
+  l’application, j’ai fait le choix de commencer directement par des
+  <span class="semibold">wireframes à fidélité moyenne</span>.
+</p>
+
+<p>
+  Ce choix m’a permis de <span class="semibold">gagner un temps précieux</span> et de
+  <span class="semibold">structurer efficacement l’architecture des écrans</span>,
+  tout en préparant le terrain pour les
+  <span class="semibold">maquettes haute fidélité</span>.
+</p>
+</div>
+</section>
+
+<section class="project-separator project-separator-personnas">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section designsystem-section">
+
+  <h2 class="section-title">Design System</h2>
+
+  <div class="section-col">
+
+
+    <div class="section-image">
+      <img src="img-les-bambinets/designsystem.webp" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+<p>
+  Pour la conception de <span class="semibold">l’application mobile</span>, je me suis
+  appuyée sur le <span class="semibold">style guide</span> initialement défini par
+  l’<span class="semibold">UI Designer</span>, parti en congé maternité.
+</p>
+
+<p>
+  J’ai ensuite fait adapter et évoluer ce guide afin de
+  <span class="semibold">renforcer la cohérence visuelle</span>, aussi bien pour
+  <span class="semibold">l’expérience utilisateur</span> que pour
+  <span class="semibold">l’image de marque</span>.
+</p>
+
+<p>
+  Cette adaptation a été menée en tenant compte des
+  <span class="semibold">spécificités du public cible</span>, afin de garantir une
+  interface à la fois <span class="semibold">accessible</span>,
+  <span class="semibold">lisible</span> et <span class="semibold">cohérente</span>
+  sur l’ensemble des écrans.
+</p>
+</div>
+</section>
+
+<section class="project-separator project-separator-questionnaire">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+<section class="project-section maquettes-section">
+
+    <h2 class="section-title">
+    Maquettes<br class="desktop-only"> High Fidelity
+  </h2>
+
+  <div class="section-col">
+
+
+    <div class="section-image">
+      <img src="img-les-bambinets/maquette-app-mobile-planche-2.png" alt="Parcours utilisateurs">
+    </div>
+
+    <!-- TEXTE -->
+   <div class="section-text">
+
+<p>
+  L’intention derrière ces <span class="semibold">maquettes haute fidélité</span>
+  reposait sur un <span class="semibold">équilibre subtil entre adultes et enfants</span>,
+  grâce à l’utilisation de <span class="semibold">visuels imagés</span>, de
+  <span class="semibold">couleurs douces</span>, d’une
+  <span class="semibold">organisation logique des contenus</span>, d’
+  <span class="semibold">icônes explicites</span> et d’une
+  <span class="semibold">UX simple et intuitive</span>, favorisant
+  <span class="semibold">l’accessibilité</span> et la
+  <span class="semibold">compréhension</span>.
+</p>
+
+<p>
+  Sur la rangée du haut, sont présentés les
+  <span class="semibold">livrables attendus par le client</span>.
+</p>
+
+<p>
+  Sur la rangée du bas, on observe une
+  <span class="semibold">version enrichie</span> intégrant des
+  <span class="semibold">évolutions</span> conçues pour
+  <span class="semibold">optimiser l’expérience utilisateur</span> :
+</p>
+
+<ul>
+  <li>
+    Un <span class="semibold">dashboard</span> centralisant l’intégralité des
+    contenus présents dans l’application, afin
+    <span class="semibold">d’inciter l’utilisateur à découvrir chaque partie</span>,
+    de <span class="semibold">maximiser l’usage</span>, la
+    <span class="semibold">découverte des fonctionnalités</span> et la
+    <span class="semibold">rétention</span> (signes, catégories et quiz).
+  </li>
+  <li>
+    Un <span class="semibold">chat direct avec le support</span> permettant
+    d’obtenir une <span class="semibold">réponse rapide</span>, accompagné d’une
+    <span class="semibold">maquette additionnelle</span> prévoyant un
+    <span class="semibold">intermédiaire</span> pour poser des questions
+    directement via l’application et recevoir une réponse par
+    <span class="semibold">mail</span>.
+  </li>
+</ul>
+
+<p>
+  Ces évolutions tiennent compte des
+  <span class="semibold">contraintes de budget</span> et de
+  <span class="semibold">temps de développement</span> du client, afin d’apporter
+  un <span class="semibold">maximum de valeur ajoutée</span> pour l’utilisateur
+  tout en respectant les <span class="semibold">ressources disponibles</span>.
+</p>
+
+<p>
+  Chaque écran a été structuré selon des
+  <span class="semibold">principes UX clés</span>, privilégiant la
+  <span class="semibold">clarté</span>, la
+  <span class="semibold">lisibilité</span> et l’
+  <span class="semibold">efficacité cognitive</span>, avec une
+  <span class="semibold">hiérarchie visuelle claire</span> facilitant la
+  <span class="semibold">découverte du contenu</span> et incitant à
+  <span class="semibold">l’exploration</span>.
+</p>
+
+</div>
+</section>
+
+<section class="project-separator project-separator-brainstorming">
+  <img
+    src="img-fdl/line.webp"
+    alt="Séparateur graphique"
+    class="separator-img"
+  >
+</section>
+
+      <section class="project-section conclusion-section">
+
+        <h2 class="section-title">Conclusion</h2>
+      
+        <div class="section-text">
+
+<p>
+  Ce projet a été conçu dans une
+  <span class="semibold">démarche UX centrée sur l’utilisateur</span>, avec une
+  attention particulière portée sur la
+  <span class="semibold">fluidité des parcours</span>,
+  <span class="semibold">l’accessibilité des contenus</span> et de
+  <span class="semibold">l’application</span>.
+</p>
+
+<p>
+  Grâce à une <span class="semibold">réflexion itérative</span> et une
+  <span class="semibold">optimisation constante</span> entre
+  <span class="semibold">fonctionnalités</span>,
+  <span class="semibold">contraintes techniques</span> et
+  <span class="semibold">besoins réels</span>, j’ai pu proposer une
+  <span class="semibold">solution cohérente</span> et
+  <span class="semibold">évolutive</span>, parfaitement alignée sur les
+  <span class="semibold">attentes du client</span>, les
+  <span class="semibold">usages</span> des professionnels et des parents.
+</p>
+
+<p>
+  L’ensemble du projet s’articule autour d’un
+  <span class="semibold">fil conducteur</span> fort, pensé pour rester en
+  <span class="semibold">lien constant avec les enfants</span>, tout en répondant
+  aux exigences fonctionnelles et pédagogiques de l’application.
+</p>
+
+   
+        </div>
+      
+      </section>
+
+<section class="project-navigation project-navigation-desktop">
+
+  <!-- Projet précédent -->
+  <a href="constel-mentorat.html" class="project-nav prev">
+    <span class="chevron">‹</span>
+    <span class="project-name">Constel Mentorat</span>
+  </a>
+
+  <!-- Projet suivant -->
+  <a href="seconde-peau.html" class="project-nav next">
+    <span class="project-name">Seconde Peau</span>
+    <span class="chevron">›</span>
+  </a>
+
+</section>
+
+<!-- MOBILE : boutons -->
+<section class="project-navigation project-navigation-mobile">
+  <a href="projetsbis.html" class="btn">Projets</a>
+      <a class="btn btn-primary" href="mailto:g.tartare@yahoo.fr">
+        Me contacter
+      </a>
+</section>
+
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
