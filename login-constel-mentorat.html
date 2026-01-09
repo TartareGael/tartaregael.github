@@ -144,10 +144,10 @@
 
       </div>
 
-      <div class="actions">
-        <button class="btn btn-primary" id="submit">
-          Continuer
-        </button>
+<button type="submit" class="btn btn-primary" id="submit">
+  Continuer
+</button>
+
 
         <a class="btn" href="projetsbis.html">
           Retour aux projets
@@ -159,17 +159,16 @@
   </main>
 
 <script>
-  const input = document.getElementById('password');
+  const passwordField = document.getElementById('password');
   const toggle = document.getElementById('toggle');
 
   toggle.addEventListener('click', () => {
-    const isPassword = input.type === 'password';
-
-    input.type = isPassword ? 'text' : 'password';
-
+    const isPassword = passwordField.type === 'password';
+    passwordField.type = isPassword ? 'text' : 'password';
     toggle.classList.toggle('is-visible', isPassword);
   });
 </script>
+
   
 <script>
   const loginBtn = document.getElementById('submit');
