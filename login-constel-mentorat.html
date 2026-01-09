@@ -158,8 +158,6 @@
     </section>
   </main>
 
-  <script src="login-constel-mentorat.js"></script>
-
 <script>
   const input = document.getElementById('password');
   const toggle = document.getElementById('toggle');
@@ -170,6 +168,28 @@
     input.type = isPassword ? 'text' : 'password';
 
     toggle.classList.toggle('is-visible', isPassword);
+  });
+</script>
+
+  <script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const password = document.querySelector("input[type=password]").value;
+
+    const res = await fetch("/auth/constel", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password })
+    });
+
+    if (res.ok) {
+      window.location.href = "/constel-mentorat";
+    } else {
+      alert("Mot de passe incorrect");
+    }
   });
 </script>
 
