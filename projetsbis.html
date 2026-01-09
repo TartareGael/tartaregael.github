@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<script>
+  (function () {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add(`theme-${savedTheme}`);
+  })();
+</script>
+
+<style>
+  html.theme-light {
+    --bg: #f6f1e9;
+  }
+
+  html.theme-dark {
+    --bg: #101112;
+  }
+
+  html {
+    background-color: var(--bg);
+  }
+</style>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects</title>
+
+  <style>
+
+  @font-face {
+  font-family: "Poppins-fallback";
+  src: local("Arial");
+  size-adjust: 108%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Roboto-fallback";
+  src: local("Arial");
+  size-adjust: 100%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/poppins-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/roboto-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+</style>
+
+  <link rel="preload" href="fonts/poppins-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+/* TEST FORCE — index.html uniquement */
+
+/* Projets / À propos / CV */
+.nav ul li a {
+  font-weight: 600 !important;
+}
+
+/* Dropdown thème : Light / Dark */
+.theme-dropdown .dropdown-menu button {
+  font-weight: 600 !important;
+}
+</style>
+
+  <!-- Styles globaux -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Style dédié à la page projet -->
+  <link rel="stylesheet" href="projetsbis.css" />
+ </head>
+
+<body class="project-page">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ====================== -->
+  <!--      NAVIGATION        -->
+  <!-- ====================== -->
+  <header>
+    <div class="nav-wrap">
+      <nav class="nav" aria-label="Navigation principale" aria-expanded="false">
+
+     <a href="index.html" class="nav-left brand-link">
+  <img
+    class="avatar"
+    src="images/photo-profil.webp"
+    alt="Portrait de Gaël Tartare"
+    width="72"
+    height="72"
+  />
+  <span class="brand">
+    Gaël<br>Tartare
+  </span>
+</a>
+
+
+        <!-- DROITE -->
+        <div class="nav-right">
+
+          <!-- DROPDOWN MOBILE -->
+          <div class="theme-dropdown mobile-theme">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </div>
+
+          <!-- BURGER -->
+          <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+        </div>
+
+        <!-- =============================== -->
+        <!--        NAVIGATION AVEC DROPDOWN -->
+        <!-- =============================== -->
+        <ul>
+          <li>
+            <a href="projetsbis.html" aria-current="page">Projets</a>
+          </li>
+
+          <li><a href="test.html">À propos</a></li>
+          <li>
+          <a 
+            href="https://drive.google.com/file/d/12P7wmIBrvMZcJ2jdYPcSZYPVTRzzmXLn/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV
+          </a>
+          </li>
+
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://www.linkedin.com/in/gael-tartare" 
+               class="nav-linkedin" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.45 20.45h-3.55v-5.54c0-1.32-.02-3.01-1.84-3.01-1.84 0-2.13 1.43-2.13 2.91v5.64h-3.55V9h3.41v1.56h.05c.48-.91 1.66-1.87 3.43-1.87 3.67 0 4.35 2.42 4.35 5.56v6.2z"/>
+              </svg>
+            </a>
+          </li>
+
+          <!-- THEME DROPDOWN (DESKTOP) -->
+          <li class="theme-dropdown">
+<button class="dropdown-button">
+  <span class="label"></span>
+  <span class="chevron">▾</span>
+</button>
+
+
+            <div class="dropdown-menu">
+              <button data-theme="dark">Dark</button>
+              <button data-theme="light">Light</button>
+            </div>
+          </li>
+
+          <!-- CTA -->
+          <li><a class="btn btn-primary" href="index.html#contact">Me contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====================== -->
+  <!--     CONTENU PROJET     -->
+  <!-- ====================== -->
+
+<!-- CONTENU -->
+<main id="contenu">
+
+  <section class="projects-section">
+    <div class="section-inner">
+
+      <h1 class="projects-title">Projets</h1>
+
+      <div class="projects-grid">
+
+<a href="login-constel-mentorat.html" class="project-item">
+  <img src="images/projet-1-1.png" alt="Constel Mentorat">
+  <h3>Constel Mentorat</h3>
+
+  <div class="project-badges">
+    <p>Expérience de matching</p>
+    <p>Solution SaaS</p>
+  </div>
+</a>
+
+<a href="les-bambinets.html" class="project-item">
+  <img src="images/projet-2-1.png" alt="Les Bambinets">
+  <h3>Les Bambinets</h3>
+
+  <div class="project-badges">
+    <p>Conception UX/UI</p>
+    <p>Pixel Design</p>
+  </div>
+</a>
+
+<a href="seconde-peau.html" class="project-item">
+  <img src="images/projet-3-1.png" alt="Seconde Peau">
+  <h3>Seconde Peau</h3>
+
+  <div class="project-badges">
+    <p>Analyse UX</p>
+    <p>Refonte interface</p>
+  </div>
+</a>
+
+<a href="food-day-lovers.html" class="project-item">
+  <img src="images/projet-4-1.png" alt="Food Day Lovers">
+  <h3>Food Day Lovers</h3>
+
+  <div class="project-badges">
+    <p>Conception UX/UI</p>
+    <p>Design Thinking</p>
+  </div>
+</a>
+
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>

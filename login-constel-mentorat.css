@@ -1,0 +1,250 @@
+/* =========================
+   TYPOGRAPHIE RESPONSIVE
+   ========================= */
+
+/* Desktop */
+@media (min-width: 1101px) {
+  .login-card h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  input {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}
+
+/* Tablette */
+@media (min-width: 600px) and (max-width: 1100px) {
+  .login-card h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  input {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 599px) {
+  .login-card h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   FIX BOUTONS — LOGIN
+   ========================= */
+
+.login-card .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.login-card .btn {
+  width: 100%;
+  max-width: 340px;
+  height: 56px;
+
+  margin: 0 auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 20px;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   ALIGNER CHAMP MDP = BOUTONS
+   ========================= */
+
+.login-card .field {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.login-card input[type="password"],
+.login-card input[type="text"] {
+  width: 100%;
+}
+
+/* =========================
+   ALIGNEMENT ICÔNE ŒIL
+   ========================= */
+
+.login-card .field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-card .toggle-visibility {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+/* =========================
+   ESPACEMENTS — PAGE LOGIN
+   ========================= */
+
+/* Desktop & tablette (base) */
+.login-card h1 {
+  margin-bottom: -8px;
+}
+
+.login-card .subtitle {
+  margin-bottom: 24px;
+}
+
+.login-card .field {
+  margin-bottom: 32px;
+}
+
+.login-card .actions {
+  margin-top: 0;
+  gap: 12px;
+}
+
+.login-card .message {
+  margin-top: 16px;
+}
+
+
+/* =========================
+   MOBILE — ESPACEMENTS PLUS COMPACTS
+   ========================= */
+
+@media (max-width: 599px) {
+  .login-card .subtitle {
+    margin-bottom: 28px;
+  }
+
+  .login-card .field {
+    margin-bottom: 20px;
+  }
+
+  .login-card .message {
+    margin-top: 12px;
+  }
+}
+
+/* =========================
+   SUPPRESSION FOCUS BLEU NATIF
+   ========================= */
+
+.login-card input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* =========================
+   SUPPRESSION TOTALE FOCUS BLEU (CHROME / SAFARI)
+   ========================= */
+
+.login-card input {
+  outline: none;
+}
+
+.login-card input:focus,
+.login-card input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+/* =========================
+   SUPPRESSION TOTALE FOCUS BLEU — CHROME
+   ========================= */
+
+.login-card input,
+.login-card input:focus,
+.login-card input:focus-visible,
+.login-card input:active {
+  outline: none !important;
+  box-shadow: inset 0 0 0 2px transparent !important;
+  -webkit-box-shadow: inset 0 0 0 2px transparent !important;
+  -webkit-appearance: none;
+}
+
+/* =========================
+   ICÔNE ŒIL — ÉTAT MASQUÉ / VISIBLE
+   ========================= */
+
+.toggle-visibility {
+  position: absolute;
+  color: var(--muted); /* 👈 COULEUR DE BASE = icône œil */
+}
+
+/* Barre diagonale */
+.toggle-visibility::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background: currentColor; /* 👈 hérite EXACTEMENT de la couleur */
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Quand le mot de passe est visible */
+.toggle-visibility.is-visible {
+  color: var(--muted); /* 👈 même couleur que l’icône */
+}
+
+.toggle-visibility.is-visible::after {
+  opacity: 1;
+}
+
+/* =========================
+   MOBILE — PADDING LATÉRAL 48px
+   ========================= */
+
+@media (max-width: 599px) {
+  main {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
