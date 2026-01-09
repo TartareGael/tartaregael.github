@@ -171,13 +171,18 @@
   });
 </script>
 
-  <script>
-  const form = document.querySelector("form");
+<script>
+  const btn = document.querySelector('button[type="submit"], .btn-continue, #continue');
+  const input = document.querySelector('input[type="password"]');
 
-  form.addEventListener("submit", async (e) => {
+  if (!btn || !input) {
+    console.error("Login: bouton ou input introuvable", { btn, input });
+  }
+
+  btn?.addEventListener("click", async (e) => {
     e.preventDefault();
 
-    const password = document.querySelector("input[type=password]").value;
+    const password = input.value;
 
     const res = await fetch("/auth/constel", {
       method: "POST",
@@ -192,6 +197,7 @@
     }
   });
 </script>
+
 
 
 </body>
