@@ -172,17 +172,17 @@
 </script>
 
 <script>
-  const btn = document.querySelector('button[type="submit"], .btn-continue, #continue');
-  const input = document.querySelector('input[type="password"]');
+  const loginBtn = document.querySelector('button[type="submit"], .btn-continue, #continue');
+  const passwordInput = document.querySelector('input[type="password"]');
 
-  if (!btn || !input) {
-    console.error("Login: bouton ou input introuvable", { btn, input });
+  if (!loginBtn || !passwordInput) {
+    console.error("Login: bouton ou input introuvable", { loginBtn, passwordInput });
   }
 
-  btn?.addEventListener("click", async (e) => {
+  loginBtn?.addEventListener("click", async (e) => {
     e.preventDefault();
 
-    const password = input.value;
+    const password = passwordInput.value;
 
     const res = await fetch("/auth/constel", {
       method: "POST",
@@ -197,6 +197,7 @@
     }
   });
 </script>
+
 
 </body>
 </html>
