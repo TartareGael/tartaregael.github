@@ -170,16 +170,16 @@
     toggle.classList.toggle('is-visible', isPassword);
   });
 </script>
-
+  
 <script>
-  const loginBtn = document.querySelector('button[type="submit"], .btn-continue, #continue');
-  const passwordInput = document.querySelector('input[type="password"]');
+  const loginBtn = document.getElementById('submit');
+  const passwordInput = document.getElementById('password');
 
   if (!loginBtn || !passwordInput) {
     console.error("Login: bouton ou input introuvable", { loginBtn, passwordInput });
   }
 
-  loginBtn?.addEventListener("click", async (e) => {
+  loginBtn.addEventListener("click", async (e) => {
     e.preventDefault();
 
     const password = passwordInput.value;
@@ -197,6 +197,7 @@
     }
   });
 </script>
+
 
 
 </body>
