@@ -183,7 +183,7 @@
 
     const password = passwordInput.value;
 
-    const res = await fetch("/auth/constel", {
+   fetch("https://constel-auth.g-tartare.workers.dev", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password })
