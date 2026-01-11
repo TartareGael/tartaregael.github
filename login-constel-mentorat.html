@@ -192,8 +192,8 @@ try {
 
   if (data.success === true) {
     sessionStorage.setItem("constel_auth", "true");
-    window.location.href = "constel-mentorat.html";
-    return;
+location.reload();
+
   } else {
     message.textContent = "Mot de passe incorrect";
     message.className = "message error";
