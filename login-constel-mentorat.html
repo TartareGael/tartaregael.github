@@ -188,12 +188,14 @@ loginBtn.addEventListener("click", async (e) => {
       body: JSON.stringify({ password })
     });
 
-    const data = await res.json();
+if (res.ok) {
+  sessionStorage.setItem("constel_auth", "true");
 
-    if (res.ok && data.success === true) {
-      sessionStorage.setItem("constel_auth", "true");
-      window.location.href = "/constel-mentorat.html";
-    } else {
+  // IMPORTANT : forcer la navigation complète
+  window.location.assign("/constel-mentorat");
+  return;
+}
+ else {
       message.textContent = "Mot de passe incorrect";
       message.className = "message error";
     }
