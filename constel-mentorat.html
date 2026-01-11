@@ -116,10 +116,13 @@
 
 <body class="project-page">
 <script>
+console.log("AUTH =", sessionStorage.getItem("constel_auth"));
+
 if (sessionStorage.getItem("constel_auth") !== "true") {
-  window.location.replace("/constel-mentorat.html");
+  window.location.replace("/login-constel-mentorat.html");
 }
 </script>
+
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <!-- ====================== -->
