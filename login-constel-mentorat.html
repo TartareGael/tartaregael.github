@@ -179,36 +179,39 @@ loginBtn.addEventListener("click", async (e) => {
   const password = passwordInput.value;
   message.textContent = "";
 
-try {
-  const res = await fetch("https://constel-auth.g-tartare.workers.dev", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ password })
-  });
+  try {
+    const res = await fetch("https://constel-auth.g-tartare.workers.dev", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ password })
+    });
 
-  const data = await res.json();
+    if (!res.ok) {
+      message.textContent = "Mot de passe incorrect";
+      message.className = "message error";
+      return;
+    }
 
-if (data.success === true) {
-  sessionStorage.setItem("constel_auth", "true");
-  window.location.href = "/constel-mentorat.html";
-}
+    const data = await res.json();
 
+    if (data.success === true) {
+      sessionStorage.setItem("constel_auth", "true");
+      window.location.href = "/constel-mentorat.html";
+    } else {
+      message.textContent = "Mot de passe incorrect";
+      message.className = "message error";
+    }
 
-  } else {
-    message.textContent = "Mot de passe incorrect";
+  } catch (err) {
+    console.error(err);
+    message.textContent = "Erreur réseau";
     message.className = "message error";
   }
-
-} catch (err) {
-  console.error(err);
-  message.textContent = "Erreur réseau";
-  message.className = "message error";
-}
-
 });
 </script>
+
 
 
 
