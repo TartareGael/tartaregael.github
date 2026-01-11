@@ -171,31 +171,40 @@
 
   
 <script>
-  const loginBtn = document.getElementById('submit');
-  const passwordInput = document.getElementById('password');
-
-  if (!loginBtn || !passwordInput) {
-    console.error("Login: bouton ou input introuvable", { loginBtn, passwordInput });
-  }
+  const loginBtn = document.getElementById("submit");
+  const passwordInput = document.getElementById("password");
+  const message = document.getElementById("message");
 
   loginBtn.addEventListener("click", async (e) => {
     e.preventDefault();
 
     const password = passwordInput.value;
+    message.textContent = "";
 
-   fetch("https://constel-auth.g-tartare.workers.dev", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password })
-    });
+    try {
+      const res = await fetch(
+        "https://constel-auth.g-tartare.workers.dev",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password }),
+        }
+      );
 
-    if (res.ok) {
-      window.location.href = "/constel-mentorat";
-    } else {
-      alert("Mot de passe incorrect");
+      if (res.ok) {
+        window.location.href = "/constel-mentorat";
+      } else {
+        message.textContent = "Mot de passe incorrect";
+        message.className = "message error";
+      }
+    } catch (err) {
+      console.error(err);
+      message.textContent = "Erreur réseau";
+      message.className = "message error";
     }
   });
 </script>
+
 
 
 
