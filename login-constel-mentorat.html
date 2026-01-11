@@ -175,32 +175,22 @@ const message = document.getElementById("message");
 
 loginBtn.addEventListener("click", async (e) => {
   e.preventDefault();
+  message.textContent = "";
 
   const password = passwordInput.value;
-  message.textContent = "";
 
   try {
     const res = await fetch("/auth", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ password })
-});
-
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password })
     });
-
-    if (!res.ok) {
-      message.textContent = "Mot de passe incorrect";
-      message.className = "message error";
-      return;
-    }
 
     const data = await res.json();
 
-    if (data.success === true) {
-document.cookie = "constel_auth=true; path=/; SameSite=Lax";
-window.location.href = "/constel-mentorat.html";
-
-
+    if (res.ok && data.success === true) {
+      document.cookie = "constel_auth=true; path=/; SameSite=Lax";
+      window.location.href = "/constel-mentorat.html";
     } else {
       message.textContent = "Mot de passe incorrect";
       message.className = "message error";
@@ -213,10 +203,6 @@ window.location.href = "/constel-mentorat.html";
   }
 });
 </script>
-
-
-
-
 
 
 
