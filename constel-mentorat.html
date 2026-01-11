@@ -115,6 +115,11 @@
 </head>
 
 <body class="project-page">
+  <script>
+  if (sessionStorage.getItem("constel_auth") !== "true") {
+    window.location.href = "/login-constel-mentorat";
+  }
+</script>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <!-- ====================== -->
