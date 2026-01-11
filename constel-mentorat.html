@@ -116,12 +116,12 @@
 
 <body class="project-page">
 <script>
-  const auth = sessionStorage.getItem("constel_auth");
-  console.log("AUTH =", auth);
+const auth = localStorage.getItem("constel_auth");
 
-  if (auth !== "true") {
-    window.location.replace("/login-constel-mentorat.html");
-  }
+if (auth !== "true") {
+  window.location.replace("/login-constel-mentorat.html");
+}
+
 </script>
 
 
