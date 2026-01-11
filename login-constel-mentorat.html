@@ -169,41 +169,45 @@
 
   
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   console.log("LOGIN SCRIPT CHARGÉ");
-const loginBtn = document.getElementById("submit");
-const passwordInput = document.getElementById("password");
-const message = document.getElementById("message");
 
-loginBtn.addEventListener("click", async (e) => {
-  e.preventDefault();
-  message.textContent = "";
+  const loginBtn = document.getElementById("submit");
+  const passwordInput = document.getElementById("password");
+  const message = document.getElementById("message");
 
-  const password = passwordInput.value;
+  loginBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    message.textContent = "";
 
-  try {
-    const res = await fetch("/auth", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password })
-    });
+    const password = passwordInput.value;
 
-    const data = await res.json();
+    try {
+      const res = await fetch("/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password })
+      });
 
-    if (res.ok && data.success === true) {
-      document.cookie = "constel_auth=true; path=/; SameSite=Lax";
-      window.location.href = "/constel-mentorat.html";
-    } else {
-      message.textContent = "Mot de passe incorrect";
+      const data = await res.json();
+
+      if (res.ok && data.success === true) {
+        document.cookie = "constel_auth=true; path=/; SameSite=Lax";
+        window.location.href = "/constel-mentorat.html";
+      } else {
+        message.textContent = "Mot de passe incorrect";
+        message.className = "message error";
+      }
+
+    } catch (err) {
+      console.error(err);
+      message.textContent = "Erreur réseau";
       message.className = "message error";
     }
-
-  } catch (err) {
-    console.error(err);
-    message.textContent = "Erreur réseau";
-    message.className = "message error";
-  }
+  });
 });
 </script>
+
 
 
 
