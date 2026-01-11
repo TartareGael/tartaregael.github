@@ -180,12 +180,12 @@ loginBtn.addEventListener("click", async (e) => {
   message.textContent = "";
 
   try {
-    const res = await fetch("https://constel-auth.g-tartare.workers.dev", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ password })
+    const res = await fetch("/auth", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ password })
+});
+
     });
 
     if (!res.ok) {
