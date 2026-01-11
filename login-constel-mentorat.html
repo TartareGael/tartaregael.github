@@ -197,8 +197,9 @@ loginBtn.addEventListener("click", async (e) => {
     const data = await res.json();
 
     if (data.success === true) {
-localStorage.setItem("constel_auth", "true");
+document.cookie = "constel_auth=true; path=/; SameSite=Lax";
 window.location.href = "/constel-mentorat.html";
+
 
     } else {
       message.textContent = "Mot de passe incorrect";
