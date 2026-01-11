@@ -173,9 +173,7 @@
   const passwordInput = document.getElementById("password");
   const message = document.getElementById("message");
 
-  loginBtn.addEventListener("click", async (e) => {
-    e.preventDefault();
-
+  loginBtn.addEventListener("click", async () => {
     const password = passwordInput.value;
     message.textContent = "";
 
@@ -189,11 +187,10 @@
         }
       );
 
-if (res.ok) {
-  sessionStorage.setItem("constel_auth", "true");
-  window.location.href = "/constel-mentorat.html";
-}
- else {
+      if (res.ok) {
+        sessionStorage.setItem("constel_auth", "true");
+        window.location.replace("/constel-mentorat.html");
+      } else {
         message.textContent = "Mot de passe incorrect";
         message.className = "message error";
       }
@@ -203,16 +200,8 @@ if (res.ok) {
       message.className = "message error";
     }
   });
-  if (res.ok) {
-  sessionStorage.setItem("constel_auth", "true");
-
-  // petit délai pour éviter les redirects Cloudflare trop rapides
-  setTimeout(() => {
-    window.location.replace("/constel-mentorat.html");
-  }, 50);
-}
-
 </script>
+
 
 
 
