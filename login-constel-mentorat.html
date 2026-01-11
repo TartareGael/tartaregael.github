@@ -169,38 +169,43 @@
 
   
 <script>
-  const loginBtn = document.getElementById("submit");
-  const passwordInput = document.getElementById("password");
-  const message = document.getElementById("message");
+const loginBtn = document.getElementById("submit");
+const passwordInput = document.getElementById("password");
+const message = document.getElementById("message");
 
-  loginBtn.addEventListener("click", async () => {
-    const password = passwordInput.value;
-    message.textContent = "";
+loginBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
 
-    try {
-      const res = await fetch(
-        "https://constel-auth.g-tartare.workers.dev",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ password }),
-        }
-      );
+  const password = passwordInput.value;
+  message.textContent = "";
 
-      if (res.ok) {
-        sessionStorage.setItem("constel_auth", "true");
-        window.location.replace("/constel-mentorat.html");
-      } else {
-        message.textContent = "Mot de passe incorrect";
-        message.className = "message error";
-      }
-    } catch (err) {
-      console.error(err);
-      message.textContent = "Erreur réseau";
+  try {
+    const res = await fetch("https://constel-auth.g-tartare.workers.dev", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ password })
+    });
+
+    const data = await res.json();
+
+    if (res.ok && data.success === true) {
+      sessionStorage.setItem("constel_auth", "true");
+      window.location.href = "/constel-mentorat.html";
+    } else {
+      message.textContent = "Mot de passe incorrect";
       message.className = "message error";
     }
-  });
+
+  } catch (err) {
+    console.error(err);
+    message.textContent = "Erreur réseau";
+    message.className = "message error";
+  }
+});
 </script>
+
 
 
 
