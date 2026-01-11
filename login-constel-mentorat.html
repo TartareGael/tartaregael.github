@@ -190,9 +190,11 @@ try {
 
   const data = await res.json();
 
-  if (data.success === true) {
-    sessionStorage.setItem("constel_auth", "true");
-location.reload();
+if (data.success === true) {
+  sessionStorage.setItem("constel_auth", "true");
+  window.location.href = "/constel-mentorat.html";
+}
+
 
   } else {
     message.textContent = "Mot de passe incorrect";
