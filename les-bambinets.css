@@ -1629,6 +1629,6 @@ html.theme-light .project-hero img {
 @media (max-width: 767px) {
   .project-header,
   .project-body {
-    padding-top: 104px;
+    padding-top: 96px !important;
     }
   }

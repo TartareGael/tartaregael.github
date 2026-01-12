@@ -1512,6 +1512,6 @@ h1, h2, h3 {
 @media (max-width: 767px) {
   .project-header,
   .project-body {
-    padding-top: 104px;
+    padding-top: 96px !important;
     }
   }
