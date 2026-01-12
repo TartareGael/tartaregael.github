@@ -1,3 +1,68 @@
+/* ============================
+   PostHog — Analytics global
+============================ */
+
+!function(t,e){
+  var o,n,p,r;
+  e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){
+    function g(t,e){
+      var o=e.split(".");
+      2==o.length&&(t=t[o[0]],e=o[1]),
+      t[e]=function(){
+        t.push([e].concat(Array.prototype.slice.call(arguments,0)))
+      }
+    }
+    (p=t.createElement("script")).type="text/javascript",
+    p.async=!0,
+    p.src=s.api_host+"/static/array.js",
+    (r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);
+    var u=e;
+    for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],
+    u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},
+    u.people.toString=function(){return u.toString(1)+".people (stub)"},
+    o="capture identify alias people.set people.set_once people.unset reset group".split(" "),
+    n=0;n<o.length;n++)g(u,o[n]);
+    e._i.push([i,s,a])
+  },e.__SV=1)
+}(document,window.posthog||[]);
+
+posthog.init('VOTRE_API_KEY_ICI', {
+  api_host: 'https://app.posthog.com',
+  capture_pageview: true
+});
+
+window.track = function (event, props = {}) {
+  if (window.posthog) {
+    posthog.capture(event, props);
+  }
+};
+
+track('page_loaded', {
+  page: document.title,
+  path: window.location.pathname
+});
+
+if (document.body.classList.contains('project-page')) {
+  track('project_viewed', {
+    project: document.querySelector('.project-title')?.innerText || 'unknown'
+  });
+}
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.btn-primary');
+  if (!btn) return;
+
+  track('cta_clicked', {
+    text: btn.innerText.trim(),
+    page: document.title
+  });
+});
+
+track('login_error');
+
+track('login_success');
+
+
 function updateThemeLabel(theme) {
   document.querySelectorAll('.theme-dropdown .dropdown-button')
     .forEach(button => {
