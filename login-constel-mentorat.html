@@ -209,6 +209,14 @@
   });
 </script>
 
+<script>
+  passwordInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // évite tout comportement par défaut
+      submitBtn.click();      // déclenche le bouton "Continuer"
+    }
+  });
+</script>
 
 
 </body>
