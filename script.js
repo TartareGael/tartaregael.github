@@ -184,41 +184,43 @@ const toggle = document.getElementById('toggle');
 const submit = document.getElementById('submit');
 const message = document.getElementById('message');
 
-toggle.addEventListener('click', () => {
-  input.type = input.type === 'password' ? 'text' : 'password';
-});
+if (input && toggle && submit && message) {
 
-submit.addEventListener('click', async () => {
-  message.textContent = '';
-  message.className = 'message';
-
-  const password = input.value.trim();
-  if (!password) return;
-
-  submit.disabled = true;
-  submit.textContent = 'Vérification…';
-
-  const res = await fetch('/auth/constel', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password })
+  toggle.addEventListener('click', () => {
+    input.type = input.type === 'password' ? 'text' : 'password';
   });
 
-  submit.disabled = false;
-  submit.textContent = 'Continuer';
+  submit.addEventListener('click', async () => {
+    message.textContent = '';
+    message.className = 'message';
 
-  if (res.ok) {
-    message.textContent = '✅ Connexion réussi, accès au projet !';
-    message.classList.add('success');
+    const password = input.value.trim();
+    if (!password) return;
 
-    setTimeout(() => {
-      window.location.href = 'constel-mentorat.html';
-    }, 900);
-  } else {
-    message.textContent = '❌ Mot de passe incorrect, veuillez réessayer.';
-    message.classList.add('error');
-  }
-});
+    submit.disabled = true;
+    submit.textContent = 'Vérification…';
+
+    const res = await fetch('/auth/constel', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password })
+    });
+
+    submit.disabled = false;
+    submit.textContent = 'Continuer';
+
+    if (res.ok) {
+      message.textContent = '✅ Connexion réussie, accès au projet !';
+      message.classList.add('success');
+      track('login_success');
+    } else {
+      message.textContent = '❌ Mot de passe incorrect';
+      message.classList.add('error');
+      track('login_error');
+    }
+  });
+
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('password');
