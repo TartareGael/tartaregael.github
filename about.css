@@ -808,3 +808,11 @@ html.theme-dark .values-item {
     padding-top: 112px !important;
   }
 }
+
+@media (max-width: 600px) {
+  .about-section,
+  .values-section {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
