@@ -301,11 +301,11 @@ html {
     }
   
     .forces img {
-      content: url("img-apropos/2-mes-forces - Tablette.png");
+      content: url("img-apropos/2-mes-forces-tablette.png");
     }
   
     .atouts img {
-      content: url("img-apropos/3-mes-attouts - Tablette.png");
+      content: url("img-apropos/3-mes-attouts-tablette.png");
     }
   
   }
@@ -320,11 +320,11 @@ html {
     }
   
     .forces img {
-      content: url("img-apropos/2-mes-forces - Mobile.png");
+      content: url("img-apropos/2-mes-forces-mobile.png");
     }
   
     .atouts img {
-      content: url("img-apropos/3-mes-attouts - Mobile.png");
+      content: url("img-apropos/3-mes-attouts-mobile.png");
     }
     }
 
@@ -779,7 +779,7 @@ html.theme-dark .values-item {
 
 @media (max-width: 767px) {
   .about-title {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 }
 
@@ -789,7 +789,7 @@ html.theme-dark .values-item {
 
 @media (max-width: 767px) {
   .about-container {
-    gap: 16px;
+    gap: 8px;
   }
 }
 
@@ -809,10 +809,66 @@ html.theme-dark .values-item {
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 500px) and  (max-width: 600px) {
+  .about-section,
+  .values-section {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+
+@media (max-width: 499px) {
   .about-section,
   .values-section {
     padding-left: 32px !important;
     padding-right: 32px !important;
+  }
+}
+
+@media (min-width: 500px) and  (max-width: 600px) {
+  .about-image img {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (min-width: 400px) and  (max-width: 499px) {
+  .about-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (min-width: 370px) and  (max-width: 399px) {
+  .about-image img {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+@media (min-width: 340px) and  (max-width: 369px) {
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 339px) {
+  .about-image img {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+/* ================================= */
+/*   MOBILE — TEXTE PARAGRAPHES      */
+/*   ALIGNÉ SUR LES PAGES PROJET     */
+/* ================================= */
+
+@media (max-width: 600px) {
+  .about-text,
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
