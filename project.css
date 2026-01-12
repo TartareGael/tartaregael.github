@@ -851,7 +851,7 @@ html.theme-dark .project-item p {
 
 @media (max-width: 767px) {
   .projects-section {
-    padding-top: 48px;
+    padding-top: 40px;
   }
 }
 
@@ -859,8 +859,19 @@ html.theme-dark .project-item p {
   .projects-title {
     font-size: 32px;      /* comme décidé */
     line-height: 1.2;
-    margin-bottom: 40px; /* 👈 réduction nette */
+    margin-bottom: 32px; /* 👈 réduction nette */
   }
 }
 
+/* ================================= */
+/*   ESPACEMENT PROJETS — MOBILE     */
+/* ================================= */
+
+@media (max-width: 767px) {
+
+  .projects-grid {
+    gap: 40px; /* 👈 espace ENTRE les projets */
+  }
+
+}
 
