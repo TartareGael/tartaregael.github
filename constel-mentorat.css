@@ -1508,3 +1508,10 @@ h1, h2, h3 {
     font-size: 20px;
   }
 }
+
+@media (max-width: 767px) {
+  .project-header,
+  .project-body {
+    padding-top: 96px;
+    }
+  }
