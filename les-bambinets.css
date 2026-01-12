@@ -1626,4 +1626,9 @@ html.theme-light .project-hero img {
   height: auto;
 }
 
-
+@media (max-width: 767px) {
+  .project-header,
+  .project-body {
+    padding-top: 104px;
+    }
+  }
