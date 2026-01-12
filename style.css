@@ -2497,3 +2497,9 @@ html.theme-dark .featured-image-main {
     margin-top: 16px !important; /* ajuste : -16 / -24 / -32 */
   }
 }
+
+@media (max-width: 599px) {
+  main {
+    margin-top: -80px;
+  }
+}

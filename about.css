@@ -779,7 +779,7 @@ html.theme-dark .values-item {
 
 @media (max-width: 767px) {
   .about-title {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 }
 
@@ -789,7 +789,7 @@ html.theme-dark .values-item {
 
 @media (max-width: 767px) {
   .about-container {
-    gap: 24px;
+    gap: 16px;
   }
 }
 
@@ -805,6 +805,6 @@ html.theme-dark .values-item {
 
 @media (min-width: 100px) and (max-width: 599px) {
   .about-section {
-    padding-top: 120px !important;
+    padding-top: 112px !important;
   }
 }
