@@ -26,14 +26,17 @@
   },e.__SV=1)
 }(document,window.posthog||[]);
 
-posthog.init('VOTRE_API_KEY_ICI', {
-  api_host: 'https://app.posthog.com',
+posthog.init('phc_Te6u9jR0isFwGBTQAEOpD0jQHxqLAdS66Xab5QwNLe', {
+  api_host: 'https://eu.i.posthog.com',
   capture_pageview: true
 });
 
 window.track = function (event, props = {}) {
   if (window.posthog) {
-    posthog.capture(event, props);
+    posthog.capture(event, {
+      source: 'portfolio_html',
+      ...props
+    });
   }
 };
 
@@ -57,10 +60,6 @@ document.addEventListener('click', (e) => {
     page: document.title
   });
 });
-
-track('login_error');
-
-track('login_success');
 
 
 function updateThemeLabel(theme) {
