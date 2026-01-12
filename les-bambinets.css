@@ -1528,12 +1528,12 @@ h1, h2, h3 {
    INDICATION "PROJETS" ACTIVE — PAGE PROJET
    ========================================= */
 
-.project-page .nav a[href="projetsbis.html"] {
+.project-page .nav a[href="project.html"] {
   position: relative; /* OBLIGATOIRE pour ::after */
 }
 
 /* Ligne sous le lien */
-.project-page .nav a[href="projetsbis.html"]::after {
+.project-page .nav a[href="project.html"]::after {
   content: "";
   position: absolute;
   left: 0;
