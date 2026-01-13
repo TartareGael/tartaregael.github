@@ -2600,7 +2600,7 @@ html.theme-dark .featured-image-main {
 
 @media (max-width: 600px) {
   :root.theme-dark .nav-toggle {
-  border-width: 1.8px !important;
+  border-width: 1.7px !important;
 }
 }
 
@@ -2625,5 +2625,23 @@ html.theme-dark .featured-image-main {
 @media (min-width: 601px) {
   :root.theme-dark .nav[aria-expanded="true"] ul {
     border-width: 1.7px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav[aria-expanded="true"] ul {
+    top: 62px; /* +12px vers le bas */
+  }
+}
+
+@media (min-width: 601px) {
+  .nav[aria-expanded="true"] ul {
+    top: 68px; /* +12px vers le bas */
+  }
+}
+
+@media (min-width: 601px) {
+  .theme-dropdown .dropdown-menu {
+    top: calc(100% + 6px);
   }
 }
