@@ -2600,12 +2600,12 @@ html.theme-dark .featured-image-main {
 
 @media (max-width: 600px) {
   :root.theme-dark .nav-toggle {
-  border-width: 2px !important;
+  border-width: 1.8px !important;
 }
 }
 
 @media (max-width: 600px) {
   :root.theme-dark .nav[aria-expanded="true"] ul {
-    border-width: 2px !important;
+    border-width: 1.8px !important;
   }
 }
