@@ -2503,3 +2503,14 @@ html.theme-dark .featured-image-main {
     margin-top: -80px;
   }
 }
+
+
+.nav-toggle @media (min-width: 1101px) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.nav-toggle svg {
+  display: block;
+}
