@@ -2609,3 +2609,21 @@ html.theme-dark .featured-image-main {
     border-width: 1.8px !important;
   }
 }
+
+@media (min-width: 601px) {
+  :root.theme-light .nav-toggle {
+  border-width: 2.4px !important;
+}
+}
+
+@media (min-width: 601px) {
+  :root.theme-dark .nav-toggle {
+  border-width: 1.7px !important;
+}
+}
+
+@media (min-width: 601px) {
+  :root.theme-dark .nav[aria-expanded="true"] ul {
+    border-width: 1.7px !important;
+  }
+}
