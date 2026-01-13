@@ -2526,9 +2526,9 @@ html.theme-dark .featured-image-main {
 
 @media (max-width: 600px) {
   .nav-toggle {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 10px !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important;
   }
 }
 
@@ -2542,23 +2542,23 @@ html.theme-dark .featured-image-main {
 
   /* ===== DROPDOWN FERMÉ (mobile) ===== */
   .theme-dropdown:not(.open) .dropdown-button {
-    height: 40px;
+    height: 48px;
     width: 88px !important;
     padding: 0 12px;
     justify-content: center;
     gap: 8px;
-    border-radius: 12px;
+    border-radius: 14px;
   }
 
   /* ===== DROPDOWN OUVERT (mobile) ===== */
   /* On NE TOUCHE PAS à la hauteur → desktop s'applique */
   .theme-dropdown.open .dropdown-button {
     width: 88px !important;
-    height: 40px;       
+    height: 48px;       
     padding: 16 12px!important;
     justify-content: center;
     gap: 8px!important;
-    border-radius: 10px !important;   
+    border-radius: 14px !important;   
     margin-bottom: 0px;
   }
 
@@ -2573,7 +2573,7 @@ html.theme-dark .featured-image-main {
   .theme-dropdown .dropdown-menu button {
     text-align: left;        /* texte à gauche */
     justify-content: flex-start;
-    padding: 16px 15px;      /* padding interne des items */
+    padding: 20px 15px;      /* padding interne des items */
   }
 
 }
@@ -2588,12 +2588,4 @@ html.theme-dark .featured-image-main {
   }
 }
 
-@media (max-width: 600px) {
-  .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-}
+
