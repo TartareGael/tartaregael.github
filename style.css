@@ -2441,9 +2441,16 @@ html.theme-dark .featured-image-main {
 }
 
 /* ESPACEMENT EN VEDETTE — MOBILE LARGE (≤ 450px) */
+@media (max-width: 500px) {
+  .featured {
+    margin-top: -62px; /* au lieu de -78px */
+  }
+}
+
+/* ESPACEMENT EN VEDETTE — MOBILE LARGE (≤ 450px) */
 @media (max-width: 450px) {
   .featured {
-    margin-top: -78px; /* au lieu de -78px */
+    margin-top: -62px; /* au lieu de -78px */
   }
 }
 
@@ -2643,5 +2650,15 @@ html.theme-dark .featured-image-main {
 @media (min-width: 601px) {
   .theme-dropdown .dropdown-menu {
     top: calc(100% + 6px);
+  }
+}
+
+@media (max-width: 500px) {
+  .loop-svg {
+    transform:
+      translateX(-1%)
+      translateY(-16px)  /* ← on descend la boucle */
+      rotate(-22deg)
+      scale(1.05);
   }
 }
