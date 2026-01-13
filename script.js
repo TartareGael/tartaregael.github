@@ -62,13 +62,10 @@ function updateThemeLabel(theme) {
 // THEME PERSISTANT + MENU STABLE
 // ================================
 
-// Lire le thème déjà défini dans <head>
-const currentTheme = document.documentElement.classList.contains('theme-dark')
-  ? 'dark'
-  : 'light';
-
-updateThemeLabel(currentTheme);
-
+// ---- Appliquer le thème sauvegardé ----
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.classList.remove('theme-light', 'theme-dark');
+document.documentElement.classList.add(`theme-${savedTheme}`);
 
 // ---- Sélecteurs ----
 const nav = document.querySelector('.nav');
