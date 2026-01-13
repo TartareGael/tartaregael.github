@@ -2511,6 +2511,16 @@ html.theme-dark .featured-image-main {
   justify-content: center !important;
 }
 
+.nav-toggle {
+  border: 1.9px solid var(--ui-stroke) !important;
+}
+
+:root.theme-dark .nav-toggle {
+  color: var(--btn-primary-bg);        /* 3 barres */
+  border-color: var(--btn-primary-bg); /* stroke extérieur */
+}
+
+
 .nav-toggle svg {
   display: block;
 }
