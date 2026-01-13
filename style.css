@@ -2512,7 +2512,7 @@ html.theme-dark .featured-image-main {
 }
 
 .nav-toggle {
-  border: 1.9px solid var(--ui-stroke) !important;
+  border: 2.2px solid var(--ui-stroke) !important;
 }
 
 :root.theme-dark .nav-toggle {
@@ -2520,7 +2520,80 @@ html.theme-dark .featured-image-main {
   border-color: var(--btn-primary-bg); /* stroke extérieur */
 }
 
-
 .nav-toggle svg {
   display: block;
+}
+
+@media (max-width: 600px) {
+  .nav-toggle {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-toggle svg {
+    width: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* ===== DROPDOWN FERMÉ (mobile) ===== */
+  .theme-dropdown:not(.open) .dropdown-button {
+    height: 40px;
+    width: 88px !important;
+    padding: 0 12px;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 12px;
+  }
+
+  /* ===== DROPDOWN OUVERT (mobile) ===== */
+  /* On NE TOUCHE PAS à la hauteur → desktop s'applique */
+  .theme-dropdown.open .dropdown-button {
+    width: 88px !important;
+    height: 40px;       
+    padding: 16 12px!important;
+    justify-content: center;
+    gap: 8px!important;
+    border-radius: 10px !important;   
+    margin-bottom: 0px;
+  }
+
+    /* Conteneur du choix Light / Dark */
+  .theme-dropdown .dropdown-menu {
+    border-radius: 14px;   /* ← ajuste ici */
+    overflow: hidden;
+    padding: 0px;
+  }
+
+  /* Boutons Light / Dark */
+  .theme-dropdown .dropdown-menu button {
+    text-align: left;        /* texte à gauche */
+    justify-content: flex-start;
+    padding: 16px 15px;      /* padding interne des items */
+  }
+
+}
+
+@media (max-width: 600px) {
+  .theme-dropdown .dropdown-menu {
+    top: calc(100% + 6px);
+  }
+
+ .nav-menu {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
 }
