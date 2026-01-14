@@ -26,7 +26,7 @@ html {
 /* RESET COMPLET DES CONTRAINTES DE style.css POUR SECTION 1 & 3 */
 .about-section,
 .values-section {
-  max-width: none !important; /* empêche le var(--maxw) 1200px */
+  max-width: none !important; 
   width: 100% !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -77,7 +77,7 @@ html {
 /* Section À propos en pleine largeur */
 .full-width {
   width: 100%;
-  padding: 0;              /* plus AUCUNE marge */
+  padding: 0;              
 }
 
 /* Container interne : texte à gauche, image à droite */
@@ -85,7 +85,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;            /* prend tout l’écran */
+  width: 100vw;            
   max-width: none;
   padding: 0;
   margin: 0;
@@ -113,9 +113,9 @@ html {
   
   .about-section {
     width: 100%;
-    max-width: 1300px;   /* comme values-section */
-    margin: 0 auto;      /* comme values-section */
-    padding-left: 80px;  /* même marge interne */
+    max-width: 1300px;   
+    margin: 0 auto;      
+    padding-left: 80px;  
     padding-right: 80px; 
     padding-top: 104px;
     padding-bottom: 104px;
@@ -156,7 +156,6 @@ html {
     height: 420px;
     border-radius: 50%;
     object-fit: cover;
-     /* 👇 Contour (stroke) autour de la photo */
    border: 2px solid rgba(255, 255, 255, 0.8);
    box-shadow: 0 0 14px rgba(245, 246, 247, 0.18);
    display: flex;
@@ -200,7 +199,7 @@ html {
   
   .about-separator {
     width: 100%;
-    margin: 0px 0 104px;   /* 👈 réduit l’espace avec le texte au-dessus */
+    margin: 0px 0 104px;   
     overflow: hidden;
   }
   
@@ -215,22 +214,22 @@ html {
   /* TABLETTE */
   @media (max-width: 900px) {
     .about-section {
-      padding-bottom: 54px;   /* au lieu de 104px */
+      padding-bottom: 54px;   
     }
 
     .about-separator {
-      margin: 0px 0 54px;  /* réduit aussi sur tablette */
+      margin: 0px 0 54px;  
     }
   }
   
   /* MOBILE */
   @media (max-width: 600px) {
     .about-section {
-      padding-bottom: 48px;   /* au lieu de 104px */
+      padding-bottom: 48px;   
     }
 
     .about-separator {
-      margin: 0px 0 48px;  /* encore moins d’espace sur mobile */
+      margin: 0px 0 48px;  
     }
   
     .about-separator img {
@@ -251,7 +250,7 @@ html {
   }
   
   .values-item img {
-    width: 100%;                /* 👈 occupe toute la largeur du conteneur */
+    width: 100%;                
     height: auto;
     border-radius: 28px;
     display: block;
@@ -490,7 +489,7 @@ html.theme-light .atouts img {
    FIX STROKE — IMAGES "MES ATOUTS / VALEURS"
    ===================================================== */
 
-/* On enlève toute bordure directe sur l’image */
+
 html.theme-light .values-section img {
   border: none !important;
   box-shadow: none !important;
@@ -511,7 +510,7 @@ html.theme-light .values-item {
       transparent
     );
 
-  overflow: hidden; /* 🔑 essentiel pour le masque */
+  overflow: hidden; 
 }
 
 /* Sécurité responsive */
@@ -587,7 +586,7 @@ html.theme-light .values-item img {
    ===================================================== */
 @media (min-width: 600px) and (max-width: 1225px) {
 
-  /* 🔒 Largeur contrôlée + padding tablette */
+  /* Largeur contrôlée + padding tablette */
   .about-section,
   .values-section {
     max-width: 600px !important;
@@ -597,7 +596,7 @@ html.theme-light .values-item img {
     padding-right: 32px !important;
   }
 
-  /* 🔒 Images calées EXACTEMENT sur la largeur du texte */
+  /* Images calées EXACTEMENT sur la largeur du texte */
   .values-item,
   .values-item img {
     width: 100% !important;
@@ -610,7 +609,7 @@ html.theme-light .values-item img {
     display: block !important;
   }
 
-  /* 🔒 Sécurité anti-décalage */
+  /* Sécurité anti-décalage */
   .values-section * {
     box-sizing: border-box !important;
   }
@@ -707,7 +706,7 @@ html.loaded .values-item img {
 }
 
 .values-item {
-  overflow: hidden; /* coupe tout ce qui dépasse */
+  overflow: hidden; 
   border-radius: 48px !important;
   background: transparent;
 }
@@ -746,13 +745,13 @@ html.theme-dark .about-image img {
    VALUES — DARK FIX (ANTI GLOW)
    ====================================== */
 
-/* 1️⃣ On enlève TOUT effet lumineux sur l’image */
+/*  On enlève TOUT effet lumineux sur l’image */
 html.theme-dark .values-item img {
   border: none;
   box-shadow: none;
 }
 
-/* 2️⃣ On met la stroke propre sur le conteneur */
+/* On met la stroke propre sur le conteneur */
 html.theme-dark .values-item {
   border: 2px solid color-mix(
     in srgb,

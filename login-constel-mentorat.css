@@ -222,7 +222,7 @@
   position: absolute;
   width: 26px;
   height: 2px;
-  background: currentColor; /* 👈 hérite EXACTEMENT de la couleur */
+  background: currentColor; 
   transform: rotate(-45deg);
   opacity: 0;
   transition: opacity 0.2s ease;
@@ -230,7 +230,7 @@
 
 /* Quand le mot de passe est visible */
 .toggle-visibility.is-visible {
-  color: var(--muted); /* 👈 même couleur que l’icône */
+  color: var(--muted); 
 }
 
 .toggle-visibility.is-visible::after {

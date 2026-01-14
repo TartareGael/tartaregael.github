@@ -57,17 +57,16 @@ html {
 /*   (RESET COMPLET DU CONTENU SEULEMENT)   */
 /* ======================================== */
 
-/* Ne touche PAS au background, aux couleurs, ni aux polices :
-   Ce sont gérés par style.css, comme demandé. */
+/* Ne touche pas au background, aux couleurs, ni aux polices */
 
 /* ---- CONTENEUR GLOBAL ---- */
 .project-page {
-    /* On laisse le background défini par style.css */
+    
   }
   
   /* ---- HEADER DU PROJET ---- */
   .project-header {
-    /* Aucun spacing par défaut */
+    
     margin: 0;
     padding: 0;
   }
@@ -76,8 +75,8 @@ html {
   .project-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    margin: 0;      /* reset */
-    padding: 0;     /* reset */
+    margin: 0;      
+    padding: 0;     
   }
   
   /* Sous-titre / intro */
@@ -85,8 +84,8 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.7;
-    margin: 0;      /* reset */
-    padding: 0;     /* reset */
+    margin: 0;      
+    padding: 0;     
   }
   
   /* ---- CORPS DU PROJET ---- */
@@ -96,7 +95,7 @@ html {
     padding: 0;
     width: 100%;
   
-    /* Aucun layout, aucune règle visuelle */
+   
   }
 
   @media (min-width: 1000px) {
@@ -199,13 +198,13 @@ html {
 }
 
   /* ---- RESET DES IMAGES DU PROJET ---- */
-  /* On neutralise toute règle d'image venant d'autres fichiers */
+  
   .project-body img,
   .project-header img {
     width: auto;
     height: auto;
     max-width: none;
-    display: inline;      /* pas de block automatique */
+    display: inline;     
     border: none;
     border-radius: 0;
     margin: 0;
@@ -221,7 +220,7 @@ html {
   
   .project-intro {
     display: block;
-    margin-top: px; /* petit espace propre et minimal */
+    margin-top: px; 
   }
 
   /* Semi-gras global pour toute la page projet */
@@ -237,14 +236,14 @@ html {
 /* Conteneur du projet (header + body) */
 .project-header,
 .project-body {
-  border: 2px dashed #ff4d4d;   /* 👉 cadre rouge bien visible */
-  padding-top: 64px;                /* 👉 qu’on ajuste ensuite */
-  margin-left: auto;       /* centre horizontalement */
+  border: 2px dashed #ff4d4d;   
+  padding-top: 64px;                
+  margin-left: auto;       
   margin-right: auto;
-  padding-left: 64px;      /* espace extérieur */
+  padding-left: 64px;      
   padding-right: 64px;
-  max-width: 1200px;            /* 👉 largeur de travail */
-  box-sizing: border-box;       /* indispensable */
+  max-width: 1200px;            
+  box-sizing: border-box;       
 }
 
 /* TABLETTE */
@@ -261,8 +260,8 @@ html {
   .project-header,
   .project-body {
     padding-top: 32px;
-    padding-left: 32px;   /* 👈 AJOUT */
-    padding-right: 32px;  /* 👈 AJOUT */
+    padding-left: 32px;   
+    padding-right: 32px;  
   }
 }
 
@@ -341,7 +340,7 @@ html {
 .project-item img {
   width: 100%;
   max-width: 600px;
-  aspect-ratio: 16 / 9;   /* 🔥 clé du problème */
+  aspect-ratio: 16 / 9;   
   object-fit: cover;
   border-radius: 20px;
   display: block;
@@ -396,7 +395,7 @@ html {
   }
 
   .project-item h3 {
-  margin-bottom: -4px; /* espace titre → description */
+  margin-bottom: -4px; 
 }
 }
 
@@ -422,7 +421,7 @@ html {
   }
 
   .project-item h3 {
-  margin-bottom: -4px; /* espace titre → description */
+  margin-bottom: -4px; 
 }
 }
 
@@ -737,8 +736,8 @@ html.theme-light .project-item p {
 
 @media (max-width: 767px) {
   .project-badges {
-    column-gap: 8px; /* espace horizontal conservé */
-    row-gap: 4px;    /* ⬅️ espace vertical réduit */
+    column-gap: 8px; 
+    row-gap: 4px;    
   }
 }
 
@@ -757,7 +756,7 @@ html.theme-dark .project-item p {
 
   border-radius: 999px;
 
-  /* ✅ fond hover dark (dropdown + bouton Projets) */
+  /* fond hover dark (dropdown + bouton Projets) */
   background: rgba(255, 255, 255, 0.10);
 
   /* Texte lisible en dark */
@@ -857,9 +856,9 @@ html.theme-dark .project-item p {
 
 @media (max-width: 767px) {
   .projects-title {
-    font-size: 32px;      /* comme décidé */
+    font-size: 32px;      
     line-height: 1.2;
-    margin-bottom: 32px; /* 👈 réduction nette */
+    margin-bottom: 32px; 
   }
 }
 
@@ -870,7 +869,7 @@ html.theme-dark .project-item p {
 @media (max-width: 767px) {
 
   .projects-grid {
-    gap: 40px; /* 👈 espace ENTRE les projets */
+    gap: 40px; 
   }
 
 }

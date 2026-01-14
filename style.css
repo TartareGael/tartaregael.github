@@ -246,8 +246,8 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
-  transform: rotate(-13deg);     /* 👉 rotation d’origine */
-  transform-origin: center;      /* 👉 pivot correct */
+  transform: rotate(-13deg);     
+  transform-origin: center;      
 }
 
 
@@ -297,7 +297,6 @@ h1 {
   height: auto;
   display: block;
   border-radius: 24px;
-  /* OMBRE — NE BOUGERA JAMAIS */
   box-shadow: 0 0 14px rgba(245, 246, 247, 0.18);
   border: 2px solid var(--ui-stroke);
   transform: translateZ(0);
@@ -334,7 +333,7 @@ h1 {
   min-width: 155px;
   height: 48px;
   padding: 0 20px;
-  border: 1.8px solid rgba(241, 242, 243, 0.9); /* 40% d’opacité */
+  border: 1.8px solid rgba(241, 242, 243, 0.9); 
   background: transparent;
   color: var(--text);
   border-radius: var(--radius);
@@ -376,8 +375,7 @@ h1 {
   font-weight: 700;
   font-size: 48px;
   line-height: 1.2;
-  margin: 0 0 34px 0;  /* uniquement un espace en bas */
-  /* PAS de padding, PAS de width, PAS de max-width */
+  margin: 0 0 34px 0;  
 }
 
 /* Style de base des cartes (sans layout) */
@@ -399,7 +397,7 @@ h1 {
 .services-layout {
   display: flex;
   flex-direction: column;
-  gap: 40px; /* espace entre la ligne du haut et la ligne du bas */
+  gap: 40px; 
   width: 100%;
   margin-bottom: 170px;
 }
@@ -408,7 +406,7 @@ h1 {
 .services-row-top {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  /* prend toute la largeur */
+  justify-content: space-between;  
   gap: 40px;
   width: 100%;
 }
@@ -423,14 +421,14 @@ h1 {
 }
 
 .service-card {
-  border: 1.8px solid rgba(255, 255, 255, 0.70);   /* un peu plus présent */
+  border: 1.8px solid rgba(255, 255, 255, 0.70);   
   box-shadow: 0 0 14px rgba(245, 246, 247, 0.18);
   border-radius: 24px;
 }
 
 /* Aligne l’espacement entre la courbe et la section "Ce que je fais" */
 .services-section {
-  margin-top: 160px !important;  /* même espacement que celui utilisé au-dessus */
+  margin-top: 160px !important;  
   margin-bottom: 160px;
 }
 
@@ -446,14 +444,13 @@ h1 {
   width: 100%;
   height: auto;
   display: block;
-  /* Espacement identique au premier divider */
   margin-top: 120px;
 }
 
 /* SECTION Témoignage */
 .testimonial-section {
   width: 100%;
-  margin-top: 160px;  /* 👉 même espacement que la section "Ce que je fais" */
+  margin-top: 160px;  
 }
 
 .testimonial-image-wrap {
@@ -473,7 +470,7 @@ h1 {
 
 /* ESPACEMENT IDENTIQUE AUX SECTIONS */
 .loop-section {
-  margin-top: 160px; /* même espacement que tes autres sections ! */
+  margin-top: 160px; 
 }
 
 /* EXACTEMENT la même structure que tes précédents dividers */
@@ -492,16 +489,16 @@ h1 {
 
 /* SECTION Collaboration */
 .collaboration-section {
-  margin-top: 120px; /* même espacement que tes autres sections */
+  margin-top: 120px; 
   text-align: center;
 }
 
 .collaboration-section h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 48px;      /* 👉 même taille que “Ce que je fais” */
+  font-size: 48px;     
   line-height: 1.2;
-  margin: 0 0 34px 0;   /* 👉 espacement demandé sous le titre */
+  margin: 0 0 34px 0;   
 }
 
 .collab-cta {
@@ -511,22 +508,22 @@ h1 {
 
 /* SECTION Collaboration */
 .collaboration-section {
-  margin-top: -120px; /* même espacement que les autres sections */
-  text-align: left;  /* alignement à gauche */
+  margin-top: -120px; 
+  text-align: left;  
 }
 
 .collaboration-section h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 40px;       /* même taille que “Ce que je fais” */
+  font-size: 40px;       
   line-height: 1.2;
-  margin: 0 0 16px 0;    /* espacement sous le titre */
+  margin: 0 0 16px 0;    
 }
 
 /* Bouton aligné à gauche */
 .collab-cta {
   display: flex;
-  justify-content: flex-start; /* bouton à gauche */
+  justify-content: flex-start; 
 }
 
 body {
@@ -545,7 +542,7 @@ html, body {
 }
 
 .dropdown-menu {
-  display: none; /* fermé par défaut */
+  display: none; 
 }
 .theme-dropdown.open .dropdown-menu {
   display: flex;
@@ -556,7 +553,7 @@ html, body {
 .dropdown-button {
   height: 48px;
   padding: 0 24px; /* plus compact */
-  border: 1.8px solid rgba(241, 242, 243, 0.9); /* 90% d’opacité */
+  border: 1.8px solid rgba(241, 242, 243, 0.9); 
   background: transparent;
   color: var(--text);
   border-radius: var(--radius);
@@ -567,8 +564,8 @@ html, body {
   /* Compact & centré */
   display: flex;
   align-items: center;
-  justify-content: center;   /* ❗compacte l’espace */
-  gap: 12px;                  /* ❗espace idéal entre texte + flèche */
+  justify-content: center;   
+  gap: 12px;                  
 
   /* remove forced width */
   min-width: auto !important;
@@ -590,7 +587,7 @@ html, body {
   background: var(--bg);
   border: 1.8px solid var(--stroke);
   border-radius: var(--radius);
-  padding: 0 !important; /* 🔥 supprime tout espace haut et bas */
+  padding: 0 !important; 
   width: 100%;
 }
 .dropdown-menu button {
@@ -603,14 +600,13 @@ html, body {
   font-size: 1rem;
   font-weight: 600;
   width: 100%;
-   /* centrage propre */
    display: flex;
    align-items: center;
    justify-content: flex-start;
    text-align: left;
  
-   padding: 0 24px;     /* plus de padding haut/bas */
-   height: auto;        /* ou 34/36 si tu veux un peu plus haut */
+   padding: 0 24px;     
+   height: auto;       
    line-height: 1;
 }
 .dropdown-menu button:hover {
@@ -671,7 +667,7 @@ html, body {
 
 /* Correction optique du premier item */
 .dropdown-menu button:first-child {
-  padding-top: 12px;      /* +2px pour compenser l’arrondi du haut */
+  padding-top: 12px;     
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(241,242,243,0.15);
 }
@@ -679,7 +675,7 @@ html, body {
 /* Correction optique du dernier item */
 .dropdown-menu button:last-child {
   padding-top: 10px;
-  padding-bottom: 12px;   /* +2px pour compenser l’arrondi du bas */
+  padding-bottom: 12px;   
 }
 
 /* =========================================================
@@ -689,7 +685,7 @@ html, body {
 .nav[aria-expanded="true"] ul li {
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* aligne tout à gauche */
+  justify-content: flex-start; 
   margin: 0;
   padding: 0;
 }
@@ -767,7 +763,7 @@ html, body {
 @media (max-width: 1100px) {
   .nav[aria-expanded="true"] ul li .btn-primary {
     width: auto !important;
-    min-width: 155px !important; /* même largeur qu’en desktop */
+    min-width: 155px !important; 
     justify-content: center !important;
   }
 }
@@ -775,9 +771,9 @@ html, body {
 /* MENU HAMBURGER — Version compacte */
 @media (max-width: 1100px) {
   .nav[aria-expanded="true"] ul {
-    width: 210px !important;  /* largeur plus élégante */
-    padding: 1rem !important; /* léger resserrement interne */
-    right: 20px !important;   /* ajustement pour un alignement parfait */
+    width: 210px !important;  
+    padding: 1rem !important; 
+    right: 20px !important;   
   }
 
   /* Ajuste l’espacement entre les éléments pour un rendu plus compact */
@@ -825,7 +821,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-left: auto; /* pousse le groupe complètement à droite */
+  margin-left: auto; 
 }
 
 /* Desktop : on cache le dropdown mobile */
@@ -848,7 +844,7 @@ html, body {
 
 /* === Stroke plus visible mais même épaisseur === */
 :root {
-  --ui-stroke: rgba(241, 242, 243, 0.55); /* intensification légère du stroke */
+  --ui-stroke: rgba(241, 242, 243, 0.55); 
 }
 
 /* Hamburger (fermé ou ouvert) */
@@ -890,7 +886,7 @@ html, body {
   justify-content: center;
 
   padding: 0 !important;
-  font-size: 20px !important; /* taille du symbole ▢ */
+  font-size: 20px !important; 
   flex-shrink: 0 !important;
 }
 
@@ -915,7 +911,7 @@ html, body {
 
 @media (max-width: 1100px) {
   .nav[aria-expanded="true"] ul {
-    padding-right: 0px !important; /* au lieu de 20 */
+    padding-right: 0px !important; 
     padding-left: 25px !important;
   }
 }
@@ -942,7 +938,7 @@ html, body {
 /* Espacement interne du panneau du menu hamburger */
 @media (max-width: 1100px) {
   .nav[aria-expanded="true"] ul li {
-    margin-bottom: 12px; /* espace entre Projets / À propos / CV */
+    margin-bottom: 12px; 
   }
 
   /* Espace supplémentaire au-dessus du logo LinkedIn */
@@ -961,7 +957,7 @@ html, body {
 
   /* Espace plus large avant le bouton dans le panneau hamburger */
   .nav[aria-expanded="true"] ul li:last-child {
-    margin-top: 16px !important; /* augmenté depuis 12px */
+    margin-top: 16px !important; 
   }
 
 }
@@ -1012,7 +1008,6 @@ html, body {
   display: inline-flex;
   align-items: center;
   gap: .45rem;
-  /* IMPORTANT : autorise le scroll */
   touch-action: manipulation;
 }
 
@@ -1061,8 +1056,8 @@ html {
   display: grid !important;
   grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
 
-  column-gap: 40px !important; /* espace horizontal */
-  row-gap: 40px !important;    /* 🔼 espace vertical augmenté */
+  column-gap: 40px !important; 
+  row-gap: 40px !important;    
 
   width: 100% !important;
 }
@@ -1070,9 +1065,9 @@ html {
 
   /* Taille des cartes (plus grandes) */
   .service-card {
-    grid-column: span 2 !important;    /* 3 cartes par ligne */
+    grid-column: span 2 !important;    
     width: 100% !important;
-    max-width: 300px !important;       /* 🔼 cartes plus larges */
+    max-width: 300px !important;       
   }
 
   /* Alignement parfait en haut (touchent les bords) */
@@ -1149,7 +1144,7 @@ html {
 @media (max-width: 599px) {
   .cta {
     flex-direction: column;
-    align-items: flex-start; /* garde la largeur naturelle */
+    align-items: flex-start; 
   }
 }
 
@@ -1158,7 +1153,7 @@ html {
   .loop-svg {
     transform:
       translateX(-1%)
-      translateY(-32px)   /* 🔼 fait remonter la boucle */
+      translateY(-32px)   
       rotate(-22deg)
       scale(1.05);
 
@@ -1169,14 +1164,14 @@ html {
 /* Espacement En Vedette (au dessus) Tablette */
 @media (min-width: 600px) and (max-width: 1100px) {
   .featured {
-    margin-top: -32px; /* ajuste ici */
+    margin-top: -32px; 
   }
 }
 
 /* Espacement En Vedette (au dessus) Mobile */
 @media (max-width: 599px) {
   .featured {
-    margin-top: -78px; /* un peu plus d’air en mobile */
+    margin-top: -78px; 
   }
 }
 
@@ -1184,22 +1179,22 @@ html {
 @media (min-width: 600px) and (max-width: 1100px) {
 
   .divider-wrap {
-    margin-top: 80px;   /* espace AU-DESSUS du séparateur */
+    margin-top: 80px;   
   }
 
   .divider {
-    margin-top: 80px;   /* espace EN-DESSOUS du séparateur */
+    margin-top: 80px;   
   }
 }
 
 @media (max-width: 599px) {
 
   .divider-wrap {
-    margin-top: -40px;   /* espace AU-DESSUS */
+    margin-top: -40px;   
   }
 
   .divider {
-    margin-top: 64px;   /* espace EN-DESSOUS */
+    margin-top: 64px;   
   }
 }
 
@@ -1268,21 +1263,21 @@ html {
 /* Espacement Une collaboration (dessus et dessous) Desktop, Tablett et Mobile (taille font mobile titre)*/
 @media (min-width: 1101px) {
   .collaboration-section {
-    margin-top: -80px;  /* effet de chevauchement maîtrisé */
+    margin-top: -80px;  
     margin-bottom: 32px;
   }
 }
 
 @media (min-width: 1000px) and (max-width: 1100px) {
   .collaboration-section {
-    margin-top: -80px;   /* moins agressif que desktop */
+    margin-top: -80px;   
     margin-bottom: 32px;
   }
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
   .collaboration-section {
-    margin-top: -48px;   /* moins agressif que desktop */
+    margin-top: -48px;   
     margin-bottom: 32px;
   }
 }
@@ -1335,8 +1330,8 @@ html {
 
 :root.theme-light {
   /* Fonds */
---bg: #f6f1e9;       /* crème un peu plus lumineux */
---bg-soft: #fcf9f5; /* surface plus aérienne */
+--bg: #f6f1e9;       
+--bg-soft: #fcf9f5; 
 
 
   /* Textes */
@@ -1497,7 +1492,7 @@ html {
 
 /* Dropdown : PAS de changement de couleur du texte */
 :root.theme-light .dropdown-menu button:hover {
-  color: inherit; /* garde la couleur normale */
+  color: inherit; 
   background: color-mix(
     in srgb,
     var(--btn-primary-bg) 12%,
@@ -1524,7 +1519,7 @@ html {
 /* Bouton "Me contacter" — hover & active (theme light) */
 :root.theme-light .btn-primary:hover,
 :root.theme-light .btn-primary:active {
-  color: inherit; /* garde la couleur du texte */
+  color: inherit; 
   background: color-mix(
     in srgb,
     var(--btn-primary-bg) 12%,
@@ -1613,7 +1608,7 @@ html {
    ====================================== */
 @media (max-width: 1100px) {
   :root.theme-light .nav[aria-expanded="true"] ul {
-    background: rgba(246, 241, 233, 0.98); /* ← clé du flou */
+    background: rgba(246, 241, 233, 0.98); 
 
     backdrop-filter: blur(14px) saturate(140%);
     -webkit-backdrop-filter: blur(14px) saturate(140%);
@@ -1739,14 +1734,14 @@ html {
 
 .loop-section {
   position: relative;
-  isolation: isolate; /* empêche toute interaction avec les sections voisines */
+  isolation: isolate; 
 }
 
 .loop-wrap--final {
   position: relative;
   z-index: 1;
-  margin-top: 0;       /* ne touche plus aux autres espacements */
-  pointer-events: none; /* purement décoratif */
+  margin-top: 0;       
+  pointer-events: none; 
 }
 
 /* =====================================
@@ -1763,9 +1758,9 @@ html.theme-dark .loop-section .divider-light { display: none !important; }
 
 /* AGRANDIR UNIQUEMENT LA BOUCLE FINALE EN MODE LIGHT */
 html.theme-light .loop-wrap--final .divider-light {
-  width: 115%;          /* ajuste si besoin */
+  width: 115%;         
   max-width: none;
-  margin-left: -7.5%;   /* recentrage visuel */
+  margin-left: -7.5%;   
 }
 
 /* ================================
@@ -2214,11 +2209,11 @@ strong {
   .services-layout {
     display: flex;
     justify-content: space-between;
-    gap: 32px; /* rythme horizontal */
+    gap: 32px; 
   }
 
   .service-card {
-    max-width: 260px; /* équilibre idéal à 5 */
+    max-width: 260px; 
   }
 }
 
@@ -2428,7 +2423,7 @@ html.theme-dark .featured-image-main {
 /* ESPACEMENT TITRE "CE QUE JE FAIS" — MOBILE */
 @media (max-width: 599px) {
   .services-section h2 {
-    margin-bottom: 24px; /* ajuste ici : 16 / 20 / 24 selon ton ressenti */
+    margin-bottom: 24px; 
   }
 }
 
@@ -2443,50 +2438,50 @@ html.theme-dark .featured-image-main {
 /* ESPACEMENT EN VEDETTE — MOBILE LARGE (≤ 450px) */
 @media (max-width: 500px) {
   .featured {
-    margin-top: -62px; /* au lieu de -78px */
+    margin-top: -62px; 
   }
 }
 
 /* ESPACEMENT EN VEDETTE — MOBILE LARGE (≤ 450px) */
 @media (max-width: 450px) {
   .featured {
-    margin-top: -62px; /* au lieu de -78px */
+    margin-top: -62px; 
   }
 }
 
 /* ESPACEMENT EN VEDETTE — MOBILE LARGE (≤ 450px) */
 @media (max-width: 400px) {
   .featured {
-    margin-top: -54px; /* au lieu de -78px */
+    margin-top: -54px; 
   }
 }
 
 /* ESPACEMENT ENTRE "EN VEDETTE" ET DIVIDER — MOBILE */
 @media (max-width: 450px) {
   .featured {
-    padding-bottom: 40px; /* ajuste : 16 / 24 / 32 */
+    padding-bottom: 40px; 
   }
 }
 
 /* ESPACEMENT DIVIDER → "CE QUE JE FAIS" — MOBILE */
 @media (max-width: 450px) {
   .services-section {
-    padding-top: 0px !important; /* ajuste : 24 / 32 / 40 */
+    padding-top: 0px !important; 
   }
 }
 
 /* ESPACEMENT AVANT "CE QUE JE FAIS" — MOBILE */
 @media (max-width: 450px) {
   .services-section {
-    margin-top: 56px !important; /* ajuste : -16 / -24 / -32 */
-    margin-bottom: -104px !important; /* ajuste : -12 / -20 / -28 */
+    margin-top: 56px !important; 
+    margin-bottom: -104px !important; 
   }
 }
 
 /* ESPACEMENT AVANT "UN AVIS QUI COMPTE" — MOBILE */
 @media (max-width: 450px) {
   .testimonial-section {
-    margin-top: 72px !important; /* ajuste : -16 / -24 / -32 */
+    margin-top: 72px !important; 
     margin-bottom: -28px !important;
   }
 }
@@ -2494,21 +2489,21 @@ html.theme-dark .featured-image-main {
 /* ESPACEMENT AVANT "UNE COLLABORATION ?" — MOBILE */
 @media (max-width: 450px) {
   .collaboration-section {
-    margin-top: -26px !important; /* ajuste : -16 / -24 / -32 */
+    margin-top: -26px !important; 
   }
 }
 
 /* ESPACEMENT TITRE → BOUTON — "UNE COLLABORATION ?" — MOBILE */
 @media (max-width: 600px) {
   .collaboration-section h2 {
-    margin-bottom: 10px; /* ajuste : 16 / 20 / 24 */
+    margin-bottom: 10px; 
   }
 }
 
 /* ESPACEMENT AVANT "UNE COLLABORATION ?" — MOBILE */
 @media (max-width: 420px) {
   .collaboration-section {
-    margin-top: 16px !important; /* ajuste : -16 / -24 / -32 */
+    margin-top: 16px !important; 
   }
 }
 
@@ -2530,8 +2525,8 @@ html.theme-dark .featured-image-main {
 }
 
 :root.theme-dark .nav-toggle {
-  color: var(--btn-primary-bg);        /* 3 barres */
-  border-color: var(--btn-primary-bg); /* stroke extérieur */
+  color: var(--btn-primary-bg);        
+  border-color: var(--btn-primary-bg); 
 }
 
 .nav-toggle svg {
@@ -2571,7 +2566,7 @@ html.theme-dark .featured-image-main {
   }
 
   /* ===== DROPDOWN OUVERT (mobile) ===== */
-  /* On NE TOUCHE PAS à la hauteur → desktop s'applique */
+  /* NE TOUCHE PAS à la hauteur → desktop s'applique */
   .theme-dropdown.open .dropdown-button {
     width: 88px !important;
     height: 44px;       
@@ -2584,16 +2579,16 @@ html.theme-dark .featured-image-main {
 
     /* Conteneur du choix Light / Dark */
   .theme-dropdown .dropdown-menu {
-    border-radius: 14px;   /* ← ajuste ici */
+    border-radius: 14px;   
     overflow: hidden;
     padding: 0px;
   }
 
   /* Boutons Light / Dark */
   .theme-dropdown .dropdown-menu button {
-    text-align: left;        /* texte à gauche */
+    text-align: left;       
     justify-content: flex-start;
-    padding: 10px 15px;      /* padding interne des items */
+    padding: 10px 15px;      
   }
 
 }
@@ -2654,13 +2649,13 @@ html.theme-dark .featured-image-main {
 
 @media (max-width: 600px) {
   .nav[aria-expanded="true"] ul {
-    top: 62px; /* +12px vers le bas */
+    top: 62px; 
   }
 }
 
 @media (min-width: 601px) {
   .nav[aria-expanded="true"] ul {
-    top: 68px; /* +12px vers le bas */
+    top: 68px; 
   }
 }
 
@@ -2674,7 +2669,7 @@ html.theme-dark .featured-image-main {
   .loop-svg {
     transform:
       translateX(-1%)
-      translateY(-16px)  /* ← on descend la boucle */
+      translateY(-16px)  
       rotate(-22deg)
       scale(1.05);
   }
@@ -2684,7 +2679,7 @@ html.theme-dark .featured-image-main {
   .loop-svg {
     transform:
       translateX(-1%)
-      translateY(-8px)  /* ← on descend la boucle */
+      translateY(-8px)  
       rotate(-22deg)
       scale(1.05);
   }

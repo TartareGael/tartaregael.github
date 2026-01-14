@@ -50,17 +50,14 @@ h1, h2, h3 {
 /*   (RESET COMPLET DU CONTENU SEULEMENT)   */
 /* ======================================== */
 
-/* Ne touche PAS au background, aux couleurs, ni aux polices :
-   Ce sont gérés par style.css, comme demandé. */
+/* Ne touche pas au background, aux couleurs, ni aux polices */
 
 /* ---- CONTENEUR GLOBAL ---- */
 .project-page {
-    /* On laisse le background défini par style.css */
   }
   
   /* ---- HEADER DU PROJET ---- */
   .project-header {
-    /* Aucun spacing par défaut */
     margin: 0;
     padding: 0;
   }
@@ -69,8 +66,8 @@ h1, h2, h3 {
   .project-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    margin: 0;      /* reset */
-    padding: 0;     /* reset */
+    margin: 0;      
+    padding: 0;     
   }
   
   /* Sous-titre / intro */
@@ -78,8 +75,8 @@ h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.7;
-    margin: 0;      /* reset */
-    padding: 0;     /* reset */
+    margin: 0;      
+    padding: 0; 
   }
   
   /* ---- CORPS DU PROJET ---- */
@@ -88,8 +85,6 @@ h1, h2, h3 {
     margin: 0;
     padding: 0;
     width: 100%;
-  
-    /* Aucun layout, aucune règle visuelle */
   }
 
   @media (min-width: 1000px) {
@@ -207,13 +202,12 @@ h1, h2, h3 {
 
   
   /* ---- RESET DES IMAGES DU PROJET ---- */
-  /* On neutralise toute règle d'image venant d'autres fichiers */
   .project-body img,
   .project-header img {
     width: auto;
     height: auto;
     max-width: none;
-    display: inline;      /* pas de block automatique */
+    display: inline;      
     border: none;
     border-radius: 0;
     margin: 0;
@@ -229,7 +223,7 @@ h1, h2, h3 {
   
   .project-intro {
     display: block;
-    margin-top: px; /* petit espace propre et minimal */
+    margin-top: px; 
   }
 
   /* Semi-gras global pour toute la page projet */
@@ -245,13 +239,13 @@ h1, h2, h3 {
 /* Conteneur du projet (header + body) */
 .project-header,
 .project-body {
-  padding-top: 64px;                /* 👉 qu’on ajuste ensuite */
-  margin-left: auto;       /* centre horizontalement */
+  padding-top: 64px;                
+  margin-left: auto;       
   margin-right: auto;
-  padding-left: 64px;      /* espace extérieur */
+  padding-left: 64px;      
   padding-right: 64px;
-  max-width: 1200px;            /* 👉 largeur de travail */
-  box-sizing: border-box;       /* indispensable */
+  max-width: 1200px;            
+  box-sizing: border-box;       
 }
 
 /* TABLETTE */
@@ -268,8 +262,8 @@ h1, h2, h3 {
   .project-header,
   .project-body {
     padding-top: 32px;
-    padding-left: 32px;   /* 👈 AJOUT */
-    padding-right: 32px;  /* 👈 AJOUT */
+    padding-left: 32px;   
+    padding-right: 32px;  
   }
 }
 
@@ -281,7 +275,7 @@ h1, h2, h3 {
   font-weight: 700;
   font-size: 48px;
   line-height: 1.2;
-  margin-bottom: 16px; /* Desktop */
+  margin-bottom: 16px; 
 }
 
 /* Tablet */
@@ -305,7 +299,7 @@ h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 32px; /* Desktop */
+  margin-bottom: 32px; 
 }
 
 /* Tablet */
@@ -326,18 +320,18 @@ h1, h2, h3 {
 
 /* PHOTO HERO */
 .project-hero {
-  margin-bottom: 16px; /* Desktop */
+  margin-bottom: 16px; 
 }
 
 @media (max-width: 1000px) {
   .project-hero {
-    margin-bottom: 16px; /* Tablet */
+    margin-bottom: 16px; 
   }
 }
 
 @media (max-width: 767px) {
   .project-hero {
-    margin-bottom: 8px; /* Mobile */
+    margin-bottom: 8px; 
   }
 }
 
@@ -345,11 +339,11 @@ h1, h2, h3 {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 24px; /* Même arrondi que la nav */
+  border-radius: 24px; 
 }
 
 .contexte-objectifs {
-  margin-bottom: 32px; /* Desktop */
+  margin-bottom: 32px; 
 }
 
 /* Tablet */
@@ -373,8 +367,8 @@ h1, h2, h3 {
 @media (min-width: 1000px) {
   .contexte-objectifs {
     display: grid;
-    grid-template-columns: 1.4fr 1.6fr; /* Titre = colonne gauche / Texte = colonne droite */
-    gap: 32px; /* espace horizontal */
+    grid-template-columns: 1.4fr 1.6fr; 
+    gap: 32px; 
     align-items: start;
   }
 
@@ -383,9 +377,9 @@ h1, h2, h3 {
     margin-bottom: 0;
   }
 
-  /* ⭐️ NOUVEAU : padding top uniquement pour la version desktop */
+  /*padding top uniquement pour la version desktop */
   .contexte-objectifs .section-text {
-    padding-top: 16px; /* Ajustable */
+    padding-top: 16px; 
   }
 
   /* Le texte garde ses paragraphes espacés */
@@ -418,14 +412,14 @@ h1, h2, h3 {
 @media (max-width: 1000px) {
   .contexte-objectifs .section-text p  {
     margin-top: 16px;
-    margin-bottom: -8px; /* ajuste la valeur */
+    margin-bottom: -8px; 
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
   .contexte-objectifs .section-text p  {
-    margin-bottom: -8px; /* valeur mobile */
+    margin-bottom: -8px; 
   }
 }
 
@@ -435,14 +429,14 @@ h1, h2, h3 {
 
 /* 🖥️ Desktop (≥ 1000px) */
 .contexte-objectifs .section-text p {
-  font-size: 18px;   /* tu peux mettre 19px si tu veux encore plus lisible */
+  font-size: 18px;   
   line-height: 1.6;
 }
 
 /* 📱 Tablette (≤ 1000px) */
 @media (max-width: 1000px) {
   .contexte-objectifs .section-text p {
-      font-size: 18px; /* légèrement plus petit pour l’équilibre visuel */
+      font-size: 18px; 
       line-height: 1.55;
   }
 }
@@ -450,7 +444,7 @@ h1, h2, h3 {
 /* 📱 Mobile (≤ 767px) */
 @media (max-width: 767px) {
   .contexte-objectifs .section-text p {
-      font-size: 16px; /* lisible sans être trop massif */
+      font-size: 16px; 
       line-height: 1.5;
   }
 }
@@ -460,8 +454,8 @@ h1, h2, h3 {
 /* =========================================== */
 
 .project-separator .separator-img {
-  width: 70%;        /* Choisis la largeur que tu veux */
-  margin: 0 auto;    /* centre la ligne */
+  width: 70%;        
+  margin: 0 auto;    
   height: auto;
   display: block;
 }
@@ -479,22 +473,22 @@ h1, h2, h3 {
 
 @media (min-width: 1000px) {
   .project-separator-bottom {
-    margin-top: 48px;      /* espace avant */
-    margin-bottom: 16px;   /* espace après */
+    margin-top: 48px;      
+    margin-bottom: 16px;   
   }
 }
 
 @media (max-width: 1000px) {
   .project-separator-bottom {
-    margin-top: 48px;      /* espace avant */
-    margin-bottom: 32px;   /* espace après */
+    margin-top: 48px;      
+    margin-bottom: 32px;   
   }
 }
 
 @media (max-width: 767px) {
   .project-separator-bottom {
-    margin-top: -8px;      /* espace avant */
-    margin-bottom: 8px;   /* espace après */
+    margin-top: -8px;      
+    margin-bottom: 8px;   
   }
 }
 
@@ -503,7 +497,7 @@ h1, h2, h3 {
 /* ============================== */
 
 .approche-conception-section {
-  margin-bottom: 32px; /* Desktop */
+  margin-bottom: 32px; 
 }
 
 /* Tablet */
@@ -528,8 +522,8 @@ h1, h2, h3 {
 @media (min-width: 1000px) {
   .approche-conception-section {
     display: grid;
-    grid-template-columns: 1.4fr 1.6fr; /* Titre = colonne gauche / Texte = colonne droite */
-    gap: 32px; /* espace horizontal */
+    grid-template-columns: 1.4fr 1.6fr; 
+    gap: 32px; 
     align-items: start;
   }
 
@@ -538,9 +532,9 @@ h1, h2, h3 {
     margin-bottom: 0;
   }
 
-  /* ⭐️ NOUVEAU : padding top uniquement pour la version desktop */
+  /* NOUVEAU : padding top uniquement pour la version desktop */
   .approche-conception-section .section-text {
-    padding-top: 16px; /* Ajustable */
+    padding-top: 16px; 
   }
 
   /* Le texte garde ses paragraphes espacés */
@@ -573,14 +567,14 @@ h1, h2, h3 {
 @media (max-width: 1000px) {
   .approche-conception-section .section-text p  {
     margin-top: 16px;
-    margin-bottom: -8px; /* ajuste la valeur */
+    margin-bottom: -8px; 
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
   .approche-conception-section .section-text p  {
-    margin-bottom: -8px; /* valeur mobile */
+    margin-bottom: -8px; 
   }
 }
 
@@ -590,14 +584,14 @@ h1, h2, h3 {
 
 /* 🖥️ Desktop (≥ 1000px) */
 .approche-conception-section.section-text p {
-  font-size: 18px;   /* tu peux mettre 19px si tu veux encore plus lisible */
+  font-size: 18px;   
   line-height: 1.6;
 }
 
 /* 📱 Tablette (≤ 1000px) */
 @media (max-width: 1000px) {
   .approche-conception-section .section-text p {
-      font-size: 18px; /* légèrement plus petit pour l’équilibre visuel */
+      font-size: 18px; 
       line-height: 1.55;
   }
 }
@@ -605,15 +599,15 @@ h1, h2, h3 {
 /* 📱 Mobile (≤ 767px) */
 @media (max-width: 767px) {
   .approche-conception-section .section-text p {
-      font-size: 16px; /* lisible sans être trop massif */
+      font-size: 16px; 
       line-height: 1.5;
   }
 }
 
 .approche-conception-section .subtitle {
-  margin-top: 32px;      /* espace au-dessus */
-  margin-bottom: -8px;   /* espace en dessous */
-  font-size: 22px;       /* option : même taille que ton h2 mobile */
+  margin-top: 32px;      
+  margin-bottom: -8px;   
+  font-size: 22px;       
 }
 
 @media (max-width: 1000px) and (min-width: 768px) {
@@ -626,9 +620,9 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
   .approche-conception-section .subtitle {
-    margin-top: 24px;    /* espace avant le H3 */
-    margin-bottom: -16px; /* espace sous le H3 */
-    font-size: 18px;     /* option : s’adapte à ton mobile */
+    margin-top: 24px;    
+    margin-bottom: -16px; 
+    font-size: 18px;     
   }
 }
 
@@ -645,22 +639,22 @@ h1, h2, h3 {
 
 @media (min-width: 1000px) {
   .project-separator-3 {
-    margin-top: 48px;      /* espace avant */
-    margin-bottom: 24px;   /* espace après */
+    margin-top: 48px;      
+    margin-bottom: 24px;   
   }
 }
 
 @media (max-width: 1000px) {
   .project-separator-3 {
-    margin-top: 48px;      /* espace avant */
-    margin-bottom: 32px;   /* espace après */
+    margin-top: 48px;      
+    margin-bottom: 32px;   
   }
 }
 
 @media (max-width: 767px) {
   .project-separator-3 {
-    margin-top: -8px;      /* espace avant */
-    margin-bottom: 0px;   /* espace après */
+    margin-top: -8px;     
+    margin-bottom: 0px;   
   }
 }
 
@@ -732,7 +726,7 @@ h1, h2, h3 {
   .definition-section .section-image img {
     width: 100%;
     height: auto;
-    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    border-radius: 16px; 
     margin-bottom: -8px;
   }
 
@@ -814,8 +808,8 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
   .project-separator-definition {
-    margin-top: 32px;      /* espace avant */
-    margin-bottom: 0px;   /* espace après */
+    margin-top: 32px;      
+    margin-bottom: 0px;  
   }
 }
 
@@ -850,8 +844,8 @@ h1, h2, h3 {
   }
 
   .personna-section .section-subtitle {
-    margin-top: 32px;     /* espace AVANT le H4 */
-    margin-bottom: 16px;  /* espace APRÈS le H4 */
+    margin-top: 32px;     
+    margin-bottom: 16px;  
   }
   
   .personna-section .section-col {
@@ -888,7 +882,7 @@ h1, h2, h3 {
 }
 
 .personna-section .section-image + .section-image {
-  margin-top: 16px; /* ajuste : 16 / 24 / 32 selon ton ressenti */
+  margin-top: 16px; 
 }
 
 @media (max-width: 1000px) {
@@ -924,7 +918,7 @@ h1, h2, h3 {
   .personna-section .section-image img {
     width: 100%;
     height: auto;
-    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    border-radius: 16px; 
     margin-bottom: -8px;
   }
 
@@ -936,7 +930,7 @@ h1, h2, h3 {
 }
 
 .personna-section .section-image + .section-image {
-  margin-top: 16px; /* ajuste : 16 / 24 / 32 selon ton ressenti */
+  margin-top: 16px; 
 }
 
 @media (max-width: 767px) {
@@ -982,7 +976,7 @@ h1, h2, h3 {
 }
 
 .personna-section .section-image + .section-image {
-  margin-top: 16px; /* ajuste : 16 / 24 / 32 selon ton ressenti */
+  margin-top: 16px; 
 }
 
 /* ============================= */
@@ -1030,8 +1024,8 @@ h1, h2, h3 {
 
 @media (max-width: 767px) {
   .project-separator-personnas {
-    margin-top: 24px;      /* espace avant */
-    margin-bottom: 0px;   /* espace après */
+    margin-top: 24px;      
+    margin-bottom: 0px;   
   }
 }
 
@@ -1090,7 +1084,7 @@ h1, h2, h3 {
   .questionnaire-section .section-image img {
     width: 100%;
     height: auto;
-    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    border-radius: 16px; 
     margin-bottom: -8px;
   }
 
@@ -1199,7 +1193,7 @@ h1, h2, h3 {
   .conclusion-section .section-image img {
     width: 100%;
     height: auto;
-    border-radius: 16px; /* cohérent avec ce qu’on a ajouté */
+    border-radius: 16px; 
     margin-bottom: -4px;
   }
 
@@ -1258,14 +1252,14 @@ h1, h2, h3 {
 
 /* Chevron */
 .project-nav .chevron {
-  font-size: 40px;              /* TU NE CHANGES PAS LA TAILLE */
+  font-size: 40px;              
   line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   position: relative;
-  top: -0.07em;                 /* 🔥 correction optique réelle */
+  top: -0.07em;                 
 }
 
 
@@ -1300,7 +1294,7 @@ h1, h2, h3 {
     margin-top: 48px;
   }
 
-  /* On réactive les boutons hérités de style.css */
+  /* Réactive les boutons hérités de style.css */
   .project-navigation .btn,
   .project-navigation .btn-primary {
     display: inline-flex;
@@ -1326,7 +1320,7 @@ h1, h2, h3 {
     align-items: flex-start;
     gap: 16px;
 
-    margin-top: 32px; /* ⬅️ espace mobile */
+    margin-top: 32px; 
     margin-bottom: 32px;
   }
 }
@@ -1339,7 +1333,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 40px; /* ⬅️ espace intermédiaire */
+    margin-top: 40px; 
     margin-bottom: 32px;
   }
 }
@@ -1352,7 +1346,7 @@ h1, h2, h3 {
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 64px; /* ⬅️ espace large écran */
+    margin-top: 64px; 
     margin-bottom: 40px;
   }
 }
@@ -1363,8 +1357,6 @@ h1, h2, h3 {
 /* =============================== */
 
 @media (max-width: 767px) {
-
-  /* Paragraphes normaux = compacts */
   .project-section .section-text p {
     margin-bottom: -8px;
   }
@@ -1393,7 +1385,7 @@ h1, h2, h3 {
 
 /* Titre "Constel Mentorat" — uniquement en thème clair */
 .theme-light .project-page .project-title {
-  color: #B34755; /* remplace par la couleur souhaitée */
+  color: #B34755; 
 }
 
 /* ================================ */
