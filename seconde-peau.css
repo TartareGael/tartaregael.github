@@ -1410,7 +1410,7 @@ h1, h2, h3 {
 @media (max-width: 600px) {
   .project-header,
   .project-body {
-    padding-top: 96px !important;
+    padding-top: 112px !important;
     }
   }
 
