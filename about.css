@@ -871,3 +871,33 @@ html.theme-dark .values-item {
     line-height: 1.5;
   }
 }
+
+@media (min-width: 770px) and (max-width: 1225px) {
+  .about-section {
+    padding-top: 64px !important;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1101px) {
+  .about-page .about-title {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+}
+
+/* TABLETTE */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .about-page .about-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+/* =========================================
+   TITRE "QUI ES-TU" — PRIMARY EN DARK MODE
+   ========================================= */
+
+html.theme-dark .about-title {
+  color: var(--btn-primary-bg);
+}

@@ -1988,3 +1988,10 @@ h1, h2, h3 {
     padding-top: 96px !important;
     }
   }
+
+  @media (min-width: 768px) and (max-width: 1100px) {
+  .project-page .project-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}

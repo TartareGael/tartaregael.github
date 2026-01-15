@@ -874,3 +874,13 @@ html.theme-dark .project-item p {
 
 }
 
+/* =====================================
+   TITRE "PROJETS" — TABLETTE
+   ===================================== */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .projects-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}

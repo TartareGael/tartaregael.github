@@ -1631,3 +1631,14 @@ html.theme-light .project-hero img {
     padding-top: 96px !important;
     }
   }
+
+  /* =====================================
+   TITRE "LES BAMBINETS" — TABLETTE
+   ===================================== */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .project-page .project-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
