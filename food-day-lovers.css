@@ -1951,12 +1951,12 @@ h1, h2, h3 {
 /*  Images Wireframes — Theme Light */
 /* =============================== */
 
-.theme-light img[src="img-fdl/wireframes-rouge-2.png"] {
+.theme-light img[src="img-fdl/wireframes.png"] {
   content: url("img-fdl/wireframes-rouge.png");
 }
 
-.theme-light img[src="img-fdl/wireframes-2.png"] {
-  content: url("img-fdl/wireframes-rouge-2.png");
+.theme-light img[src="img-fdl/wireframes-rouge-2.png"] {
+  content: url("img-fdl/wireframes-2.png");
 }
 
 /* ================================ */
