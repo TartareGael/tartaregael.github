@@ -357,56 +357,45 @@
 
 
 
-<!-- SECTION Ce que je fais -->
-<!-- SECTION Ce que je fais -->
-<section class="services-section">
+<!-- SECTION Ce que je fais (Carousel) -->
+<section class="services-section" aria-label="Ce que je fais">
   <div class="section-inner">
 
-    <h2>Ce que je fais</h2>
-
-    <div class="services-layout">
-
-      <!-- LIGNE DU HAUT -->
-      <div class="services-row-bottom-wrapper">
-        <div class="services-row-bottom">
-
-          <div class="service-card service-1">
-            <img src="images/ce-que-je-fais-1.png" alt="">
-          </div>
-
-          <div class="service-card service-2">
-            <img src="images/ce-que-je-fais-2.png" alt="">
-          </div>
-
-          <div class="service-card service-3">
-            <img src="images/ce-que-je-fais-3.png" alt="">
-          </div>
-
-          <!-- Mobile uniquement -->
-          <div class="service-card service-6">
-            <img src="images/ce-que-je-fais-6.png" alt="">
-          </div>
-
-        </div>
-      </div>
-
-      <!-- LIGNE DU BAS -->
-      <div class="services-row-bottom">
-
-        <div class="service-card service-4">
-          <img src="images/ce-que-je-fais-4.png" alt="">
-        </div>
-
-        <div class="service-card service-5">
-          <img src="images/ce-que-je-fais-5.png" alt="">
-        </div>
-
-      </div>
-
+    <div class="services-head">
+      <h2>Ce que je fais</h2>
     </div>
+
+    <!-- WRAP (flèches à l'extérieur du track) -->
+<div class="services-carousel">
+
+  <!-- Flèche gauche -->
+  <button class="carousel-arrow left" id="servicesPrev" aria-label="Voir précédent">
+    ‹
+  </button>
+
+  <!-- Track -->
+  <div class="services-track" id="servicesTrack">
+    <div class="service-card service-1"><img src="images/ce-que-je-fais-1.png" alt=""></div>
+    <div class="service-card service-2"><img src="images/ce-que-je-fais-2.png" alt=""></div>
+    <div class="service-card service-3"><img src="images/ce-que-je-fais-3.png" alt=""></div>
+    <div class="service-card service-4"><img src="images/ce-que-je-fais-4.png" alt=""></div>
+    <div class="service-card service-5"><img src="images/ce-que-je-fais-5.png" alt=""></div>
+    <div class="service-card service-6"><img src="images/ce-que-je-fais-6.png" alt=""></div>
+  </div>
+
+  <!-- Flèche droite -->
+  <button class="carousel-arrow right" id="servicesNext" aria-label="Voir suivant">
+    ›
+  </button>
+
+</div>
+
 
   </div>
 </section>
+
+
+
 
    
     
