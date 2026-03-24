@@ -1594,14 +1594,6 @@ h1, h2, h3 {
 }
 
 /* =========================================
-   HERO — LES BAMBINETS (THEME LIGHT)
-   ========================================= */
-
-html.theme-light .project-hero img[src="img-les-bambinets/projet-2-1.png"] {
-  content: url("images/les-bambinets-rouge-cover.png");
-}
-
-/* =========================================
    HERO — STROKE + OMBRE (THEME LIGHT UNIQUEMENT)
    Identique à "Mes valeurs"
    ========================================= */
