@@ -1527,5 +1527,9 @@ html.theme-light img[src="img-constel/projet-1-1.png"] {
 }
 
 html.theme-light .project-hero img {
-  box-shadow: 0 20px 60px rgba(255, 0, 0, 0.25);
+  box-shadow: 0 0px 40px color-mix(
+    in srgb,
+    var(--btn-primary-bg) 30%,
+    transparent
+  );
 }
