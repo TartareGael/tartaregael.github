@@ -586,13 +586,6 @@ strong {
 
 }
 
-/* =========================================
-   COVER PROJET 2 — THEME LIGHT UNIQUEMENT
-   ========================================= */
-
-html.theme-light img[src="images/projet-2-1.png"] {
-  content: url("images/les-bambinets-rouge-cover.png");
-}
 
 @media (hover: hover) and (pointer: fine) {
 
