@@ -10,7 +10,7 @@ export async function onRequest(context) {
     // Si le cookie n'est PAS présent → login
     if (!cookie.includes("constel_auth=ok")) {
       return Response.redirect(
-        "https://gael-tartare.fr/login-constel-mentorat",
+        "https://gael-tartare.fr/constel-mentorat.html",
         302
       );
     }
