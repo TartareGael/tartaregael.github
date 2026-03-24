@@ -586,6 +586,9 @@ strong {
 
 }
 
+html.theme-light img[src="images/projet-1-1.png"] {
+  content: url("img-constel/constel-mentorat-rouge-cover.png");
+}
 
 @media (hover: hover) and (pointer: fine) {
 

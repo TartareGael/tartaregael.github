@@ -1521,3 +1521,7 @@ h1, h2, h3 {
     line-height: 1.2;
   }
 }
+
+html.theme-light img[src="images/projet-1-1.png"] {
+  content: url("img-constel/constel-mentorat-rouge-cover.png");
+}
