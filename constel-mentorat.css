@@ -1522,6 +1522,6 @@ h1, h2, h3 {
   }
 }
 
-html.theme-light img[src="images/projet-1-1.png"] {
+html.theme-light img[src="img-constel/projet-1-1.png"] {
   content: url("img-constel/constel-mentorat-rouge-cover.png");
 }
